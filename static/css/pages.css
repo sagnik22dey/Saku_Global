@@ -1,0 +1,570 @@
+/* ===== Inner page shared ===== */
+.page-hero {
+  padding-block: clamp(48px, 6vw, 88px) clamp(32px, 4vw, 56px);
+  background: var(--color-surface);
+  position: relative;
+}
+
+.page-hero--dark {
+  background: var(--color-accent-deep);
+  color: #fff;
+}
+
+.page-hero--dark h1,
+.page-hero--dark .breadcrumb a:hover {
+  color: #fff;
+}
+
+.page-hero--dark .lead {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.page-hero__inner {
+  max-width: 760px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.page-hero--split {
+  background: var(--color-surface);
+}
+
+.page-hero__grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(28px, 4vw, 56px);
+  align-items: center;
+}
+
+.page-hero__media {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  aspect-ratio: 16 / 11;
+  box-shadow: var(--shadow-md);
+}
+
+.page-hero__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 880px) {
+  .page-hero__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Advisory board */
+.advisor {
+  text-align: left;
+}
+
+.advisor__avatar {
+  width: 84px;
+  height: 84px;
+  border-radius: var(--radius-pill);
+  object-fit: cover;
+  margin-bottom: 18px;
+}
+
+.advisor h3 {
+  font-size: 1.25rem;
+}
+
+.advisor__role {
+  color: var(--color-accent);
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.advisor p {
+  color: var(--color-text-muted);
+  font-size: 15px;
+}
+
+/* Course detail */
+.course-detail {
+  display: grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap: clamp(28px, 4vw, 48px);
+  align-items: start;
+}
+
+.course-detail__media {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  margin-bottom: 28px;
+}
+
+.course-detail__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.course-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.meta-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  font-size: 14px;
+  color: var(--color-text-soft);
+}
+
+.meta-pill svg {
+  width: 16px;
+  height: 16px;
+  color: var(--color-accent-deep);
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.rating__score {
+  font-family: var(--font-head);
+  font-size: 2.4rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.stars {
+  display: inline-flex;
+  gap: 2px;
+  color: #f5a623;
+}
+
+.stars svg {
+  width: 18px;
+  height: 18px;
+}
+
+.enroll-card {
+  position: sticky;
+  top: calc(var(--header-h) + 20px);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: var(--shadow-sm);
+}
+
+.enroll-card__price {
+  font-family: var(--font-head);
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.syllabus {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.syllabus__item {
+  display: flex;
+  gap: 14px;
+  padding: 18px 20px;
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-md);
+  align-items: flex-start;
+}
+
+.syllabus__num {
+  font-family: var(--font-head);
+  font-weight: 800;
+  color: var(--color-accent);
+}
+
+.prose p {
+  color: var(--color-text-soft);
+  margin-bottom: 16px;
+}
+
+.prose h3 {
+  margin: 28px 0 12px;
+}
+
+.prose ul.bullets {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.prose ul.bullets li {
+  display: flex;
+  gap: 12px;
+  color: var(--color-text-soft);
+}
+
+.prose ul.bullets li::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  margin-top: 9px;
+  border-radius: 50%;
+  background: var(--color-accent-deep);
+  flex: none;
+}
+
+@media (max-width: 880px) {
+  .course-detail {
+    grid-template-columns: 1fr;
+  }
+  .enroll-card {
+    position: static;
+  }
+}
+
+/* Internship card */
+.intern-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 30px;
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-lg);
+  background: #fff;
+  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
+}
+
+.intern-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+}
+
+.intern-card__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.intern-card h3 {
+  font-size: 1.25rem;
+  max-width: 16ch;
+}
+
+.intern-card p {
+  color: var(--color-text-muted);
+  font-size: 15px;
+  flex: 1;
+}
+
+.intern-card .btn {
+  align-self: flex-start;
+  margin-top: 6px;
+}
+
+/* Eligibility chips */
+.elig-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Misc detail list */
+.detail-section {
+  margin-bottom: 36px;
+}
+
+.detail-section h3 {
+  margin-bottom: 16px;
+}
+
+/* ===== Course Track Slider (courses page) ===== */
+.courses-showcase {
+  padding-top: clamp(40px, 5vw, 72px);
+  padding-bottom: clamp(40px, 5vw, 72px);
+}
+
+.courses-showcase__title {
+  font-family: var(--font-head);
+  font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-align: center;
+  margin-bottom: clamp(28px, 3.5vw, 48px);
+  background: linear-gradient(90.91deg, #090909 -5.17%, #135f9a 99.22%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Tab bar — individual pills, no enclosing border */
+.course-tab-bar {
+  margin-bottom: clamp(28px, 3.5vw, 44px);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.course-tab-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.course-tab-bar__track {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-width: max-content;
+  margin: 0 auto;
+  width: fit-content;
+  padding: 4px 0;
+}
+
+.course-tab-btn {
+  border: 1px solid var(--color-card-border);
+  background: #fff;
+  padding: 12px 24px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.25s var(--ease);
+  position: relative;
+}
+
+.course-tab-btn:hover {
+  border-color: var(--color-accent-deep);
+  color: var(--color-accent-deep);
+}
+
+.course-tab-btn.is-active {
+  background: var(--color-accent-deep);
+  color: #fff;
+  border-color: var(--color-accent-deep);
+  font-weight: 600;
+}
+
+.course-tab-bar__sep {
+  display: none;
+}
+
+/* Slider */
+.course-slider {
+  position: relative;
+  overflow: visible;
+}
+
+.course-slider__card {
+  width: 100%;
+  position: relative;
+  min-height: 420px;
+}
+
+/* Track card — rounded image inset + checkmark list */
+.track-card {
+  display: grid;
+  grid-template-columns: 48% 1fr;
+  gap: 0;
+  min-height: 420px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--color-card-border);
+  box-shadow: var(--shadow-sm);
+  animation: trackCardIn 0.45s var(--ease) forwards;
+}
+
+@keyframes trackCardIn {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.track-card__media {
+  position: relative;
+  padding: 24px;
+  display: flex;
+  align-items: stretch;
+}
+
+.track-card__media img {
+  width: 100%;
+  height: 100%;
+  min-height: 370px;
+  object-fit: cover;
+  display: block;
+  border-radius: var(--radius-md);
+}
+
+.track-card__body {
+  padding: clamp(28px, 3.5vw, 48px) clamp(28px, 3.5vw, 48px) clamp(28px, 3.5vw, 48px) clamp(16px, 2vw, 32px);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Gray badge pill */
+.track-card__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  padding: 10px 20px;
+  border-radius: var(--radius-pill);
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 14px;
+  width: fit-content;
+}
+
+.track-card__name {
+  font-family: var(--font-head);
+  font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.2;
+  margin-top: 4px;
+}
+
+.track-card__desc {
+  color: var(--color-text-muted);
+  font-size: clamp(14px, 1.2vw, 16px);
+  line-height: 1.65;
+  max-width: 42ch;
+}
+
+/* Checkmark topics list */
+.track-card__topics {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.track-card__topic {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--color-text);
+  line-height: 1.4;
+}
+
+.track-card__check {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-accent-deep);
+}
+
+/* CTA row: pill button + text link */
+.track-card__actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.track-card__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  border-radius: var(--radius-pill);
+  background: var(--color-accent-deep);
+  color: #fff;
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.25s var(--ease), transform 0.2s var(--ease);
+}
+
+.track-card__cta:hover {
+  background: #0e2119;
+  transform: translateY(-1px);
+}
+
+.track-card__link {
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color 0.2s var(--ease);
+}
+
+.track-card__link:hover {
+  color: var(--color-accent-deep);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .track-card {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .track-card__media {
+    padding: 16px;
+    padding-bottom: 0;
+  }
+
+  .track-card__media img {
+    min-height: 220px;
+    max-height: 280px;
+  }
+
+  .track-card__body {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .course-tab-bar__track {
+    gap: 8px;
+  }
+
+  .course-tab-btn {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+
+  .track-card__actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+}

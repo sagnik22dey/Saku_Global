@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Courses — SAKU Global Tech Labs</title>
+  <meta name="description" content="Explore SAKU Global's course catalog across AI, Semiconductor Engineering, Cloud Computing, Pre-Placement Training, and VLSI & Chip Design." />
+  <meta name="theme-color" content="#19352d" />
+  <link rel="canonical" href="https://www.sakuglobal.com/courses" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Work+Sans:wght@400;500;600;700;800&display=swap" />
+  <link rel="stylesheet" href="/static/css/tokens.css" />
+  <link rel="stylesheet" href="/static/css/base.css" />
+  <link rel="stylesheet" href="/static/css/layout.css" />
+  <link rel="stylesheet" href="/static/css/components.css" />
+  <link rel="stylesheet" href="/static/css/pages.css" />
+  <script src="/static/js/partials.js" defer></script>
+  <script src="/static/js/data.js" defer></script>
+  <script src="/static/js/courses.js" defer></script>
+</head>
+<body>
+  <div id="site-header"></div>
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero__inner">
+          <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> <span>/</span> <span>Courses</span></nav>
+          <span class="eyebrow">Our Courses</span>
+          <h1 class="h1">Artificial Intelligence Courses</h1>
+          <p class="lead">End-to-end AI engineering — from ML fundamentals to deploying large language models in production environments.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section courses-showcase">
+      <div class="container">
+        <h2 class="courses-showcase__title">OUR COURSES</h2>
+
+        <div class="course-tab-bar" id="courseTabBar">
+          <div class="course-tab-bar__track">
+            <button class="course-tab-btn is-active" data-index="0">Artificial Intelligence</button>
+            <span class="course-tab-bar__sep"></span>
+            <button class="course-tab-btn" data-index="1">Semiconductor Engineering</button>
+            <span class="course-tab-bar__sep"></span>
+            <button class="course-tab-btn" data-index="2">Cloud Computing</button>
+            <span class="course-tab-bar__sep"></span>
+            <button class="course-tab-btn" data-index="3">Pre-Placement Training</button>
+            <span class="course-tab-bar__sep"></span>
+            <button class="course-tab-btn" data-index="4">VLSI &amp; Chip Design</button>
+          </div>
+        </div>
+
+        <div class="course-slider" id="courseSlider">
+          <div class="course-slider__card" id="courseSliderCard">
+            <!-- JS renders the active track card here -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+</body>
+</html>
