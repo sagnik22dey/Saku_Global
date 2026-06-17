@@ -9,9 +9,30 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.querySelectorAll('.nav-item').forEach(item => {
-      item.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
+      if (!item.classList.contains('dropdown')) {
+        item.addEventListener('click', () => {
+          hamburger.classList.remove('active');
+          navMenu.classList.remove('active');
+        });
+      }
+    });
+
+    document.querySelectorAll('.nav-item.dropdown').forEach(dropdown => {
+      const arrow = dropdown.querySelector('.nav-arrow');
+      if (arrow) {
+        arrow.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          dropdown.classList.toggle('mobile-open');
+        });
+      }
+
+      const links = dropdown.querySelectorAll('a');
+      links.forEach(link => {
+        link.addEventListener('click', () => {
+          hamburger.classList.remove('active');
+          navMenu.classList.remove('active');
+        });
       });
     });
   }
