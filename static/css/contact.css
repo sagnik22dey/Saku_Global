@@ -10,15 +10,6 @@
   text-align: center;
 }
 
-.hero-divider {
-  width: 100vw;
-  max-width: 1458px;
-  height: 1px;
-  background-color: #135f9a;
-  position: absolute;
-  top: 5vw;
-}
-
 .contact-hero .gradient-text {
   font-family: "Inter", sans-serif;
   font-weight: 600;
@@ -139,7 +130,7 @@
   z-index: 10;
   max-height: 200px;
   overflow-y: auto;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .multiselect-wrapper:focus-within .multiselect-dropdown {
@@ -248,7 +239,8 @@
   flex-shrink: 0;
 }
 
-.info-text, .address-text {
+.info-text,
+.address-text {
   font-family: "Inter", sans-serif;
   font-weight: 300;
   font-size: clamp(16px, 1.8vw, 24px);
@@ -283,8 +275,9 @@
     flex-direction: column;
     align-items: center;
   }
-  
-  .contact-left, .contact-right {
+
+  .contact-left,
+  .contact-right {
     width: 100%;
     max-width: 100%;
   }
