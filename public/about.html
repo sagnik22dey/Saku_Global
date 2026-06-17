@@ -1,80 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us — SAKU Global Tech Labs | Where Deep Tech Meets Real Careers</title>
-  <meta name="description" content="Saku Global Tech Labs is a next-generation technology training institution producing industry-ready professionals. Meet our advisory board of industry luminaries." />
-  <meta name="theme-color" content="#19352d" />
-  <link rel="canonical" href="https://www.sakuglobal.com/about" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Work+Sans:wght@400;500;600;700;800&display=swap" />
-  <link rel="stylesheet" href="/static/css/tokens.css" />
-  <link rel="stylesheet" href="/static/css/base.css" />
-  <link rel="stylesheet" href="/static/css/layout.css" />
-  <link rel="stylesheet" href="/static/css/components.css" />
-  <link rel="stylesheet" href="/static/css/pages.css" />
-  <script src="/static/js/partials.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Saku Global Tech Labs</title>
+  <meta name="description" content="Learn about Saku Global Tech Labs, our mission to bridge deep tech education with careers, and our advisory board of industry luminaries.">
+  <link rel="stylesheet" href="/static/css/common.css">
+  <link rel="stylesheet" href="/static/css/about.css">
 </head>
 <body>
-  <div id="site-header"></div>
-  <main id="main">
-    <section class="page-hero page-hero--split">
-      <div class="container">
-        <div class="page-hero__grid">
-          <div class="page-hero__inner">
-            <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> <span>/</span> <span>About Us</span></nav>
-            <span class="eyebrow">About SAKU Global</span>
-            <h1 class="h1">Where Deep Tech Meets Real Careers</h1>
-            <p class="lead">Saku Global Tech Labs is a next-generation technology training institution founded with a singular mission: to produce industry-ready professionals who can hit the ground running in the world's most demanding tech roles.</p>
-            <div class="hero__actions">
-              <a class="btn btn--primary" href="/courses">Browse Programs</a>
-              <a class="btn btn--outline" href="/contact">Talk to Us</a>
-            </div>
+
+  <header class="saku-header" id="about-header">
+    <div class="header-container">
+      <a href="/" class="logo-link" id="header-logo-link">
+        <img src="/static/images/logo.svg" alt="Saku Global" class="logo-svg">
+      </a>
+
+      <button class="hamburger" id="hamburger-menu-btn" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-menu">
+        <a href="/about" class="nav-item">About Us</a>
+        <div class="nav-item dropdown">
+          <a href="/courses">Courses</a>
+          <svg class="nav-arrow" viewBox="0 0 10 6">
+            <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+          <div class="dropdown-content">
+            <a href="/course-ml-dl">Machine Learning & Deep Learning</a>
+            <a href="/course-gen-ai">Generative AI & LLMs</a>
+            <a href="/course-mlops">MLOps & Model Deployment</a>
+            <a href="/course-ai-ethics">AI Ethics & Governance</a>
+            <a href="/course-capstone">Capstone Project</a>
           </div>
-          <div class="page-hero__media reveal">
-            <img src="https://picsum.photos/seed/saku-about/640/440" alt="SAKU Global Tech Labs team working in a collaborative workspace" loading="eager" />
+        </div>
+        <div class="nav-item dropdown">
+          <a href="/internship">Internship</a>
+          <svg class="nav-arrow" viewBox="0 0 10 6">
+            <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+          <div class="dropdown-content">
+            <a href="/internship-ai-research">AI Research Internship</a>
+            <a href="/internship-semiconductor">Semiconductor Design Internship</a>
+            <a href="/internship-cloud">Cloud & DevOps Internship</a>
+            <a href="/internship-embedded">Embedded Systems Internship</a>
+            <a href="/internship-ai-product">AI Product Internship</a>
+            <a href="/internship-research">Research Publication Program</a>
           </div>
         </div>
+        <a href="/higher-education" class="nav-item">International Education</a>
+        <a href="/contact" class="nav-item">Contacts Us</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main id="about-main-content">
+    <section class="about-intro-section" id="about-intro">
+      <div class="about-intro-image-wrapper">
+        <img src="https://picsum.photos/510/419?random=grad" alt="Where Deep Tech Meets Real Careers" class="about-intro-image">
+      </div>
+      <div class="about-intro-content">
+        <h1 class="about-intro-title">Where Deep Tech. Meets Real Careers</h1>
+        <p class="about-intro-desc">Saku Global Tech Labs is a next-generation technology training institution founded with a singular mission: to produce industry-ready professionals who can hit the ground running in the world's most demanding tech roles.</p>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="grid grid--4">
-          <div class="feature reveal"><span class="feature__icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span><h3>Applied Learning</h3><p>Project-first curriculum where every concept ships as working code.</p></div>
-          <div class="feature reveal"><span class="feature__icon"><svg viewBox="0 0 24 24" fill="none"><path d="M3 21h18M5 21V7l8-4 8 4v14M9 9h.01M9 13h.01M9 17h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>Industry-Led</h3><p>Built and reviewed with engineers from leading global tech firms.</p></div>
-          <div class="feature reveal"><span class="feature__icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18" stroke="currentColor" stroke-width="1.8"/></svg></span><h3>Global Placement</h3><p>Pathways into opportunity-rich markets across four continents.</p></div>
-          <div class="feature reveal"><span class="feature__icon"><svg viewBox="0 0 24 24" fill="none"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12c1 1 1 2 1 3h6c0-1 0-2 1-3a7 7 0 0 0-4-12z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>Research &amp; Innovation</h3><p>Live R&amp;D collaborations and publication opportunities for learners.</p></div>
+    <section class="advisory-section" id="about-advisory">
+      <span class="advisory-eyebrow">ADVISORY BOARD</span>
+      <h2 class="advisory-title">Guided by Industry Luminaries</h2>
+      
+      <div class="advisory-grid">
+        <div class="advisory-card" id="advisory-member-charlie">
+          <div class="advisory-card-image-wrapper">
+            <img src="https://picsum.photos/369/184?random=portrait1" alt="Charlie Geidt" class="advisory-card-image">
+          </div>
+          <h3 class="advisory-card-name">Charlie Geidt</h3>
+          <p class="advisory-card-role">Founder</p>
+          <p class="advisory-card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex</p>
         </div>
-      </div>
-    </section>
 
-    <section class="section mission">
-      <div class="container">
-        <div class="section-head section-head--center reveal">
-          <span class="eyebrow">Advisory Board</span>
-          <h2 class="h2">Guided by Industry Luminaries</h2>
-          <p class="lead" style="text-align:center">Our programs are shaped by leaders who have built and scaled deep-tech across the globe.</p>
+        <div class="advisory-card" id="advisory-member-abram">
+          <div class="advisory-card-image-wrapper">
+            <img src="https://picsum.photos/369/184?random=portrait2" alt="Abram Dorwart" class="advisory-card-image">
+          </div>
+          <h3 class="advisory-card-name">Abram Dorwart</h3>
+          <p class="advisory-card-role">Founder</p>
+          <p class="advisory-card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex</p>
         </div>
-        <div class="grid grid--3">
-          <article class="feature advisor reveal"><img class="advisor__avatar" src="https://picsum.photos/seed/charlie/160/160" alt="Portrait of Charlie Geidt" loading="lazy" /><h3>Charlie Geidt</h3><p class="advisor__role">Founder</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p></article>
-          <article class="feature advisor reveal"><img class="advisor__avatar" src="https://picsum.photos/seed/abram/160/160" alt="Portrait of Abram Dorwart" loading="lazy" /><h3>Abram Dorwart</h3><p class="advisor__role">Founder</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p></article>
-          <article class="feature advisor reveal"><img class="advisor__avatar" src="https://picsum.photos/seed/jakob/160/160" alt="Portrait of Jakob Franci" loading="lazy" /><h3>Jakob Franci</h3><p class="advisor__role">Founder</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p></article>
-        </div>
-      </div>
-    </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="cta-band reveal">
-          <div><h2 class="h2">Ready to build your tech future?</h2><p>Join a generation of engineers solving the world's most complex technical challenges.</p></div>
-          <a class="btn btn--primary" href="/courses">Explore Courses</a>
+        <div class="advisory-card" id="advisory-member-jakob">
+          <div class="advisory-card-image-wrapper">
+            <img src="https://picsum.photos/369/184?random=portrait3" alt="Jakob Franci" class="advisory-card-image">
+          </div>
+          <h3 class="advisory-card-name">Jakob Franci</h3>
+          <p class="advisory-card-role">Founder</p>
+          <p class="advisory-card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex</p>
         </div>
       </div>
     </section>
   </main>
-  <div id="site-footer"></div>
+
+  <footer class="saku-footer" id="about-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="/static/images/logo_white.svg" alt="Saku Global" class="logo-svg footer-logo">
+          <p class="footer-desc">Saku Global Tech Labs — where deep tech education meets industry demand. Shaping the engineers of tomorrow, today.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Program</h4>
+          <div class="footer-links">
+            <a href="/courses">Artificial Intelligence</a>
+            <a href="/semiconductor">Semiconductor</a>
+            <a href="/cloud">Cloud Computing</a>
+            <a href="/vlsi">VLSI Design</a>
+            <a href="/placement">Pre-Placement</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Company</h4>
+          <div class="footer-links">
+            <a href="/about">About Us</a>
+            <a href="/advisory-board">Advisory Board</a>
+            <a href="/internships">Internships</a>
+            <a href="/higher-education">International</a>
+            <a href="/careers">Careers</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Connect</h4>
+          <div class="social-links">
+            <a href="#" class="social-icon-wrapper" aria-label="Instagram">
+              <svg class="social-svg" viewBox="0 0 24 24">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="none" stroke="currentColor" stroke-width="2"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </a>
+            <a href="#" class="social-icon-wrapper" aria-label="Twitter">
+              <svg class="social-svg" viewBox="0 0 24 24">
+                <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" fill="none" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </a>
+            <a href="#" class="social-icon-wrapper" aria-label="LinkedIn">
+              <svg class="social-svg" viewBox="0 0 24 24">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" fill="none" stroke="currentColor" stroke-width="2"/>
+                <rect x="2" y="9" width="4" height="12" fill="currentColor"/>
+                <circle cx="4" cy="4" r="2" fill="currentColor"/>
+              </svg>
+            </a>
+            <a href="#" class="social-icon-wrapper" aria-label="YouTube">
+              <svg class="social-svg" viewBox="0 0 24 24">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" fill="none" stroke="currentColor" stroke-width="2"/>
+                <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          <span>&copy; www.SAKUGLOBAL.com 2024 | All Rights Reserved</span>
+        </div>
+        <div class="footer-bottom-links">
+          <a href="/privacy">Privacy</a>
+          <a href="/terms">Terms</a>
+          <a href="/sitemap">Sitemap</a>
+          <a href="/help">Help</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/static/js/main.js"></script>
 </body>
 </html>

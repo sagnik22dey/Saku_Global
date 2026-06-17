@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 80">
+  <circle cx="40" cy="40" r="30" fill="none" stroke="#135f9a" stroke-width="4"/>
+  <circle cx="40" cy="40" r="20" fill="none" stroke="#374957" stroke-width="2"/>
+  <path d="M40,10 L40,70 M10,40 L70,40" stroke="#135f9a" stroke-width="2"/>
+  <text x="85" y="38" font-family="Inter" font-weight="700" font-size="22" fill="#135f9a">SAKU</text>
+  <text x="85" y="58" font-family="Inter" font-weight="500" font-size="14" fill="#374957" letter-spacing="2">GLOBAL TECH LABS</text>
+</svg>
