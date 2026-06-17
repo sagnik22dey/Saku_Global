@@ -79,7 +79,8 @@ document.addEventListener('DOMContentLoaded', () => {
       count: '12 Courses',
       desc: 'End-to-end AI engineering — from ML fundamentals to deploying large language models in production environments.',
       duration: '6 months Beginner → Advanced',
-      tags: ['Machine Learning & Deep Learning', 'Generative AI & LLMs', 'MLOps & Model Deployment', 'AI Ethics & Governance', 'Capstone Project']
+      tags: ['Machine Learning & Deep Learning', 'Generative AI & LLMs', 'MLOps & Model Deployment', 'AI Ethics & Governance', 'Capstone Project'],
+      link: '/courses-ai'
     },
     'semiconductor': {
       image: '/static/images/courses/course-2.png',
@@ -87,7 +88,8 @@ document.addEventListener('DOMContentLoaded', () => {
       count: '8 Courses',
       desc: 'Comprehensive training in semiconductor physics, chip architecture, fabrication processes, and cleanroom protocols.',
       duration: '5 months Beginner → Advanced',
-      tags: ['Device Physics', 'Microfabrication', 'ASIC & FPGA Design', 'Cleanroom Protocols', 'Silicon Verification']
+      tags: ['Device Physics', 'Microfabrication', 'ASIC & FPGA Design', 'Cleanroom Protocols', 'Silicon Verification'],
+      link: '/courses-semiconductor'
     },
     'cloud': {
       image: '/static/images/courses/course-3.png',
@@ -95,7 +97,8 @@ document.addEventListener('DOMContentLoaded', () => {
       count: '10 Courses',
       desc: 'Master modern cloud architecture, containerization, serverless computing, and DevOps automation across major cloud platforms.',
       duration: '4 months Beginner → Advanced',
-      tags: ['AWS & Azure Architectures', 'Docker & Kubernetes', 'CI/CD & DevOps', 'Cloud Security', 'Infrastructure as Code']
+      tags: ['AWS & Azure Architectures', 'Docker & Kubernetes', 'CI/CD & DevOps', 'Cloud Security', 'Infrastructure as Code'],
+      link: '/courses-cloud'
     },
     'placement': {
       image: '/static/images/courses/course-4.png',
@@ -103,7 +106,8 @@ document.addEventListener('DOMContentLoaded', () => {
       count: '6 Courses',
       desc: 'Accelerate your career readiness with dedicated mock interviews, algorithmic problem solving, and soft skills training.',
       duration: '3 months Intermediate → Placement',
-      tags: ['Data Structures & Algos', 'System Design', 'Mock Technical Interviews', 'Soft Skills & Resume Review', 'Behavioral Prep']
+      tags: ['Data Structures & Algos', 'System Design', 'Mock Technical Interviews', 'Soft Skills & Resume Review', 'Behavioral Prep'],
+      link: '/courses-placement'
     },
     'vlsi': {
       image: '/static/images/courses/course-5.png',
@@ -111,7 +115,8 @@ document.addEventListener('DOMContentLoaded', () => {
       count: '9 Courses',
       desc: 'Dive deep into hardware description languages, physical design flow, RTL coding, and electronic design automation tools.',
       duration: '6 months Beginner → Advanced',
-      tags: ['Verilog & SystemVerilog', 'RTL Coding & Synthesis', 'Physical Design Flow', 'Static Timing Analysis', 'EDA Tools Mastery']
+      tags: ['Verilog & SystemVerilog', 'RTL Coding & Synthesis', 'Physical Design Flow', 'Static Timing Analysis', 'EDA Tools Mastery'],
+      link: '/courses-vlsi'
     }
   };
 
@@ -147,6 +152,11 @@ document.addEventListener('DOMContentLoaded', () => {
           if (courseCount) courseCount.textContent = data.count;
           if (courseDesc) courseDesc.textContent = data.desc;
           if (courseDuration) courseDuration.textContent = data.duration;
+
+          const knowMoreBtn = document.querySelector('.btn-know-more');
+          if (knowMoreBtn) {
+            knowMoreBtn.onclick = () => window.location.href = data.link;
+          }
 
           if (courseTags) {
             courseTags.innerHTML = '';
@@ -196,6 +206,23 @@ document.addEventListener('DOMContentLoaded', () => {
       } catch (err) {
         alert('An error occurred. Please try again.');
       }
+    });
+  }
+
+  const timelineNodes = document.querySelectorAll('.timeline-node');
+  if (timelineNodes.length > 0) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        } else {
+          entry.target.classList.remove('active');
+        }
+      });
+    }, { threshold: 0.5 });
+
+    timelineNodes.forEach(node => {
+      observer.observe(node);
     });
   }
 });
