@@ -64,13 +64,19 @@
 }
 
 .hero-slide::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, rgba(102, 102, 102, 0) 0%, rgba(42, 42, 42, 0.4) 36%, rgba(25, 25, 25, 0.55) 56%, rgba(0, 0, 0, 0.8) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(102, 102, 102, 0) 0%,
+    rgba(42, 42, 42, 0.4) 36%,
+    rgba(25, 25, 25, 0.55) 56%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
   z-index: 1;
 }
 
@@ -192,9 +198,14 @@
   padding: 4vh 3vw;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   gap: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 18vh;
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .mission-card:hover {
@@ -204,21 +215,26 @@
 
 .mission-card-content {
   flex: 1;
+  align-self: center;
 }
 
 .mission-card-title {
-  font-size: clamp(1.2rem, 1.8vw, 1.8rem);
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
   font-weight: 600;
   line-height: 1.2;
   color: var(--text-dark);
 }
 
 .mission-card-image {
-  width: 15vw;
-  height: 15vh;
-  object-fit: cover;
-  border-radius: 12px;
+  width: auto;
+  height: 20vh;
+  max-width: 50%;
+  object-fit: contain;
+  object-position: bottom right;
   flex-shrink: 0;
+  align-self: flex-end;
+  margin-bottom: -4vh;
+  margin-right: -3vw;
 }
 
 .mission-grid .mission-card:nth-child(5) {
@@ -241,44 +257,61 @@
 }
 
 .courses-tabs-nav {
-  background-color: var(--bg-accent);
-  border-radius: var(--border-radius-pill);
-  padding: 1.5vh 2.5vw;
+  background-color: #ececec;
+  border-radius: 75px;
+  padding: 1vh 1.5vw;
   display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  gap: 1.5vw;
+  gap: clamp(8px, 1.1vw, 13.21px);
   width: 100%;
-  max-width: 80vw;
-  margin-bottom: 6vh;
+  max-width: 73.5vw;
+  margin-bottom: 10vh;
+  box-sizing: border-box;
 }
 
 .course-tab {
   font-family: var(--font-sans);
   font-weight: 700;
-  font-size: clamp(0.85rem, 1.1vw, 1.15rem);
-  color: var(--text-dark);
+  font-size: clamp(0.85rem, 1.15vw, 1.1rem);
+  color: #000000;
   background: transparent;
   border: none;
-  padding: 1vh 2vw;
-  border-radius: var(--border-radius-pill);
+  padding: 0.6vh 0;
+  border-radius: 44.77px;
   cursor: pointer;
   transition: all 0.3s ease;
   white-space: nowrap;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  text-align: center;
 }
 
 .course-tab.active {
-  background-color: var(--bg-light);
-  background-image: var(--gradient-title);
+  background-color: #ffffff;
+  padding: 0.6vh 1.4vw;
+  border-radius: 44.77px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  -webkit-text-fill-color: initial;
+  color: #000000;
+  position: relative;
+  isolation: isolate;
+}
+
+.tab-gradient-text {
+  font-weight: 700;
+  background: linear-gradient(90.91deg, #090909 -5.17%, #135f9a 99.22%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  background-clip: text;
 }
 
 .course-tab-divider {
   width: 1px;
-  height: 25px;
-  background-color: rgba(0, 0, 0, 0.2);
+  height: 33.42px;
+  background-color: #000000;
+  flex-shrink: 0;
 }
 
 .course-card-display {
@@ -298,7 +331,7 @@
   height: 45vh;
   border-radius: 25px;
   overflow: hidden;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .course-card-image img {
@@ -369,7 +402,9 @@
   font-size: clamp(0.95rem, 1.2vw, 1.25rem);
   font-weight: 700;
   cursor: pointer;
-  transition: opacity 0.3s ease, transform 0.2s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.2s ease;
 }
 
 .btn-know-more:hover {
@@ -378,55 +413,69 @@
 }
 
 .intl-section {
-  background-color: var(--bg-accent);
+  background-color: #DADADA;
   border-radius: 20px;
   margin: 4vh 5vw;
   display: flex;
+  flex-direction: row;
   align-items: center;
+  gap: clamp(20px, 2.9vw, 42px);
   overflow: hidden;
+  min-height: clamp(380px, 40vw, 565px);
+  padding-right: clamp(20px, 5.8vw, 85px);
 }
 
 .intl-image-container {
-  flex: 1;
-  height: 55vh;
-  min-height: 400px;
+  flex: 0 0 43%;
+  height: clamp(380px, 40vw, 565px);
+  overflow: hidden;
 }
 
 .intl-image-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 .intl-content {
-  flex: 1.2;
-  padding: 6vh 5vw;
+  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 2.5vh;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 0;
 }
 
 .intl-eyebrow {
-  font-size: clamp(0.95rem, 1.1vw, 1.15rem);
+  font-family: var(--font-sans);
+  font-size: clamp(0.85rem, 1.1vw, 1.15rem);
   font-weight: 500;
-  color: var(--text-dark);
-  letter-spacing: 1.5px;
+  color: #000000;
+  line-height: 2;
+  letter-spacing: 0.5px;
 }
 
 .intl-title {
-  font-size: clamp(2rem, 3.5vw, 3.5rem);
-  line-height: 1.15;
+  font-family: var(--font-sans);
+  font-size: clamp(2.2rem, 4.5vw, 4rem);
+  line-height: 1.19;
   font-weight: 700;
-  background: var(--gradient-title);
+  background: linear-gradient(90.91deg, #090909 -5.17%, #135F9A 99.22%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  margin: 0;
 }
 
 .intl-desc {
-  font-size: clamp(0.95rem, 1.1vw, 1.15rem);
+  font-family: var(--font-sans);
+  font-size: clamp(0.95rem, 1.15vw, 1.25rem);
+  font-weight: 400;
   line-height: 1.7;
-  color: var(--text-dark);
+  color: #000000;
+  margin: 0;
 }
 
 .build-future-section {
@@ -524,7 +573,9 @@
   font-size: clamp(1.1rem, 1.3vw, 1.3rem);
   font-weight: 700;
   cursor: pointer;
-  transition: opacity 0.3s ease, transform 0.2s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.2s ease;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -621,7 +672,8 @@
     max-width: 100%;
   }
   .mission-card-image {
-    width: 20vw;
+    height: 18vh;
+    max-width: 40%;
   }
   .courses-tabs-nav {
     max-width: 100%;
@@ -644,10 +696,18 @@
   }
   .intl-section {
     flex-direction: column;
+    padding-right: 0;
+    gap: 0;
   }
   .intl-image-container {
+    flex: none;
     width: 100%;
     height: 35vh;
+  }
+  .intl-content {
+    padding: 5vh 5vw;
+    width: 100%;
+    box-sizing: border-box;
   }
   .build-future-container {
     flex-direction: column;
@@ -671,10 +731,16 @@
   .mission-card {
     flex-direction: column;
     text-align: center;
+    align-items: center;
+    overflow: visible;
   }
   .mission-card-image {
-    width: 60vw;
+    width: auto;
     height: 20vh;
+    max-width: 70%;
+    margin-bottom: 0;
+    margin-right: 0;
+    align-self: center;
   }
   .mission-grid .mission-card:nth-child(5) {
     grid-column: 1;

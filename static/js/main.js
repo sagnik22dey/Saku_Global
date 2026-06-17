@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const courseData = {
     'ai': {
-      image: 'https://picsum.photos/800/600?random=ai',
+      image: '/static/images/courses/course-1.png',
       title: 'Artificial Intelligence',
       count: '12 Courses',
       desc: 'End-to-end AI engineering — from ML fundamentals to deploying large language models in production environments.',
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
       tags: ['Machine Learning & Deep Learning', 'Generative AI & LLMs', 'MLOps & Model Deployment', 'AI Ethics & Governance', 'Capstone Project']
     },
     'semiconductor': {
-      image: 'https://picsum.photos/800/600?random=semi',
+      image: '/static/images/courses/course-2.png',
       title: 'Semiconductor Engineering',
       count: '8 Courses',
       desc: 'Comprehensive training in semiconductor physics, chip architecture, fabrication processes, and cleanroom protocols.',
@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
       tags: ['Device Physics', 'Microfabrication', 'ASIC & FPGA Design', 'Cleanroom Protocols', 'Silicon Verification']
     },
     'cloud': {
-      image: 'https://picsum.photos/800/600?random=cloud',
+      image: '/static/images/courses/course-3.png',
       title: 'Cloud Computing',
       count: '10 Courses',
       desc: 'Master modern cloud architecture, containerization, serverless computing, and DevOps automation across major cloud platforms.',
@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
       tags: ['AWS & Azure Architectures', 'Docker & Kubernetes', 'CI/CD & DevOps', 'Cloud Security', 'Infrastructure as Code']
     },
     'placement': {
-      image: 'https://picsum.photos/800/600?random=placement',
+      image: '/static/images/courses/course-4.png',
       title: 'Pre-Placement Training',
       count: '6 Courses',
       desc: 'Accelerate your career readiness with dedicated mock interviews, algorithmic problem solving, and soft skills training.',
@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
       tags: ['Data Structures & Algos', 'System Design', 'Mock Technical Interviews', 'Soft Skills & Resume Review', 'Behavioral Prep']
     },
     'vlsi': {
-      image: 'https://picsum.photos/800/600?random=vlsi',
+      image: '/static/images/courses/course-5.png',
       title: 'VLSI & Chip Design',
       count: '9 Courses',
       desc: 'Dive deep into hardware description languages, physical design flow, RTL coding, and electronic design automation tools.',
@@ -123,8 +123,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (!data) return;
 
-        tabButtons.forEach(btn => btn.classList.remove('active'));
+        tabButtons.forEach(btn => {
+          btn.classList.remove('active');
+          const span = btn.querySelector('.tab-gradient-text');
+          if (span) {
+            btn.textContent = span.textContent.trim();
+          }
+        });
+
         button.classList.add('active');
+        const labelText = button.textContent.trim();
+        button.innerHTML = '';
+        const gradientSpan = document.createElement('span');
+        gradientSpan.className = 'tab-gradient-text';
+        gradientSpan.textContent = labelText;
+        button.appendChild(gradientSpan);
 
         courseCardDisplay.style.opacity = '0';
 
