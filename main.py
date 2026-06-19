@@ -25,6 +25,7 @@ app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
 ROUTES = {
     "/": "pages/index.html",
     "/about": "pages/about.html",
+    "/about_us": "saku_pages/about_us.html",
     "/courses-ai": "course-categories/courses-ai.html",
     "/courses-semiconductor": "course-categories/courses-semiconductor.html",
     "/courses-cloud": "course-categories/courses-cloud.html",
@@ -67,13 +68,20 @@ ROUTES = {
     "/internship-swe": "pages/internships.html",
     "/internship-data": "pages/internships.html",
     "/contact": "pages/contact.html",
-    "/what-we-offer": "pages/what-we-offer.html",
-    "/why-choose": "pages/why-choose.html",
+    "/contact_us": "saku_pages/contact.html",
+    "/leadership": "saku_pages/leadership.html",
+    "/what-we-offer": "saku_pages/what_we_offer.html",
+    "/why-choose": "saku_pages/why_choose.html",
     "/ai-training": "pages/ai-training.html",
     "/career-readiness": "pages/career-readiness.html",
     "/higher-education": "pages/higher-education.html",
     "/industry-academia": "pages/industry-academia.html",
     "/semiconductor": "pages/semiconductor.html",
+    "/saku/ai-training": "saku_pages/courses/ai_training.html",
+    "/saku/semiconductor": "saku_pages/courses/semiconductor.html",
+    "/saku/career-readiness": "saku_pages/courses/career_readiness.html",
+    "/saku/industry-academia": "saku_pages/courses/industry_academia.html",
+    "/saku/higher-ed": "saku_pages/courses/higher_ed.html",
 }
 
 

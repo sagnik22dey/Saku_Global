@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | Saku Global</title>
+    <meta
+      name="description"
+      content="Get in touch with SAKU Global Tech Labs. We partner with universities and organizations to develop future-ready talent."
+    />
+    <link rel="stylesheet" href="/static/css/common.css" />
+    <link rel="stylesheet" href="/static/css/contact.css" />
+  </head>
+  <body>
+    <header class="saku-header">
+      <div class="header-container">
+        <a href="/" class="logo-link">
+          <img
+            src="/static/images/logo.svg"
+            alt="Saku Global"
+            class="logo-svg"
+          />
+        </a>
+
+        <button class="hamburger" aria-label="Toggle Navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="nav-menu">
+          <a href="/about_us" class="nav-item">About Us</a>
+          <div class="nav-item dropdown">
+            <a href="/what-we-offer">What We Offer</a>
+            <svg class="nav-arrow" viewBox="0 0 10 6">
+              <path
+                d="M1 1L5 5L9 1"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"
+              />
+            </svg>
+            <div class="dropdown-content">
+              <a href="/saku/ai-training"
+                >AI Training & Workforce Development</a
+              >
+              <a href="/saku/semiconductor"
+                >Semiconductor Manufacturing Education & Training</a
+              >
+              <a href="/saku/career-readiness"
+                >Career Readiness & Employability Solutions</a
+              >
+              <a href="/saku/industry-academia">Industry-Academia Engagement</a>
+              <a href="/saku/higher-ed">Higher Education Consultancy</a>
+            </div>
+          </div>
+          <a href="/why-choose" class="nav-item">Why Choose Us?</a>
+          <a href="/leadership" class="nav-item">Leadership</a>
+          <a href="/contact_us" class="nav-item">Contacts Us</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="contact-hero">
+        <h1 class="gradient-text">Let's Build the Future Together</h1>
+        <p class="hero-subtitle">
+          Whether you are a university seeking transformation, an institution
+          looking to integrate AI, or an organization aiming to develop
+          future-ready talent, SAKU Global Tech Labs is your trusted partner.
+        </p>
+      </section>
+
+      <section class="contact-content">
+        <div class="contact-left">
+          <h2 class="form-title">Contact Us</h2>
+          <form class="contact-form" id="contact-page-form">
+            <input
+              type="text"
+              id="fullName"
+              class="form-input"
+              placeholder="Full name"
+              required
+            />
+            <input
+              type="text"
+              id="organisation"
+              class="form-input"
+              placeholder="Organisation / Institution"
+              required
+            />
+            <input
+              type="text"
+              id="designation"
+              class="form-input"
+              placeholder="Designation"
+              required
+            />
+            <input
+              type="email"
+              id="email"
+              class="form-input"
+              placeholder="Email Address *"
+              required
+            />
+            <input
+              type="tel"
+              id="phone"
+              class="form-input"
+              placeholder="Phone Number"
+              required
+            />
+
+            <div class="form-select-wrapper">
+              <select id="location" class="form-input form-select" required>
+                <option value="" disabled selected>
+                  Location (City, Country)
+                </option>
+                <option value="India">India</option>
+                <option value="USA">USA</option>
+                <option value="Other">Other</option>
+              </select>
+              <img
+                src="/static/images/chevron-down.svg"
+                class="select-icon"
+                alt=""
+              />
+            </div>
+
+            <div class="form-select-wrapper multiselect-wrapper" tabindex="0">
+              <div class="form-input form-select multiselect-display">
+                <span class="placeholder">I am interested in: *</span>
+                <img
+                  src="/static/images/chevron-down.svg"
+                  class="select-icon"
+                  alt=""
+                />
+              </div>
+              <div class="multiselect-dropdown">
+                <label
+                  ><input type="checkbox" value="AI Training" /> AI Training &
+                  Workforce Development</label
+                >
+                <label
+                  ><input type="checkbox" value="Semiconductor" /> Semiconductor
+                  Manufacturing Education & Training</label
+                >
+                <label
+                  ><input type="checkbox" value="Career" /> Career Readiness &
+                  Employability Solutions</label
+                >
+                <label
+                  ><input type="checkbox" value="Industry" /> Industry -
+                  Academia Engagement</label
+                >
+                <label
+                  ><input type="checkbox" value="Higher Education" /> Higher
+                  Education Consultancy</label
+                >
+                <label
+                  ><input type="checkbox" value="Partnerships" /> Partnerships &
+                  Collaborations</label
+                >
+                <label><input type="checkbox" value="Other" /> Other</label>
+              </div>
+            </div>
+
+            <textarea
+              id="message"
+              class="form-input form-textarea"
+              placeholder="Message / Requirements *"
+              required
+            ></textarea>
+            <p class="form-hint">
+              Please briefly describe your requirements or how we can assist
+              you.
+            </p>
+
+            <label class="checkbox-container">
+              <input type="checkbox" required />
+              <span class="checkmark"></span>
+              I agree to be contacted by Saku Global Tech Tabs Pvt Ltd regarding
+              my inquiry.
+            </label>
+
+            <button type="submit" class="btn-submit">Send Message</button>
+          </form>
+        </div>
+
+        <div class="contact-right">
+          <h2 class="info-title">Get in Touch</h2>
+          <div class="info-list">
+            <div class="info-item">
+              <img
+                src="/static/images/envelope.svg"
+                class="info-icon"
+                alt="Email"
+              />
+              <a href="mailto:info@sakuglobaltech.com" class="info-text"
+                >info@sakuglobaltech.com</a
+              >
+            </div>
+            <div class="info-item">
+              <img
+                src="/static/images/link.svg"
+                class="info-icon"
+                alt="Website"
+              />
+              <a
+                href="https://www.sakuglobaltech.com"
+                target="_blank"
+                class="info-text"
+                >www.sakuglobaltech.com</a
+              >
+            </div>
+            <div class="info-item address-item">
+              <img
+                src="/static/images/marker.svg"
+                class="info-icon"
+                alt="Location"
+              />
+              <div class="address-text">
+                <strong>India Office</strong><br />
+                4th Floor, Silviana<br />
+                PAN Card Club Road, Baner<br />
+                Pune – 411 045, Maharashtra,<br />
+                India.<br /><br />
+                <strong>USA Office</strong><br />
+                6707 W. Broadleaf Hollow Lane<br />
+                Highland, Utah 84003, USA
+              </div>
+            </div>
+          </div>
+
+          <p class="partner-text">
+            Partner with us to create innovative learning ecosystems, accelerate
+            technology adoption, and empower the next generation of global
+            talent.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="saku-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <img
+              src="/static/images/logo_white.svg"
+              alt="Saku Global"
+              class="logo-svg footer-logo"
+            />
+            <p class="footer-desc">
+              Saku Global Tech Tabs Pvt Ltd - where deep tech education meets
+              industry demand. Shaping the engineers of tomorrow, today.
+            </p>
+            <div
+              class="footer-contact-info"
+              style="
+                margin-top: 1.5rem;
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+              "
+            >
+              <div
+                class="contact-item"
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                  color: rgba(255, 255, 255, 0.7);
+                "
+              >
+                <img
+                  src="/static/images/envelope.svg"
+                  alt="Email"
+                  class="contact-icon"
+                  style="
+                    width: 20px;
+                    height: 20px;
+                    filter: brightness(0) invert(1);
+                  "
+                />
+                <span>info@sakuglobaltech.com</span>
+              </div>
+              <div
+                class="contact-item"
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                  color: rgba(255, 255, 255, 0.7);
+                "
+              >
+                <img
+                  src="/static/images/route.svg"
+                  alt="Website"
+                  class="contact-icon"
+                  style="
+                    width: 20px;
+                    height: 20px;
+                    filter: brightness(0) invert(1);
+                  "
+                />
+                <span>www.sakuglobaltech.com</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-col-title">Program</h4>
+            <div class="footer-links">
+              <a href="#">AI Training &amp; Workforce Development</a>
+              <a href="#"
+                >Semiconductor Manufacturing Education &amp; Training</a
+              >
+              <a href="#">Career Readiness &amp; Employability Solutions</a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-col-title">Services</h4>
+            <div class="footer-links">
+              <a href="#">Higher Education Consultancy</a>
+              <a href="#">Industry - Academia Engagement</a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-col-title">Company</h4>
+            <div class="footer-links">
+              <a href="/about_us">About Us</a>
+              <a href="#">Advisory Board</a>
+              <a href="#">Internships</a>
+              <a href="#">International</a>
+              <a href="#">Careers</a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-col-title">Connect</h4>
+            <div class="social-links">
+              <a href="#" class="social-icon-wrapper" aria-label="WhatsApp">
+                <img
+                  src="/static/images/whatsapp.svg"
+                  alt="WhatsApp"
+                  class="social-icon"
+                />
+              </a>
+              <a href="#" class="social-icon-wrapper" aria-label="X">
+                <img src="/static/images/x.svg" alt="X" class="social-icon" />
+              </a>
+              <a href="#" class="social-icon-wrapper" aria-label="LinkedIn">
+                <img
+                  src="/static/images/linkedin.svg"
+                  alt="LinkedIn"
+                  class="social-icon"
+                />
+              </a>
+              <a href="#" class="social-icon-wrapper" aria-label="Instagram">
+                <img
+                  src="/static/images/instagram.svg"
+                  alt="Instagram"
+                  class="social-icon"
+                />
+              </a>
+              <a href="#" class="social-icon-wrapper" aria-label="YouTube">
+                <img
+                  src="/static/images/youtube.svg"
+                  alt="YouTube"
+                  class="social-icon"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-copyright">
+            <span class="copyright-text">2026 | All Rights Reserved</span>
+          </div>
+          <div class="footer-bottom-links">
+            <a href="/privacy">Privacy</a>
+            <div class="footer-bottom-divider"></div>
+            <a href="/terms">Terms</a>
+            <div class="footer-bottom-divider"></div>
+            <a href="/sitemap">Sitemap</a>
+            <div class="footer-bottom-divider"></div>
+            <a href="/help">Help</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/static/js/main.js"></script>
+  </body>
+</html>

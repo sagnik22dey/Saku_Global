@@ -1,0 +1,238 @@
+/* Leadership Page CSS */
+
+.leadership-main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  padding-top: 100px; /* Account for fixed header */
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.leadership-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 4vw 0;
+  gap: 4vw;
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  .leadership-hero {
+    flex-direction: row;
+    padding: 6vw 0;
+  }
+}
+
+/* Timeline Column */
+.leadership-timeline {
+  flex: 1;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding-left: 1rem;
+}
+
+.leadership-title {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.1;
+  margin-bottom: 2rem;
+}
+
+.timeline-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+}
+
+/* Dashed vertical line */
+.timeline-list::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  bottom: 40px;
+  left: 36px;
+  width: 2px;
+  border-left: 2px dashed #012c73;
+  z-index: 0;
+}
+
+.timeline-item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.timeline-icon {
+  flex-shrink: 0;
+  width: 74px;
+  height: 74px;
+  background-color: #012c73;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline-icon img {
+  width: 44px;
+  height: 44px;
+}
+
+.timeline-content {
+  padding-top: 10px;
+}
+
+.timeline-content p {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  line-height: 1.5;
+  color: #4d4d4d;
+  margin: 0;
+}
+
+/* Image Column */
+.leadership-image-wrapper {
+  flex: 1;
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .leadership-image-wrapper {
+    margin-top: 0;
+    justify-content: flex-end;
+  }
+}
+
+.image-curve-container {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 0.6;
+  max-height: 80vh;
+  overflow: hidden;
+  border-radius: 500px 0 0 0; /* large top left radius for curved mask */
+  position: relative;
+}
+
+.leadership-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.name-card {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 10%;
+  background-color: #012c73;
+  padding: 1.5rem 2rem;
+  color: #ffffff;
+  border-radius: 10px 0 0 0;
+  box-shadow: -10px -10px 0 rgba(1, 44, 115, 0.5); /* slight offset decoration if needed */
+}
+
+@media (min-width: 1024px) {
+  .name-card {
+    left: auto;
+    right: 0;
+    width: 80%;
+    padding: 2rem 3rem;
+  }
+}
+
+.name-card h2 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+  margin: 0 0 0.5rem 0;
+  border-bottom: 2px solid rgba(255,255,255,0.3);
+  padding-bottom: 0.5rem;
+}
+
+.name-card p {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  margin: 0;
+  color: rgba(255,255,255,0.9);
+}
+
+/* Bottom Banner */
+.bottom-banner {
+  background-color: #012c73;
+  width: 100%;
+  padding: 3rem 0;
+  margin-top: 4rem;
+}
+
+.banner-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .banner-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 1024px) {
+  .banner-container {
+    flex-wrap: nowrap;
+  }
+}
+
+.banner-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.5rem;
+  color: #ffffff;
+  flex: 1;
+  min-width: 200px;
+}
+
+/* Add dividers between items on desktop */
+@media (min-width: 1024px) {
+  .banner-item:not(:last-child) {
+    border-right: 2px solid rgba(255, 255, 255, 0.2);
+    padding-right: 2rem;
+  }
+}
+
+.banner-item img {
+  width: 64px;
+  height: 64px;
+}
+
+.banner-item h3 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.3;
+  margin: 0;
+}

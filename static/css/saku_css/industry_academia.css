@@ -1,0 +1,119 @@
+/* static/css/saku_css/industry_academia.css */
+
+.industry-academia-main {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: "Work Sans", "Inter", sans-serif;
+  background-color: #ffffff;
+  padding: 8vw 0;
+}
+
+.industry-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5vw;
+}
+
+.industry-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+}
+
+.industry-title {
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3.5vw;
+  line-height: 1.15;
+  color: #0c4366;
+  margin: 0;
+}
+
+.industry-subtitle {
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6vw;
+  line-height: 1.4;
+  color: #555555;
+  margin: 0;
+}
+
+.industry-list {
+  padding-left: 1.5vw;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8vw;
+  color: #666666;
+}
+
+.industry-list li {
+  font-family: "Work Sans", sans-serif;
+  font-size: 1.1vw;
+  font-weight: 400;
+  line-height: 1.5;
+  position: relative;
+}
+
+.industry-image-wrapper {
+  flex: 1.2;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.industry-image {
+  width: 100%;
+  max-width: 50vw;
+  height: auto;
+  border-radius: 1vw;
+  object-fit: cover;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .industry-academia-main {
+    padding: 12vw 0;
+  }
+  
+  .industry-section {
+    flex-direction: column;
+    gap: 8vw;
+  }
+
+  .industry-content,
+  .industry-image-wrapper {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .industry-title {
+    font-size: 6vw;
+    text-align: center;
+  }
+
+  .industry-subtitle {
+    font-size: 3.5vw;
+    text-align: center;
+  }
+
+  .industry-list {
+    padding-left: 5vw;
+    gap: 2vw;
+    margin-top: 3vw;
+  }
+
+  .industry-list li {
+    font-size: 3.5vw;
+  }
+
+  .industry-image {
+    max-width: 90vw;
+  }
+}

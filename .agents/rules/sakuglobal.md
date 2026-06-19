@@ -15,9 +15,11 @@ Please adhere strictly to our established project architecture and coding guidel
 
 ### 1. Structure & Navigation Consistency
 
-- Re-use the exact same Navbar (Header) and Footer structures and classes established in `public/index.html` and styled in `static/css/common.css`.
+- For general pages, re-use the exact same Navbar (Header) and Footer structures and classes established in `public/index.html` and styled in `static/css/common.css`.
+- **CRITICAL for `saku_pages`:** For any new HTML pages created within the `public/saku_pages` directory and their corresponding CSS in `static/css/saku_css`, you MUST re-use the exact same Navbar and Footer structures established in `public/saku_pages/about_us.html`.
+  - The `saku_pages` Navbar must contain the specific links: "About Us", "What We Offer", "Why Choose Us?", "Leadership", and "Contacts Us".
+  - The `saku_pages` Footer must contain the updated layout with columns: "Program", "Services", "Company", and "Connect" as found in `about_us.html`.
 - Ensure all links in the header and footer navigate to their correct FastAPI routes.
-
 ### 2. Sizing, Spacing & Layout
 
 - Use viewport units (`vw` and `vh`) for major spacing, section padding, margins, and key element dimensions so the design scales fluidly.

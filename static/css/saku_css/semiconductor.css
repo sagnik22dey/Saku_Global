@@ -1,0 +1,182 @@
+/* static/css/saku_css/career_readiness.css */
+
+.career-readiness-main {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: "Work Sans", "Inter", sans-serif;
+  background-color: #ffffff;
+  padding-bottom: 5vw;
+}
+
+.coming-soon-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5vw 0 2vw 0;
+}
+
+.coming-soon-text {
+  font-family: "Work Sans", sans-serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 4vw;
+  line-height: 1.2;
+  color: #135f9a;
+  text-align: center;
+}
+
+.career-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4vw;
+  margin-top: 4vw;
+  margin-bottom: 4vw;
+}
+
+.career-section.reverse {
+  flex-direction: row-reverse;
+}
+
+.career-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vw;
+}
+
+.career-title {
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.5vw;
+  line-height: 1.2;
+  color: #135f9a;
+}
+
+.career-subtitle {
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.2vw;
+  line-height: 1.4;
+  color: #555555;
+  margin-bottom: 1vw;
+}
+
+.career-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2vw;
+}
+
+.career-list-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1vw;
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.1vw;
+  line-height: 1.5;
+  color: #333333;
+}
+
+.list-icon {
+  width: 2vw;
+  height: 2vw;
+  object-fit: contain;
+}
+
+.career-image-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.career-image {
+  width: 100%;
+  max-width: 40vw;
+  height: auto;
+  border-radius: 0.5vw;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.empowering-banner {
+  background-color: #011d6c; /* Dark blue banner */
+  width: 80%;
+  margin: 4vw auto;
+  padding: 2vw;
+  border-radius: 0.5vw;
+  text-align: center;
+}
+
+.empowering-text {
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.2vw;
+  line-height: 1.5;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .coming-soon-text {
+    font-size: 8vw;
+    padding-top: 15vw;
+  }
+
+  .career-section,
+  .career-section.reverse {
+    flex-direction: column;
+    gap: 6vw;
+  }
+
+  .career-content,
+  .career-image-wrapper {
+    width: 100%;
+  }
+
+  .career-image {
+    max-width: 90vw;
+  }
+
+  .career-title {
+    font-size: 6vw;
+    text-align: center;
+  }
+
+  .career-subtitle {
+    font-size: 3.5vw;
+    text-align: center;
+  }
+
+  .career-list-item {
+    font-size: 3.5vw;
+    gap: 3vw;
+  }
+
+  .list-icon {
+    width: 6vw;
+    height: 6vw;
+  }
+
+  .empowering-banner {
+    width: 90%;
+    padding: 4vw;
+  }
+
+  .empowering-text {
+    font-size: 3.5vw;
+  }
+}
