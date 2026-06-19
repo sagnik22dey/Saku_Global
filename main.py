@@ -82,6 +82,7 @@ ROUTES = {
     "/saku/career-readiness": "saku_pages/courses/career_readiness.html",
     "/saku/industry-academia": "saku_pages/courses/industry_academia.html",
     "/saku/higher-ed": "saku_pages/courses/higher_ed.html",
+    "/saku/quantum": "saku_pages/courses/quantum.html",
 }
 
 

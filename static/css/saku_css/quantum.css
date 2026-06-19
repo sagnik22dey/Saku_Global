@@ -1,0 +1,302 @@
+.quantum-main {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: "Inter", sans-serif;
+  color: #121010;
+}
+
+.quantum-hero {
+  display: flex;
+  flex-direction: column;
+  padding: 10vh 5vw;
+  background: #ffffff;
+}
+
+.quantum-hero-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4vw;
+}
+
+.quantum-left-col {
+  flex: 1;
+  min-width: 300px;
+  max-width: 45vw;
+}
+
+.quantum-title {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 2.5vw;
+  line-height: 1.2;
+  background: linear-gradient(90.91deg, #090909 -5.17%, #135F9A 99.22%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 2vh;
+}
+
+.quantum-subtitle {
+  font-weight: 600;
+  font-size: 1.3vw;
+  color: #374957;
+  margin-bottom: 4vh;
+  border-bottom: 2px solid #135f9a;
+  padding-bottom: 1vh;
+  display: inline-block;
+}
+
+.quantum-features {
+  display: flex;
+  flex-direction: column;
+  gap: 2.7vh;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1vw;
+  padding: 1vh 1.5vw;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.feature-item:hover {
+  background: rgba(19, 95, 154, 0.05);
+  transform: translateX(6px);
+}
+
+.feature-icon-wrapper {
+  width: 2.5vw;
+  height: 2.5vw;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-icon-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.feature-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-text h3 {
+  font-size: 1.1vw;
+  font-weight: 700;
+  margin: 0 0 0.5vh 0;
+  color: #333;
+}
+
+.feature-text p {
+  font-size: 1vw;
+  color: #555;
+  margin: 0;
+}
+
+.quantum-right-col {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+.quantum-diagram-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1vw;
+}
+
+.diagram-item {
+  background: #f9f9f9;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.diagram-item:hover {
+  transform: translateY(-5px);
+}
+
+.diagram-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.diagram-main-img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  margin-top: 1vh;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.quantum-right-col:hover .diagram-main-img {
+  transform: scale(1.03);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.blue-banner {
+  background: #0d3b66;
+  color: #fff;
+  padding: 4vh 4vw;
+  border-radius: 12px;
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+  box-shadow: 0 15px 30px rgba(13, 59, 102, 0.2);
+}
+
+.banner-top-row {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2vw;
+}
+
+.banner-item {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+  flex: 1;
+  min-width: 200px;
+}
+
+.banner-icon {
+  width: 3vw;
+  height: 3vw;
+}
+
+.banner-icon img {
+  width: 100%;
+  height: 100%;
+  filter: brightness(0) invert(1);
+  object-fit: contain;
+}
+
+.banner-text h4 {
+  font-size: 1.1vw;
+  margin: 0 0 0.5vh 0;
+  font-weight: 700;
+}
+
+.banner-text p {
+  font-size: 0.9vw;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.banner-bottom-row {
+  display: flex;
+  justify-content: center;
+  gap: 4vw;
+  flex-wrap: wrap;
+  margin-top: 2vh;
+}
+
+.quantum-cta {
+  background: #e9ecef;
+  padding: 8vh 5vw;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3vh;
+}
+
+.cta-title {
+  font-size: 2.5vw;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+}
+
+.cta-text {
+  font-size: 1.2vw;
+  color: #555;
+  max-width: 60vw;
+  margin: 0;
+}
+
+.cta-btn {
+  background: #0d3b66;
+  color: white;
+  padding: 2vh 3vw;
+  font-size: 1.2vw;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.cta-btn:hover {
+  background: #135f9a;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .quantum-hero-top {
+    flex-direction: column;
+  }
+  .quantum-left-col,
+  .quantum-right-col {
+    max-width: 100%;
+  }
+  .quantum-title {
+    font-size: 8vw;
+  }
+  .quantum-subtitle {
+    font-size: 4vw;
+  }
+  .feature-text h3 {
+    font-size: 4vw;
+  }
+  .feature-text p {
+    font-size: 3.5vw;
+  }
+  .feature-icon-wrapper {
+    width: 6vw;
+    height: 6vw;
+  }
+
+  .quantum-diagram-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .banner-text h4 {
+    font-size: 3.5vw;
+  }
+  .banner-text p {
+    font-size: 3vw;
+  }
+  .banner-icon {
+    width: 8vw;
+    height: 8vw;
+  }
+
+  .cta-title {
+    font-size: 6vw;
+  }
+  .cta-text {
+    font-size: 4vw;
+    max-width: 90vw;
+  }
+  .cta-btn {
+    font-size: 4vw;
+    padding: 2vh 6vw;
+  }
+}

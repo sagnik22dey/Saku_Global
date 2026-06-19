@@ -246,4 +246,20 @@ document.addEventListener('DOMContentLoaded', () => {
       observer.observe(node);
     });
   }
+
+  const revealElements = document.querySelectorAll('.slide-up, .slide-left, .slide-right, .scale-in, .fade-in');
+  if (revealElements.length > 0) {
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    revealElements.forEach(el => {
+      revealObserver.observe(el);
+    });
+  }
 });
+

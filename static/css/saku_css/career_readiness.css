@@ -1,11 +1,9 @@
-/* static/css/saku_css/career_readiness.css */
-
 .career-readiness-main {
   width: 100%;
   overflow-x: hidden;
-  font-family: "Work Sans", "Inter", sans-serif;
+  font-family: "Inter", sans-serif;
   background-color: #ffffff;
-  padding-bottom: 5vw;
+  padding-bottom: 0;
 }
 
 .career-section {
@@ -13,33 +11,48 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: 4vw;
-  margin-top: 4vw;
-  margin-bottom: 4vw;
+  gap: 5vw;
+  padding: 7vh 0;
+}
+
+.career-section--hero {
+  padding-top: 8vh;
 }
 
 .career-content {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 1vw;
+  gap: 1.2rem;
+  max-width: 48%;
 }
 
 .career-title {
-  font-family: "Work Sans", sans-serif;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 2.8vw;
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  font-size: clamp(2rem, 2.8vw, 3.2rem);
   line-height: 1.2;
+  color: #0c2d4e;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.career-title--offerings {
+  font-size: clamp(2.2rem, 3vw, 3.4rem);
+  margin-bottom: 1.2rem;
+}
+
+.cr-highlight {
   color: #135f9a;
 }
 
 .career-subtitle {
-  font-family: "Work Sans", sans-serif;
-  font-style: normal;
+  font-family: "Inter", sans-serif;
   font-weight: 600;
-  line-height: 1.4;
-  color: #555555;
+  font-size: clamp(1rem, 1.2vw, 1.3rem);
+  line-height: 1.5;
+  color: #3a3a3a;
+  margin: 0;
 }
 
 .career-list {
@@ -48,53 +61,67 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 1.5vw;
+  gap: 1.1rem;
 }
 
 .career-list.detailed-list {
-  gap: 2vw;
+  gap: 1.5rem;
 }
 
 .career-list-item {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  gap: 1vw;
-  font-family: "Work Sans", sans-serif;
-  font-style: normal;
-  font-size: 1.3vw;
+  gap: 0.9rem;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(0.95rem, 1.1vw, 1.15rem);
   line-height: 1.5;
   color: #333333;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.career-list-item:hover {
+  transform: translateX(6px);
+  color: #135f9a;
 }
 
 .career-list-item span {
-  font-weight: 600;
-  color: #555555;
-  padding-top: 0.2vw;
+  font-weight: 500;
+  color: #444444;
+  padding-top: 3px;
 }
 
 .list-icon {
-  width: 2.5vw;
-  height: 2.5vw;
+  width: 32px;
+  height: 32px;
   object-fit: contain;
+  flex-shrink: 0;
+  margin-top: 2px;
+  transition: transform 0.3s ease;
+}
+
+.career-list-item:hover .list-icon {
+  transform: scale(1.1);
 }
 
 .list-text-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 0.5vw;
+  gap: 0.25rem;
 }
 
 .list-text-wrapper strong {
-  font-size: 1.2vw;
-  color: #444;
+  font-size: clamp(1rem, 1.15vw, 1.2rem);
+  font-weight: 700;
+  color: #1a1a1a;
 }
 
 .list-text-wrapper p {
   margin: 0;
-  font-size: 1vw;
-  color: #666;
+  font-size: clamp(0.95rem, 1vw, 1.1rem);
+  color: #555555;
   font-weight: 400;
+  line-height: 1.5;
 }
 
 .career-image-wrapper {
@@ -102,27 +129,36 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 45%;
 }
 
 .career-image-wrapper.stack-images {
   flex-direction: column;
+  gap: 0;
 }
 
 .career-image {
   width: 100%;
-  max-width: 45vw;
   height: auto;
-  border-radius: 0.5vw;
   object-fit: cover;
+  display: block;
+  scale: 1.1;
+  border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.career-image-wrapper:hover .career-image {
+  transform: scale(1.03);
+  box-shadow: 0px 12px 32px rgba(0, 0, 0, 0.12);
 }
 
 .empowering-banner {
-  background-color: #011d6c; /* Dark blue banner */
-  width: 80%;
-  margin: 4vw auto;
-  padding: 2vw;
-  border-radius: 0.5vw;
+  background-color: #0d2a6b;
+  width: 100%;
+  margin: 5vh auto 2vh;
+  padding: 0.5vh 2vw;
+  border-radius: 6px;
 }
 
 .banner-content {
@@ -130,85 +166,99 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 2vw;
+  gap: 3vw;
 }
 
 .banner-divider {
   width: 2px;
-  height: 2vw;
+  height: 2.5rem;
   background-color: rgba(255, 255, 255, 0.5);
+  flex-shrink: 0;
 }
 
 .empowering-text {
-  font-family: "Work Sans", sans-serif;
-  font-style: normal;
+  font-family: "Inter", sans-serif;
   font-weight: 500;
-  font-size: 1.2vw;
+  font-size: clamp(0.8rem, 1vw, 1rem);
   line-height: 1.5;
   color: #ffffff;
   margin: 0;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .career-section {
-    flex-direction: column;
-    gap: 6vw;
+@media (max-width: 1024px) {
+  .career-content {
+    max-width: 48%;
   }
 
-  .career-content,
   .career-image-wrapper {
+    max-width: 48%;
+  }
+}
+
+@media (max-width: 768px) {
+  .career-section {
+    flex-direction: column !important;
+    gap: 4vh;
+    padding: 5vh 0;
+  }
+
+  .career-content {
+    max-width: 100%;
+    gap: 1rem;
+  }
+
+  .career-image-wrapper {
+    max-width: 100%;
     width: 100%;
   }
 
-  .career-image {
-    max-width: 90vw;
+  .career-title {
+    font-size: clamp(1.6rem, 7vw, 2.2rem);
   }
 
-  .career-title {
-    font-size: 6vw;
-    text-align: center;
+  .career-title--offerings {
+    font-size: clamp(1.6rem, 7vw, 2.2rem);
   }
 
   .career-subtitle {
-    font-size: 4vw !important;
-    text-align: center;
+    font-size: clamp(0.9rem, 3.5vw, 1rem);
   }
 
   .career-list-item {
-    font-size: 4vw;
-    gap: 3vw;
+    font-size: clamp(0.9rem, 3.5vw, 1rem);
+    gap: 0.8rem;
   }
 
   .list-icon {
-    width: 8vw;
-    height: 8vw;
+    width: 24px;
+    height: 24px;
   }
 
   .list-text-wrapper strong {
-    font-size: 4vw;
+    font-size: clamp(0.9rem, 3.5vw, 1rem);
   }
 
   .list-text-wrapper p {
-    font-size: 3.5vw;
+    font-size: clamp(0.85rem, 3vw, 0.95rem);
   }
 
-  .empowering-banner {
-    width: 90%;
-    padding: 4vw;
+  .empowering-banner.container {
+    padding-left: 4vw;
+    padding-right: 4vw;
   }
-  
+
   .banner-content {
     flex-direction: column;
     text-align: center;
+    gap: 1rem;
   }
 
   .banner-divider {
-    width: 50vw;
+    width: 50%;
     height: 2px;
   }
 
   .empowering-text {
-    font-size: 4vw;
+    font-size: clamp(0.85rem, 3.5vw, 1rem);
   }
 }
