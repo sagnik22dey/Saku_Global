@@ -129,11 +129,10 @@ ul {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: var(--bg-light);
+  background-color: #012C73;
   min-width: 260px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  padding: 10px 0;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.15);
+  padding: 11px 0;
   display: flex;
   flex-direction: column;
   opacity: 0;
@@ -150,20 +149,32 @@ ul {
 }
 
 .dropdown-content a {
-  color: var(--text-dark);
+  color: #FFFFFF;
   padding: 12px 20px;
   text-decoration: none;
   font-size: 14px;
   font-family: var(--font-nav);
   font-weight: 500;
+  line-height: 18px;
   transition:
     background-color 0.2s,
     color 0.2s;
+  position: relative;
+}
+
+.dropdown-content a:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 19.5px;
+  right: 19.5px;
+  height: 1px;
+  background-color: #FFFFFF;
 }
 
 .dropdown-content a:hover {
-  background-color: var(--bg-gray);
-  color: var(--primary-color);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
 }
 
 .hamburger {

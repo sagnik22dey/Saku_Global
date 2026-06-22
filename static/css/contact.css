@@ -50,10 +50,10 @@
   background: #ffffff;
   box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.25);
   border-radius: 13px;
-  padding: 3vw 2vw;
+  padding: clamp(30px, 3vw, 43px) clamp(20px, 2vw, 29px) clamp(28px, 2.8vw, 39px) clamp(22px, 2.2vw, 30px);
   display: flex;
   flex-direction: column;
-  gap: 2vw;
+  gap: clamp(25px, 2.5vw, 35px);
 }
 
 .form-title {
@@ -67,7 +67,7 @@
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 1.5vw;
+  gap: clamp(16px, 2vw, 28px);
 }
 
 .form-input {
@@ -150,7 +150,8 @@
   padding: 0.5vw 1.5vw;
   font-family: "Inter", sans-serif;
   font-weight: 500;
-  font-size: clamp(14px, 1.2vw, 18px);
+  font-size: clamp(18px, 1.8vw, 24px);
+  line-height: 1.4;
   color: #000000;
   cursor: pointer;
   display: flex;
@@ -164,6 +165,7 @@
 
 .form-textarea {
   min-height: 150px;
+  padding: clamp(14px, 1.2vw, 17px) clamp(16px, 1.5vw, 21px) clamp(70px, 7vw, 100px) clamp(16px, 1.5vw, 21px);
   resize: vertical;
 }
 
@@ -230,13 +232,13 @@
 .info-list {
   display: flex;
   flex-direction: column;
-  gap: 2vw;
+  gap: 23px;
 }
 
 .info-item {
   display: flex;
   align-items: center;
-  gap: 1.5vw;
+  gap: 24px;
 }
 
 .address-item {
@@ -249,8 +251,7 @@
   flex-shrink: 0;
 }
 
-.info-text,
-.address-text {
+.info-text {
   font-family: "Inter", sans-serif;
   font-weight: 300;
   font-size: clamp(16px, 1.8vw, 24px);
@@ -259,25 +260,25 @@
 }
 
 .address-text {
-  font-weight: 700;
-  font-size: clamp(16px, 1.5vw, 20px);
+  font-family: "Inter", sans-serif;
+  font-size: clamp(16px, 1.8vw, 24px);
+  line-height: 22px;
+  color: #000000;
 }
 
 .address-text strong {
   font-weight: 700;
+  display: block;
+  margin-bottom: 0.3vw;
 }
 
 .partner-text {
   font-family: "Inter", sans-serif;
   font-weight: 700;
   font-size: clamp(18px, 2vw, 24px);
-  line-height: 1.25;
+  line-height: 30px;
   color: #4d4d4d;
   margin-top: 4vw;
-  background: rgba(19, 95, 154, 0.05);
-  padding: 1.5vw;
-  border-radius: 8px;
-  border-left: 4px solid #135f9a;
 }
 
 @media (max-width: 768px) {
