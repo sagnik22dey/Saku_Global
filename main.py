@@ -23,7 +23,8 @@ async def handle_contact_submission(data: ContactRequest):
 app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
 
 ROUTES = {
-    "/": "pages/index.html",
+    "/": "saku_pages/about_us.html",
+    "/home": "pages/index.html",
     "/about": "pages/about.html",
     "/about_us": "saku_pages/about_us.html",
     "/courses-ai": "course-categories/courses-ai.html",
