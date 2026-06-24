@@ -85,6 +85,10 @@ ROUTES = {
     "/saku/quantum": "saku_pages/courses/quantum.html",
     "/saku/master-ai": "saku_pages/masterai.html",
     "/saku/masterai": "saku_pages/masterai.html",
+    "/saku/master-ai/track-a": "saku_pages/courses/master_ai_landing_pages/track_a.html",
+    "/saku/master-ai/track-b": "saku_pages/courses/master_ai_landing_pages/track_b.html",
+    "/saku/master-ai/track-c": "saku_pages/courses/master_ai_landing_pages/track_c.html",
+    "/saku/master-ai/track-d": "saku_pages/courses/master_ai_landing_pages/track_d.html",
 }
 
 
