@@ -83,6 +83,8 @@ ROUTES = {
     "/saku/industry-academia": "saku_pages/courses/industry_academia.html",
     "/saku/higher-ed": "saku_pages/courses/higher_ed.html",
     "/saku/quantum": "saku_pages/courses/quantum.html",
+    "/saku/master-ai": "saku_pages/masterai.html",
+    "/saku/masterai": "saku_pages/masterai.html",
 }
 
 
