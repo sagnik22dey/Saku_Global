@@ -216,6 +216,45 @@ ul {
   transform: translateX(0);
 }
 
+.sub-sub-dropdown {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.sub-sub-dropdown-link-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.sub-sub-dropdown-link-container > a {
+  flex-grow: 1;
+}
+
+.sub-sub-dropdown-content {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: #012c73;
+  min-width: 350px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(10px);
+  transition: all 0.3s ease;
+  z-index: 1002;
+}
+
+.sub-sub-dropdown:hover .sub-sub-dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
 .hamburger {
   display: none;
   flex-direction: column;
@@ -251,16 +290,32 @@ ul {
 .footer-top {
   display: flex;
   justify-content: space-between;
-  gap: 40px;
+  gap: clamp(40px, 8vw, 116px);
   padding-bottom: 4vw;
   border-bottom: 2px solid rgba(36, 63, 55, 0.1);
 }
 
+.footer-right-columns {
+  display: flex;
+  margin-top: 15vh;
+  gap: clamp(20px, 4vw, 108px);
+}
+
+.footer-col.programme {
+  flex: 0 0 235px;
+}
+.footer-col.services {
+  flex: 0 0 229px;
+}
+.footer-col.company {
+  flex: 0 0 125px;
+}
+
 .footer-brand {
-  max-width: 400px;
+  max-width: 345px;
   display: flex;
   flex-direction: column;
-  gap: 1vw;
+  gap: 1.5vw;
 }
 
 .footer-logo {
@@ -299,23 +354,57 @@ ul {
   font-weight: 400;
   color: rgba(255, 255, 255, 0.7);
   transition: color 0.3s ease;
+  line-height: 1.5;
 }
 
 .footer-links a:hover {
   color: #ffffff;
 }
 
+.footer-contact-info {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 18px;
+  line-height: 34px;
+}
+
+.contact-icon {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
+}
+
+.footer-connect-section {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-connect-section .footer-col-title {
+  margin-bottom: 0;
+}
+
 .social-links {
-  display: grid;
-  grid-template-columns: repeat(3, 40px);
-  gap: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .social-icon-wrapper {
-  width: 3vw;
-  height: 3vw;
+  width: 36px;
+  height: 30px;
   border-radius: 8px;
-  /* background: #ffffff; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -327,8 +416,8 @@ ul {
 }
 
 .social-icon {
-  width: 2vw;
-  height: 2vw;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
 }
 
@@ -386,8 +475,8 @@ ul {
 
 @media (max-width: 1024px) {
   .footer-top {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 40px;
   }
 }
@@ -444,7 +533,8 @@ ul {
     align-items: center;
   }
 
-  .sub-dropdown-content {
+  .sub-dropdown-content,
+  .sub-sub-dropdown-content {
     position: static;
     box-shadow: none;
     min-width: 100%;
@@ -458,7 +548,9 @@ ul {
   }
 
   .sub-dropdown:hover .sub-dropdown-content,
-  .sub-dropdown.mobile-open .sub-dropdown-content {
+  .sub-dropdown.mobile-open .sub-dropdown-content,
+  .sub-sub-dropdown:hover .sub-sub-dropdown-content,
+  .sub-sub-dropdown.mobile-open .sub-sub-dropdown-content {
     display: flex;
     opacity: 1;
     visibility: visible;
@@ -526,13 +618,21 @@ ul {
     font-size: 14px;
   }
 
-  .footer-top > .footer-col:nth-child(2),
-  .footer-top > .footer-col:nth-child(3) {
-    flex: 1 1 calc(50% - 12px);
-    min-width: 0;
+  .footer-right-columns {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
   }
 
-  .footer-top > .footer-col:nth-child(4) {
+  .footer-col.programme,
+  .footer-col.services,
+  .footer-col.company {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .footer-right-columns > .footer-col:nth-child(3) {
     width: 100%;
     flex: 0 0 100%;
     align-items: center;

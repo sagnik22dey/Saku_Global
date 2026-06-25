@@ -87,9 +87,21 @@ ROUTES = {
     "/saku/master-ai": "saku_pages/masterai.html",
     "/saku/masterai": "saku_pages/masterai.html",
     "/saku/master-ai/track-a": "saku_pages/courses/master_ai_landing_pages/track_a.html",
+    "/saku/master-ai/track-a/master-in-ai-creation": "saku_pages/essential_fundamental_ai/master_in_ai_creation.html",
+    "/saku/master-ai/track-a/data-science-foundations": "saku_pages/essential_fundamental_ai/data_science_foundations.html",
+    "/saku/master-ai/track-a/practical-machine-learning": "saku_pages/essential_fundamental_ai/practical_machine_learning.html",
     "/saku/master-ai/track-b": "saku_pages/courses/master_ai_landing_pages/track_b.html",
+    "/saku/master-ai/track-b/full-stack-dev-ai": "saku_pages/advanced_applied_ai/full_stack_dev_ai.html",
+    "/saku/master-ai/track-b/deep-learning-cv": "saku_pages/advanced_applied_ai/deep_learning_cv.html",
+    "/saku/master-ai/track-b/advanced-ai-nlp-llms-rl": "saku_pages/advanced_applied_ai/advanced_ai_nlp_llms_rl.html",
+    "/saku/master-ai/track-b/rl-and-responsible-ai": "saku_pages/advanced_applied_ai/rl_and_responsible_ai.html",
+    "/saku/master-ai/track-b/master-ai-app-engineering": "saku_pages/advanced_applied_ai/master_ai_app_engineering.html",
     "/saku/master-ai/track-c": "saku_pages/courses/master_ai_landing_pages/track_c.html",
+    "/saku/master-ai/track-c/applied-ai-engineering": "saku_pages/ai_engineering_flagship/applied_ai_engineering.html",
     "/saku/master-ai/track-d": "saku_pages/courses/master_ai_landing_pages/track_d.html",
+    "/saku/master-ai/track-d/ai-essentials-doctors": "saku_pages/medical_healthcare_ai/ai_essentials_doctors.html",
+    "/saku/master-ai/track-d/ai-fundamentals-doctors": "saku_pages/medical_healthcare_ai/ai_fundamentals_doctors.html",
+    "/saku/master-ai/track-d/ai-excellence-doctors": "saku_pages/medical_healthcare_ai/ai_excellence_doctors.html",
 }
 
 
