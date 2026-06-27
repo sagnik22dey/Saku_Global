@@ -49,7 +49,7 @@
   font-family: "Work Sans", sans-serif;
   font-style: normal;
   font-weight: 600;
-  font-size: 2.5vw;
+  font-size: clamp(1.4rem, 2.5vw, 2.5rem);
   line-height: 1.2;
   color: #135f9a;
 }
@@ -58,7 +58,7 @@
   font-family: "Work Sans", sans-serif;
   font-style: normal;
   font-weight: 600;
-  font-size: 1.2vw;
+  font-size: clamp(0.9rem, 1.2vw, 1.2rem);
   line-height: 1.4;
   color: #555555;
   margin-bottom: 1vw;
@@ -81,7 +81,7 @@
   font-family: "Work Sans", sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 1.1vw;
+  font-size: clamp(0.85rem, 1.1vw, 1.1rem);
   line-height: 1.5;
   color: #333333;
   transition: transform 0.3s ease, color 0.3s ease;
@@ -93,8 +93,8 @@
 }
 
 .list-icon {
-  width: 2vw;
-  height: 2vw;
+  width: 24px;
+  height: 24px;
   object-fit: contain;
   transition: transform 0.3s ease;
 }
@@ -139,7 +139,7 @@
   font-family: "Work Sans", sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 1.2vw;
+  font-size: clamp(0.85rem, 1.2vw, 1.2rem);
   line-height: 1.5;
   color: #ffffff;
   margin: 0;
@@ -148,14 +148,16 @@
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .coming-soon-text {
-    font-size: 8vw;
-    padding-top: 15vw;
+    font-size: clamp(1.8rem, 8vw, 2.5rem);
+    padding-top: 10vw;
+    padding: 10vw 5vw 0;
+    text-align: center;
   }
 
   .career-section,
   .career-section.reverse {
     flex-direction: column;
-    gap: 6vw;
+    gap: 5vw;
   }
 
   .career-content,
@@ -165,26 +167,31 @@
 
   .career-image {
     max-width: 90vw;
+    scale: 1;
   }
 
   .career-title {
-    font-size: 6vw;
+    font-size: clamp(1.4rem, 6vw, 2rem);
     text-align: center;
   }
 
   .career-subtitle {
-    font-size: 3.5vw;
+    font-size: clamp(0.9rem, 3.5vw, 1rem);
     text-align: center;
   }
 
-  .career-list-item {
-    font-size: 3.5vw;
+  .career-list {
     gap: 3vw;
   }
 
+  .career-list-item {
+    font-size: clamp(0.85rem, 3.5vw, 1rem);
+    gap: 2.5vw;
+  }
+
   .list-icon {
-    width: 6vw;
-    height: 6vw;
+    width: 22px;
+    height: 22px;
   }
 
   .empowering-banner {
@@ -193,6 +200,6 @@
   }
 
   .empowering-text {
-    font-size: 3.5vw;
+    font-size: clamp(0.8rem, 3.5vw, 1rem);
   }
 }

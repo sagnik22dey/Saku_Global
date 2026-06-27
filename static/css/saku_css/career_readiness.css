@@ -196,10 +196,18 @@
 }
 
 @media (max-width: 768px) {
+  .career-readiness-main {
+    overflow-x: hidden;
+  }
+
   .career-section {
     flex-direction: column !important;
     gap: 4vh;
-    padding: 5vh 0;
+    padding: 5vh 5vw;
+  }
+
+  .career-section--hero {
+    padding-top: 8vh;
   }
 
   .career-content {
@@ -210,6 +218,14 @@
   .career-image-wrapper {
     max-width: 100%;
     width: 100%;
+    overflow: hidden;
+  }
+
+  .career-image {
+    scale: 1;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
   }
 
   .career-title {

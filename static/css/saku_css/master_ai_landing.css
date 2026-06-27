@@ -4,7 +4,7 @@
   position: relative;
   width: 100vw;
   height: 45vh;
-  min-height: 400px;
+  min-height: 280px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -223,23 +223,61 @@
 }
 
 @media (max-width: 768px) {
+  .landing-hero {
+    height: 40vh;
+    min-height: 220px;
+  }
+
+  .landing-hero h1 {
+    font-size: clamp(1.4rem, 6vw, 2rem);
+  }
+
+  .track-pill {
+    font-size: 0.9rem;
+    padding: 0.4rem 1rem;
+  }
+
+  .landing-main {
+    padding: 5vh 4vw 8vh;
+    gap: 4vh;
+  }
+
+  .landing-description {
+    font-size: clamp(0.95rem, 4vw, 1.2rem);
+  }
+
   .landing-stats {
     flex-direction: column;
     gap: 2rem;
+    align-items: center;
   }
-  
+
+  .stat-value {
+    font-size: clamp(2rem, 8vw, 2.5rem);
+  }
+
+  .program-cards-container {
+    width: 100%;
+  }
+
   .program-card {
     flex-direction: column;
     align-items: flex-start;
     padding: 1.5rem;
+    gap: 1rem;
   }
-  
+
   .card-right {
     align-items: flex-start;
-    margin-top: 1rem;
+    margin-top: 0;
   }
-  
+
   .card-price {
     text-align: left;
+  }
+
+  .apply-button {
+    padding: 0.9rem 2rem;
+    font-size: 1rem;
   }
 }

@@ -1,164 +1,429 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Master of AI Application Engineering | Saku Global</title>
-<link href="/static/css/common.css" rel="stylesheet"/>
-<link href="/static/css/saku_css/sub_courses.css" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
-</head>
-<body>
-<header class="saku-header">
-<div class="header-container">
-<div class="logo-link">
-<img alt="Saku Global" class="logo-svg" src="/static/images/logo.svg"/>
-</div>
-<button aria-label="Toggle Navigation" class="hamburger">
-<span></span>
-<span></span>
-<span></span>
-</button>
-<nav class="nav-menu">
-<a class="nav-item" href="/#about">About Us</a>
-<div class="nav-item dropdown">
-<a href="/what-we-offer">What We Offer</a>
-<svg class="nav-arrow" viewbox="0 0 10 6">
-<path d="M1 1L5 5L9 1" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
-</svg>
-<div class="dropdown-content">
-<div class="sub-dropdown"><div class="sub-dropdown-link-container"><a href="/saku/master-ai">AI Training &amp; Workforce Development</a><svg class="nav-arrow sub-nav-arrow" viewbox="0 0 10 6">
-<path d="M1 1L5 5L9 1" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
-</svg></div><div class="sub-dropdown-content"><div class="sub-sub-dropdown"><div class="sub-sub-dropdown-link-container"><a href="/saku/master-ai/track-a">Essential &amp; Fundamental Applied AI Programmes</a><svg class="nav-arrow sub-nav-arrow" viewbox="0 0 10 6"><path d="M1 1L5 5L9 1" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg></div><div class="sub-sub-dropdown-content"><a href="/saku/master-ai/track-a/master-in-ai-creation">Master in AI Creation</a><a href="/saku/master-ai/track-a/data-science-foundations">Data Science Foundations with Python</a><a href="/saku/master-ai/track-a/practical-machine-learning">Practical Machine Learning</a></div></div><div class="sub-sub-dropdown"><div class="sub-sub-dropdown-link-container"><a href="/saku/master-ai/track-b">Advanced Applied AI Programmes</a><svg class="nav-arrow sub-nav-arrow" viewbox="0 0 10 6"><path d="M1 1L5 5L9 1" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg></div><div class="sub-sub-dropdown-content"><a href="/saku/master-ai/track-b/full-stack-dev-ai">Full Stack Development with AI</a><a href="/saku/master-ai/track-b/deep-learning-cv">Deep Learning and Computer Vision</a><a href="/saku/master-ai/track-b/advanced-ai-nlp-llms-rl">Advanced AI with NLP, LLMs, RL &amp; Ethics</a><a href="/saku/master-ai/track-b/rl-and-responsible-ai">Reinforcement Learning and Responsible AI</a><a href="/saku/master-ai/track-b/master-ai-app-engineering">Master of AI Application Engineering</a></div></div><div class="sub-sub-dropdown"><div class="sub-sub-dropdown-link-container"><a href="/saku/master-ai/track-c">AI Engineering Flagship Programme</a><svg class="nav-arrow sub-nav-arrow" viewbox="0 0 10 6"><path d="M1 1L5 5L9 1" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg></div><div class="sub-sub-dropdown-content"><a href="/saku/master-ai/track-c/applied-ai-engineering">Applied AI Engineering Programme</a></div></div><div class="sub-sub-dropdown"><div class="sub-sub-dropdown-link-container"><a href="/saku/master-ai/track-d">Medical &amp; Healthcare AI Programmes</a><svg class="nav-arrow sub-nav-arrow" viewbox="0 0 10 6"><path d="M1 1L5 5L9 1" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg></div><div class="sub-sub-dropdown-content"><a href="/saku/master-ai/track-d/ai-essentials-doctors">AI Essentials for Doctors</a><a href="/saku/master-ai/track-d/ai-fundamentals-doctors">AI Fundamentals for Doctors</a><a href="/saku/master-ai/track-d/ai-excellence-doctors">AI Excellence for Doctors</a></div></div></div></div>
-<a href="/saku/semiconductor">Semiconductor Manufacturing Education &amp; Training</a>
-<a href="/saku/quantum">Quantum Communication Technology Programme</a>
-<a href="/saku/career-readiness">Career Readiness &amp; Employability Solutions</a>
-<a href="/saku/industry-academia">Industry-Academia Engagement</a>
-<a href="/saku/higher-ed">Higher Education Consultancy</a>
-</div>
-</div>
-<a class="nav-item" href="/why-choose">Why Choose Us?</a>
-<a class="nav-item" href="/leadership">Leadership</a>
-<a class="nav-item" href="/contact_us">Contacts Us</a>
-</nav>
-</div>
-</header>
-
-<main class="sub-course-main">
-  <div class="sub-course-hero" style="background-image: url('https://picsum.photos/1920/400?random=ai_app_eng');">
-  </div>
-  <div class="sub-course-container">
-    <div class="sub-course-header-section">
-      <h1 class="sub-course-title">Master of AI Application Engineering</h1>
-      <div class="sub-course-meta">12 Months, Self-paced <br> AI Enthusiasts / Professionals <br> 180+ Labs · 350+ Assignments · 80+ Videos</div>
-      <div class="sub-course-action-row">
-        <div class="sub-course-price-block">
-          <span class="sub-course-price">₹61,950</span>
-          <span class="sub-course-price-note">incl. GST</span>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Master of AI Application Engineering | Saku Global</title>
+    <link href="/static/css/common.css" rel="stylesheet" />
+    <link href="/static/css/saku_css/sub_courses.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="saku-header">
+      <div class="header-container">
+        <div class="logo-link">
+          <img
+            alt="Saku Global"
+            class="logo-svg"
+            src="/static/images/logo.svg"
+          />
         </div>
-        <a href="#" class="apply-now-btn">Apply Now</a>
+        <button aria-label="Toggle Navigation" class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="nav-menu">
+          <a class="nav-item" href="/#about">About Us</a>
+          <div class="nav-item dropdown">
+            <a href="/what-we-offer">What We Offer</a>
+            <svg class="nav-arrow" viewbox="0 0 10 6">
+              <path
+                d="M1 1L5 5L9 1"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+              ></path>
+            </svg>
+            <div class="dropdown-content">
+              <div class="sub-dropdown">
+                <div class="sub-dropdown-link-container">
+                  <a href="/saku/master-ai"
+                    >AI Training &amp; Workforce Development</a
+                  ><svg class="nav-arrow sub-nav-arrow" viewbox="0 0 10 6">
+                    <path
+                      d="M1 1L5 5L9 1"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.5"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="sub-dropdown-content">
+                  <div class="sub-sub-dropdown">
+                    <div class="sub-sub-dropdown-link-container">
+                      <a href="/saku/master-ai/track-a"
+                        >Essential &amp; Fundamental Applied AI Programmes</a
+                      ><svg class="nav-arrow sub-nav-arrow" viewbox="0 0 10 6">
+                        <path
+                          d="M1 1L5 5L9 1"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.5"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div class="sub-sub-dropdown-content">
+                      <a href="/saku/master-ai/track-a/master-in-ai-creation"
+                        >Master in AI Creation</a
+                      ><a
+                        href="/saku/master-ai/track-a/data-science-foundations"
+                        >Data Science Foundations with Python</a
+                      ><a
+                        href="/saku/master-ai/track-a/practical-machine-learning"
+                        >Practical Machine Learning</a
+                      >
+                    </div>
+                  </div>
+                  <div class="sub-sub-dropdown">
+                    <div class="sub-sub-dropdown-link-container">
+                      <a href="/saku/master-ai/track-b"
+                        >Advanced Applied AI Programmes</a
+                      ><svg class="nav-arrow sub-nav-arrow" viewbox="0 0 10 6">
+                        <path
+                          d="M1 1L5 5L9 1"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.5"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div class="sub-sub-dropdown-content">
+                      <a href="/saku/master-ai/track-b/full-stack-dev-ai"
+                        >Full Stack Development with AI</a
+                      ><a href="/saku/master-ai/track-b/deep-learning-cv"
+                        >Deep Learning and Computer Vision</a
+                      ><a href="/saku/master-ai/track-b/advanced-ai-nlp-llms-rl"
+                        >Advanced AI with NLP, LLMs, RL &amp; Ethics</a
+                      ><a href="/saku/master-ai/track-b/rl-and-responsible-ai"
+                        >Reinforcement Learning and Responsible AI</a
+                      ><a
+                        href="/saku/master-ai/track-b/master-ai-app-engineering"
+                        >Master of AI Application Engineering</a
+                      >
+                    </div>
+                  </div>
+                  <div class="sub-sub-dropdown">
+                    <div class="sub-sub-dropdown-link-container">
+                      <a href="/saku/master-ai/track-c"
+                        >AI Engineering Flagship Programme</a
+                      ><svg class="nav-arrow sub-nav-arrow" viewbox="0 0 10 6">
+                        <path
+                          d="M1 1L5 5L9 1"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.5"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div class="sub-sub-dropdown-content">
+                      <a href="/saku/master-ai/track-c/applied-ai-engineering"
+                        >Applied AI Engineering Programme</a
+                      >
+                    </div>
+                  </div>
+                  <div class="sub-sub-dropdown">
+                    <div class="sub-sub-dropdown-link-container">
+                      <a href="/saku/master-ai/track-d"
+                        >Medical &amp; Healthcare AI Programmes</a
+                      ><svg class="nav-arrow sub-nav-arrow" viewbox="0 0 10 6">
+                        <path
+                          d="M1 1L5 5L9 1"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.5"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div class="sub-sub-dropdown-content">
+                      <a href="/saku/master-ai/track-d/ai-essentials-doctors"
+                        >AI Essentials for Doctors</a
+                      ><a href="/saku/master-ai/track-d/ai-fundamentals-doctors"
+                        >AI Fundamentals for Doctors</a
+                      ><a href="/saku/master-ai/track-d/ai-excellence-doctors"
+                        >AI Excellence for Doctors</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a href="/saku/semiconductor"
+                >Semiconductor Manufacturing Education &amp; Training</a
+              >
+              <a href="/saku/quantum"
+                >Quantum Communication Technology Programme</a
+              >
+              <a href="/saku/career-readiness"
+                >Career Readiness &amp; Employability Solutions</a
+              >
+              <a href="/saku/industry-academia">Industry-Academia Engagement</a>
+              <a href="/saku/higher-ed">Higher Education Consultancy</a>
+            </div>
+          </div>
+          <a class="nav-item" href="/why-choose">Why Choose Us?</a>
+          <a class="nav-item" href="/leadership">Leadership</a>
+          <a class="nav-item" href="/contact_us">Contacts Us</a>
+        </nav>
       </div>
-    </div>
-    
-    <div class="sub-course-description">
-      A comprehensive programme taking learners from ML fundamentals through cutting-edge AI including NLP, LLMs, Reinforcement Learning, and Responsible AI. Graduates will have the skills to design, build, and deploy real-world AI applications, culminating in a full-pipeline capstone project.
-    </div>
+    </header>
 
-    <div class="section-learning-outcomes">
-      <h2 class="section-title">Learning Outcomes</h2>
-      <ul class="learning-outcomes-list">
-        <li><img src="/static/images/outcome-check.svg" class="outcome-icon" alt="check"> Understand supervised/unsupervised learning, regression, classification, and core ML techniques</li>
-        <li><img src="/static/images/outcome-check.svg" class="outcome-icon" alt="check"> Build neural networks, CNNs for vision, RNNs for sequences, and Transformers for NLP</li>
-        <li><img src="/static/images/outcome-check.svg" class="outcome-icon" alt="check"> Work with tokenisation, word embeddings, GPT, BERT, T5, and prompt engineering</li>
-        <li><img src="/static/images/outcome-check.svg" class="outcome-icon" alt="check"> Apply RL concepts where agents learn from environments through reward-based systems</li>
-        <li><img src="/static/images/outcome-check.svg" class="outcome-icon" alt="check"> Implement a complete AI solution from problem definition through to deployment</li>
-      </ul>
-    </div>
+    <main class="sub-course-main">
+      <div
+        class="sub-course-hero"
+        style="
+          background-image: url(&quot;/static/images/saku_images/sub-courses/Advanced-Applied-AI-Programme/master-of-ai-application-engg-hero.png&quot;);
+        "
+      ></div>
+      <div class="sub-course-container">
+        <div class="sub-course-header-section">
+          <h1 class="sub-course-title">Master of AI Application Engineering</h1>
+          <div class="sub-course-meta">
+            12 Months, Self-paced <br />
+            AI Enthusiasts / Professionals <br />
+            180+ Labs · 350+ Assignments · 80+ Videos
+          </div>
+          <div class="sub-course-action-row">
+            <div class="sub-course-price-block">
+              <span class="sub-course-price">₹61,950</span>
+              <span class="sub-course-price-note">incl. GST</span>
+            </div>
+            <a href="#" class="apply-now-btn">Apply Now</a>
+          </div>
+        </div>
 
-    <div class="section-programme-features">
-      <h2 class="section-title">Programme Features</h2>
-      <div class="programme-features-grid">
-        <div class="feature-card">
-          <span class="feature-title">Hands-on Labs</span>
-          <span class="feature-desc">180+ Labs</span>
+        <div class="sub-course-description">
+          A comprehensive programme taking learners from ML fundamentals through
+          cutting-edge AI including NLP, LLMs, Reinforcement Learning, and
+          Responsible AI. Graduates will have the skills to design, build, and
+          deploy real-world AI applications, culminating in a full-pipeline
+          capstone project.
         </div>
-        <div class="feature-card">
-          <span class="feature-title">Assignments</span>
-          <span class="feature-desc">350+</span>
+
+        <div class="section-learning-outcomes">
+          <h2 class="section-title">Learning Outcomes</h2>
+          <ul class="learning-outcomes-list">
+            <li>
+              <img
+                src="/static/images/outcome-check.svg"
+                class="outcome-icon"
+                alt="check"
+              />
+              Understand supervised/unsupervised learning, regression,
+              classification, and core ML techniques
+            </li>
+            <li>
+              <img
+                src="/static/images/outcome-check.svg"
+                class="outcome-icon"
+                alt="check"
+              />
+              Build neural networks, CNNs for vision, RNNs for sequences, and
+              Transformers for NLP
+            </li>
+            <li>
+              <img
+                src="/static/images/outcome-check.svg"
+                class="outcome-icon"
+                alt="check"
+              />
+              Work with tokenisation, word embeddings, GPT, BERT, T5, and prompt
+              engineering
+            </li>
+            <li>
+              <img
+                src="/static/images/outcome-check.svg"
+                class="outcome-icon"
+                alt="check"
+              />
+              Apply RL concepts where agents learn from environments through
+              reward-based systems
+            </li>
+            <li>
+              <img
+                src="/static/images/outcome-check.svg"
+                class="outcome-icon"
+                alt="check"
+              />
+              Implement a complete AI solution from problem definition through
+              to deployment
+            </li>
+          </ul>
         </div>
-        <div class="feature-card">
-          <span class="feature-title">Video Lessons</span>
-          <span class="feature-desc">80+ Videos</span>
+
+        <div class="section-programme-features">
+          <h2 class="section-title">Programme Features</h2>
+          <div class="programme-features-grid">
+            <div class="feature-card">
+              <span class="feature-title">Hands-on Labs</span>
+              <span class="feature-desc">180+ Labs</span>
+            </div>
+            <div class="feature-card">
+              <span class="feature-title">Assignments</span>
+              <span class="feature-desc">350+</span>
+            </div>
+            <div class="feature-card">
+              <span class="feature-title">Video Lessons</span>
+              <span class="feature-desc">80+ Videos</span>
+            </div>
+            <div class="feature-card">
+              <span class="feature-title">Capstone</span>
+              <span class="feature-desc">Real-world AI Project</span>
+            </div>
+          </div>
         </div>
-        <div class="feature-card">
-          <span class="feature-title">Capstone</span>
-          <span class="feature-desc">Real-world AI Project</span>
+
+        <div class="section-content-headings">
+          <h2 class="section-title">Programme Content Headings</h2>
+          <div class="content-headings-list">
+            <div class="content-heading-item">
+              <div class="heading-number">01</div>
+              <div class="heading-text">
+                <div class="heading-title">Machine Learning Fundamentals</div>
+                <div class="heading-desc">
+                  ML basics; supervised/unsupervised; regression &
+                  classification; Scikit-learn
+                </div>
+              </div>
+            </div>
+            <div class="content-heading-item">
+              <div class="heading-number">02</div>
+              <div class="heading-text">
+                <div class="heading-title">
+                  Neural Networks & Deep Learning Basics
+                </div>
+                <div class="heading-desc">
+                  Activation functions; backpropagation; Keras/TensorFlow
+                </div>
+              </div>
+            </div>
+            <div class="content-heading-item">
+              <div class="heading-number">03</div>
+              <div class="heading-text">
+                <div class="heading-title">CNNs for Vision</div>
+                <div class="heading-desc">
+                  Convolutional layers; image classification; transfer learning;
+                  data augmentation
+                </div>
+              </div>
+            </div>
+            <div class="content-heading-item">
+              <div class="heading-number">04</div>
+              <div class="heading-text">
+                <div class="heading-title">
+                  Advanced Model Optimisation & Tuning
+                </div>
+                <div class="heading-desc">
+                  Grid/random search; Optuna; AutoML; early stopping
+                </div>
+              </div>
+            </div>
+            <div class="content-heading-item">
+              <div class="heading-number">05</div>
+              <div class="heading-text">
+                <div class="heading-title">NLP Fundamentals</div>
+                <div class="heading-desc">
+                  Text preprocessing; Word2Vec, GloVe, FastText; text
+                  classification
+                </div>
+              </div>
+            </div>
+            <div class="content-heading-item">
+              <div class="heading-number">06</div>
+              <div class="heading-text">
+                <div class="heading-title">
+                  Sequence Models (RNNs, LSTM, GRU)
+                </div>
+                <div class="heading-desc">
+                  LSTM & GRU; sequence to sequence models
+                </div>
+              </div>
+            </div>
+            <div class="content-heading-item">
+              <div class="heading-number">07</div>
+              <div class="heading-text">
+                <div class="heading-title">
+                  Transformers & Large Language Models
+                </div>
+                <div class="heading-desc">
+                  Self attention; BERT, GPT, T5; LLMs; fine-tuning LLMs
+                </div>
+              </div>
+            </div>
+            <div class="content-heading-item">
+              <div class="heading-number">08</div>
+              <div class="heading-text">
+                <div class="heading-title">
+                  Prompt Engineering & LLM Application
+                </div>
+                <div class="heading-desc">
+                  Chain-of-Thought; RAG; LangChain; building LLM-powered tools
+                </div>
+              </div>
+            </div>
+            <div class="content-heading-item">
+              <div class="heading-number">09</div>
+              <div class="heading-text">
+                <div class="heading-title">Reinforcement Learning</div>
+                <div class="heading-desc">
+                  Core RL concepts; DQN; Stable Baselines; real-world use cases
+                </div>
+              </div>
+            </div>
+            <div class="content-heading-item">
+              <div class="heading-number">10</div>
+              <div class="heading-text">
+                <div class="heading-title">Responsible AI & Ethics</div>
+                <div class="heading-desc">
+                  Bias in AI; fairness, explainability; AI governance frameworks
+                </div>
+              </div>
+            </div>
+            <div class="content-heading-item">
+              <div class="heading-number">11</div>
+              <div class="heading-text">
+                <div class="heading-title">Final Capstone Project</div>
+                <div class="heading-desc">
+                  Real-world industry project; full pipeline from data through
+                  model to deployment
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-entry-requirements">
+          <h2 class="section-title">Entry Requirements</h2>
+          <div class="entry-requirements-pill">
+            <img
+              src="/static/images/req-icon.svg"
+              class="req-icon"
+              alt="requirement"
+            />
+            <span
+              >Basic Python knowledge required; the programme progresses from
+              beginner to advanced level.</span
+            >
+          </div>
         </div>
       </div>
-    </div>
+    </main>
 
-    <div class="section-content-headings">
-      <h2 class="section-title">Programme Content Headings</h2>
-      <div class="content-headings-list">
-        <div class="content-heading-item">
-          <div class="heading-number">01</div>
-          <div class="heading-text"><div class="heading-title">Machine Learning Fundamentals</div><div class="heading-desc">ML basics; supervised/unsupervised; regression & classification; Scikit-learn</div></div>
-        </div>
-        <div class="content-heading-item">
-          <div class="heading-number">02</div>
-          <div class="heading-text"><div class="heading-title">Neural Networks & Deep Learning Basics</div><div class="heading-desc">Activation functions; backpropagation; Keras/TensorFlow</div></div>
-        </div>
-        <div class="content-heading-item">
-          <div class="heading-number">03</div>
-          <div class="heading-text"><div class="heading-title">CNNs for Vision</div><div class="heading-desc">Convolutional layers; image classification; transfer learning; data augmentation</div></div>
-        </div>
-        <div class="content-heading-item">
-          <div class="heading-number">04</div>
-          <div class="heading-text"><div class="heading-title">Advanced Model Optimisation & Tuning</div><div class="heading-desc">Grid/random search; Optuna; AutoML; early stopping</div></div>
-        </div>
-        <div class="content-heading-item">
-          <div class="heading-number">05</div>
-          <div class="heading-text"><div class="heading-title">NLP Fundamentals</div><div class="heading-desc">Text preprocessing; Word2Vec, GloVe, FastText; text classification</div></div>
-        </div>
-        <div class="content-heading-item">
-          <div class="heading-number">06</div>
-          <div class="heading-text"><div class="heading-title">Sequence Models (RNNs, LSTM, GRU)</div><div class="heading-desc">LSTM & GRU; sequence to sequence models</div></div>
-        </div>
-        <div class="content-heading-item">
-          <div class="heading-number">07</div>
-          <div class="heading-text"><div class="heading-title">Transformers & Large Language Models</div><div class="heading-desc">Self attention; BERT, GPT, T5; LLMs; fine-tuning LLMs</div></div>
-        </div>
-        <div class="content-heading-item">
-          <div class="heading-number">08</div>
-          <div class="heading-text"><div class="heading-title">Prompt Engineering & LLM Application</div><div class="heading-desc">Chain-of-Thought; RAG; LangChain; building LLM-powered tools</div></div>
-        </div>
-        <div class="content-heading-item">
-          <div class="heading-number">09</div>
-          <div class="heading-text"><div class="heading-title">Reinforcement Learning</div><div class="heading-desc">Core RL concepts; DQN; Stable Baselines; real-world use cases</div></div>
-        </div>
-        <div class="content-heading-item">
-          <div class="heading-number">10</div>
-          <div class="heading-text"><div class="heading-title">Responsible AI & Ethics</div><div class="heading-desc">Bias in AI; fairness, explainability; AI governance frameworks</div></div>
-        </div>
-        <div class="content-heading-item">
-          <div class="heading-number">11</div>
-          <div class="heading-text"><div class="heading-title">Final Capstone Project</div><div class="heading-desc">Real-world industry project; full pipeline from data through model to deployment</div></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="section-entry-requirements">
-      <h2 class="section-title">Entry Requirements</h2>
-      <div class="entry-requirements-pill">
-        <img src="/static/images/req-icon.svg" class="req-icon" alt="requirement"> 
-        <span>Basic Python knowledge required; the programme progresses from beginner to advanced level.</span>
-      </div>
-    </div>
-
-  </div>
-</main>
-
-<footer class="saku-footer">
+    <footer class="saku-footer">
       <div class="container">
         <div class="footer-top">
           <div class="footer-brand">
@@ -281,6 +546,6 @@
         </div>
       </div>
     </footer>
-<script src="/static/js/main.js"></script>
-</body>
+    <script src="/static/js/main.js"></script>
+  </body>
 </html>

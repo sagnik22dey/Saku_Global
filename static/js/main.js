@@ -18,27 +18,42 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.querySelectorAll('.nav-item.dropdown').forEach(dropdown => {
-      const arrow = dropdown.querySelector('.nav-arrow:not(.sub-nav-arrow)');
-      if (arrow) {
-        arrow.addEventListener('click', (e) => {
+      const topArrow = dropdown.querySelector(':scope > .nav-arrow');
+      if (topArrow) {
+        topArrow.addEventListener('click', (e) => {
           e.preventDefault();
           e.stopPropagation();
           dropdown.classList.toggle('mobile-open');
         });
       }
 
-      const subDropdowns = dropdown.querySelectorAll('.sub-dropdown');
-      subDropdowns.forEach(subDropdown => {
-        const subArrow = subDropdown.querySelector('.sub-nav-arrow');
-        if (subArrow) {
-          subArrow.addEventListener('click', (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            subDropdown.classList.toggle('mobile-open');
-          });
+      dropdown.querySelectorAll(':scope .sub-dropdown').forEach(subDropdown => {
+        const container = subDropdown.querySelector(':scope > .sub-dropdown-link-container');
+        if (container) {
+          const subArrow = container.querySelector('.sub-nav-arrow');
+          if (subArrow) {
+            subArrow.addEventListener('click', (e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              subDropdown.classList.toggle('mobile-open');
+            });
+          }
         }
       });
 
+      dropdown.querySelectorAll(':scope .sub-sub-dropdown').forEach(subSubDropdown => {
+        const container = subSubDropdown.querySelector(':scope > .sub-sub-dropdown-link-container');
+        if (container) {
+          const subSubArrow = container.querySelector('.sub-nav-arrow');
+          if (subSubArrow) {
+            subSubArrow.addEventListener('click', (e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              subSubDropdown.classList.toggle('mobile-open');
+            });
+          }
+        }
+      });
 
       const links = dropdown.querySelectorAll('a');
       links.forEach(link => {

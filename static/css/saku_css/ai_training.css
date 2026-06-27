@@ -116,46 +116,51 @@
 }
 
 @media (max-width: 1024px) {
-    .ai-content {
-        max-width: 48%;
-    }
+  .ai-content {
+    max-width: 48%;
+  }
 
-    .ai-image-wrapper {
-        max-width: 48%;
-    }
+  .ai-image-wrapper {
+    max-width: 48%;
+  }
 }
 
 @media (max-width: 768px) {
-    .ai-course-main {
-        padding: 6vh 0 0;
-        gap: 6vh;
-    }
+  .ai-course-main {
+    padding: 6vh 5vw 0;
+    gap: 6vh;
+  }
 
-    .ai-section {
-        flex-direction: column !important;
-        gap: 4vh;
-        padding-bottom: 4vh;
-    }
+  .ai-section {
+    flex-direction: column !important;
+    gap: 4vh;
+    padding-bottom: 4vh;
+  }
 
-    .ai-content {
-        max-width: 100%;
-        gap: 1.2rem;
-    }
+  .ai-content {
+    max-width: 100%;
+    gap: 1.2rem;
+  }
 
-    .ai-image-wrapper {
-        max-width: 100%;
-        width: 100%;
-    }
+  .ai-image-wrapper {
+    max-width: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
 
-    .ai-title {
-        font-size: clamp(1.6rem, 7vw, 2.2rem);
-    }
+  .ai-image {
+    border-radius: 12px;
+  }
 
-    .ai-subtitle {
-        font-size: clamp(0.95rem, 4vw, 1.2rem);
-    }
+  .ai-title {
+    font-size: clamp(1.6rem, 7vw, 2.2rem);
+  }
 
-    .ai-feature-list li {
-        font-size: clamp(0.9rem, 3.5vw, 1rem);
-    }
+  .ai-subtitle {
+    font-size: clamp(0.95rem, 4vw, 1.2rem);
+  }
+
+  .ai-feature-list li {
+    font-size: clamp(0.9rem, 3.5vw, 1rem);
+  }
 }

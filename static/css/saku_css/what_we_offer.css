@@ -11,6 +11,8 @@
   flex-direction: column;
   align-items: center;
   padding-top: 5vw;
+  padding-left: 4vw;
+  padding-right: 4vw;
   margin-bottom: 4vw;
 }
 
@@ -170,17 +172,66 @@
 }
 
 @media (max-width: 768px) {
+  .offer-header {
+    padding-top: 10vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    margin-bottom: 6vw;
+  }
+
+  .offer-title {
+    font-size: clamp(1.8rem, 7vw, 2.5rem);
+    text-align: center;
+  }
+
+  .offer-grid-section {
+    padding: 0 4vw;
+  }
+
   .offer-grid {
     gap: 5vw;
+    flex-direction: column;
+    align-items: center;
   }
+
   .offer-card {
-    width: 90vw;
+    width: 100%;
+    max-width: 100%;
     padding: 4vw;
+    min-width: unset;
   }
+
   .offer-card-image {
+    height: 48vw;
     margin-bottom: 4vw;
   }
+
+  .offer-card-title {
+    font-size: 1.2rem;
+    min-height: unset;
+    margin-bottom: 2vw;
+  }
+
+  .offer-card-subtitle {
+    font-size: 1rem;
+    margin-bottom: 2vw;
+  }
+
+  .offer-card-desc {
+    font-size: 0.95rem;
+    margin-bottom: 4vw;
+  }
+
   .offer-card-actions {
     gap: 3vw;
+    flex-wrap: wrap;
+  }
+
+  .btn-view-course,
+  .btn-enroll-now {
+    width: 48%;
+    height: 40px;
+    font-size: 0.9rem;
+    padding: 0;
   }
 }

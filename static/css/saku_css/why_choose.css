@@ -178,6 +178,20 @@
 }
 
 @media (max-width: 768px) {
+  .why-choose-hero {
+    padding: 10vw 5vw 6vw;
+  }
+
+  .hero-title {
+    font-size: clamp(1.5rem, 6.5vw, 2.5rem);
+    max-width: 100%;
+    padding: 0 2vw;
+  }
+
+  .timeline-section {
+    padding: 4vw 5vw;
+  }
+
   .timeline-line {
     display: none;
   }
@@ -202,6 +216,21 @@
   .timeline-item--reverse .timeline-image-wrapper {
     width: 100%;
     padding: 0 !important;
+  }
+
+  .feature-image {
+    width: 100%;
+    height: auto;
+    max-height: 55vw;
+    object-fit: cover;
+  }
+
+  .feature-title {
+    font-size: clamp(1.2rem, 5vw, 1.6rem);
+  }
+
+  .feature-desc {
+    font-size: clamp(0.9rem, 3.5vw, 1rem);
   }
 
   .timeline-item:hover .timeline-image-wrapper {
