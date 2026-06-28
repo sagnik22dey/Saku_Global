@@ -102,6 +102,7 @@ ROUTES = {
     "/saku/master-ai/track-d/ai-essentials-doctors": "saku_pages/medical_healthcare_ai/ai_essentials_doctors.html",
     "/saku/master-ai/track-d/ai-fundamentals-doctors": "saku_pages/medical_healthcare_ai/ai_fundamentals_doctors.html",
     "/saku/master-ai/track-d/ai-excellence-doctors": "saku_pages/medical_healthcare_ai/ai_excellence_doctors.html",
+    "/application-form": "saku_pages/application_form.html",
 }
 
 

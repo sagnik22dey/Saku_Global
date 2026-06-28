@@ -1057,3 +1057,34 @@ ul {
 .delay-5 {
   transition-delay: 0.5s;
 }
+
+/* Nav Apply Now Button */
+.nav-btn-apply {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 23px;
+  gap: 10px;
+  width: 130px;
+  height: 52px;
+  background: linear-gradient(90.91deg, #090909 -5.17%, #135F9A 99.22%);
+  border-radius: 3px;
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+  
+  color: #FFFFFF;
+  text-decoration: none;
+  font-family: var(--font-nav, inherit);
+  font-weight: 500;
+  font-size: 16px;
+  transition: opacity 0.3s ease;
+  box-sizing: border-box;
+}
+
+.nav-btn-apply:hover {
+  opacity: 0.9;
+  color: #FFFFFF;
+}
+
