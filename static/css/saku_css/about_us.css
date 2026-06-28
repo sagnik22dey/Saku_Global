@@ -32,15 +32,16 @@
 }
 
 .about-hero-content {
+  padding-top: 10vh;
+  padding-right: 33vw;
   position: relative;
   z-index: 1;
-  padding: 0 4vw;
 }
 
 .hero-title {
   font-family: "Inter", sans-serif;
   font-weight: 700;
-  font-size: clamp(24px, 4vw, 60px);
+  font-size: clamp(24px, 5vw, 6vw);
   line-height: 1.17;
   color: #1a1a1a;
   max-width: 60vw;

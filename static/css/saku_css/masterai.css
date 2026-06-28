@@ -479,6 +479,27 @@
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
+/* Back to Top */
+.back-to-top-container {
+  text-align: center;
+  padding: 2rem 0 4rem;
+}
+
+.back-to-top {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #666666;
+  text-decoration: underline;
+  text-decoration-color: #666666;
+  text-underline-offset: 4px;
+  transition: color 0.3s ease, text-decoration-color 0.3s ease;
+}
+
+.back-to-top:hover {
+  color: #135f9a;
+  text-decoration-color: #135f9a;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .master-hero {
