@@ -31,20 +31,34 @@
   object-fit: cover;
 }
 
-.about-hero-content {
-  padding-top: 10vh;
-  padding-right: 33vw;
-  position: relative;
+.hero-gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    #ffffff -10.08%,
+    rgba(241, 247, 254, 0.7) 83.19%,
+    rgba(255, 255, 255, 0) 131.47%
+  );
   z-index: 1;
+}
+
+.about-hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
 }
 
 .hero-title {
   font-family: "Inter", sans-serif;
   font-weight: 700;
-  font-size: clamp(24px, 5vw, 6vw);
+  font-size: clamp(24px, 4vw, 5vw);
   line-height: 1.17;
   color: #1a1a1a;
-  max-width: 60vw;
+  max-width: 46vw;
   margin: 0;
   text-shadow: none;
 }
@@ -174,6 +188,10 @@
     max-width: 80vw;
   }
 
+  .hero-gradient-overlay {
+    width: 90%;
+  }
+
   .about-company {
     flex-direction: column;
     padding: 10vw 4vw;
@@ -215,6 +233,10 @@
   .about-hero {
     height: 56vw;
     min-height: 220px;
+  }
+
+  .hero-gradient-overlay {
+    width: 100%;
   }
 
   .hero-title {
