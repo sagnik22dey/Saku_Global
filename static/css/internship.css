@@ -12,7 +12,7 @@
 }
 
 .hero-title {
-  font-size: 3rem;
+  font-size: 3.333vw;
   font-weight: 700;
   color: #1a2a40;
   line-height: 1.2;
@@ -24,7 +24,7 @@
 
 .timeline-section {
   width: 100%;
-  max-width: 1200px;
+  max-width: 83.333vw;
   margin: 0 auto;
   padding: 0 5vw;
 }
@@ -80,8 +80,8 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 24px;
-  height: 24px;
+  width: 1.667vw;
+  height: 1.667vw;
   background-color: #dceef2;
   border-radius: 50%;
   border: 6px solid #ffffff;
@@ -116,29 +116,29 @@
 }
 
 .program-title {
-  font-size: 1.5rem;
+  font-size: 1.667vw;
   font-weight: 700;
   color: #1a2a40;
-  margin-bottom: 1rem;
+  margin-bottom: 1.111vw;
 }
 
 .program-desc {
-  font-size: 1rem;
+  font-size: 1.111vw;
   color: #555555;
   line-height: 1.6;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.667vw;
 }
 
 .btn-apply {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  padding: 8px 22px;
+  padding: 0.556vw 1.528vw;
   background: linear-gradient(90.91deg, #090909 -5.17%, #135F9A 99.22%);
   color: #ffffff;
   text-decoration: none;
   font-family: 'Inter', sans-serif;
-  font-size: 13.7px;
+  font-size: 0.951vw;
   font-weight: 700;
   border-radius: 4.9px;
   text-transform: uppercase;
@@ -152,7 +152,7 @@
 
 @media (max-width: 768px) {
   .hero-title {
-    font-size: 2.2rem;
+    font-size: 4.583vw;
   }
   
   .timeline-line,
@@ -167,7 +167,7 @@
   .timeline-item {
     flex-direction: column !important;
     text-align: center !important;
-    gap: 2rem;
+    gap: 4.167vw;
   }
   
   .timeline-item.right {

@@ -42,13 +42,17 @@
   font-size: 3vw;
   line-height: 1.1;
   margin-bottom: 1vw;
+  background: linear-gradient(90.91deg, #090909 -5.17%, #135f9a 99.22%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .application-header .subtitle {
   font-weight: 500;
-  font-size: 1.1vw;
+  font-size: 1.35vw;
   color: #4d4d4d;
-  max-width: 45vw;
+  max-width: 35vw;
   margin: 0 auto;
 }
 
@@ -311,11 +315,11 @@
   .application-main {
     padding: 8vh 5vw 10vh 5vw;
   }
-  
+
   .form-container {
     max-width: 90vw;
   }
-  
+
   .form-grid-3 {
     grid-template-columns: 1fr;
   }
@@ -396,7 +400,7 @@
   .terms-text {
     font-size: 2.5vw;
   }
-  
+
   .select-wrapper::after {
     width: 2vw;
     height: 2vw;

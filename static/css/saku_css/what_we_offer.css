@@ -19,7 +19,7 @@
 .offer-title {
   font-family: "Inter", sans-serif;
   font-weight: 700;
-  font-size: clamp(2.5rem, 4vw, 3.75rem);
+  font-size: clamp(2.778vw, 4vw, 4.167vw);
   text-align: center;
   margin-bottom: 2vw;
 }
@@ -33,7 +33,7 @@
 
 .offer-divider {
   width: 90vw;
-  max-width: 1458px;
+  max-width: 101.25vw;
   height: 1px;
   background-color: #135f9a;
 }
@@ -48,7 +48,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 2vw;
-  max-width: 1200px;
+  max-width: 83.333vw;
   margin: 0 auto;
 }
 
@@ -58,11 +58,11 @@
   align-items: center;
   padding: 1.5vw;
   width: calc(33.333% - 2vw);
-  min-width: 250px;
-  max-width: 357px;
+  min-width: 17.361vw;
+  max-width: 24.792vw;
   background: #ffffff;
   box-shadow: 0px 0px 18px 7px rgba(0, 0, 0, 0.05);
-  border-radius: 15px;
+  border-radius: 1.042vw;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -73,9 +73,9 @@
 
 .offer-card-image {
   width: 100%;
-  height: 171px;
+  height: 11.875vw;
   object-fit: cover;
-  border-radius: 15px;
+  border-radius: 1.042vw;
   margin-bottom: 1.5vw;
   transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
@@ -94,17 +94,17 @@
 .offer-card-title {
   font-family: "Inter", sans-serif;
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 1.667vw;
   line-height: 1.25;
   color: #000000;
   margin-bottom: 0.5vw;
-  min-height: 60px;
+  min-height: 4.167vw;
 }
 
 .offer-card-subtitle {
   font-family: "Inter", sans-serif;
   font-weight: 500;
-  font-size: 1.25rem;
+  font-size: 1.389vw;
   color: #4d4d4d;
   margin-bottom: 0.5vw;
 }
@@ -112,7 +112,7 @@
 .offer-card-desc {
   font-family: "Inter", sans-serif;
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 1.111vw;
   line-height: 1.5;
   color: #000000;
   margin-bottom: 1.5vw;
@@ -132,13 +132,13 @@
   justify-content: center;
   align-items: center;
   padding: 0.5vw 1vw;
-  width: 140px;
-  height: 35px;
+  width: 9.722vw;
+  height: 2.431vw;
   border: 1px solid #000000;
-  border-radius: 5px;
+  border-radius: 0.347vw;
   font-family: "Inter", sans-serif;
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 1.111vw;
   color: #000000;
   text-decoration: none;
   transition: all 0.3s ease;
@@ -154,13 +154,13 @@
   justify-content: center;
   align-items: center;
   padding: 0.5vw 1vw;
-  width: 140px;
-  height: 35px;
+  width: 9.722vw;
+  height: 2.431vw;
   background: linear-gradient(90.91deg, #090909 -5.17%, #135f9a 99.22%);
-  border-radius: 5px;
+  border-radius: 0.347vw;
   font-family: "Inter", sans-serif;
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 1.111vw;
   color: #ffffff;
   text-decoration: none;
   transition: all 0.3s ease;
@@ -180,7 +180,7 @@
   }
 
   .offer-title {
-    font-size: clamp(1.8rem, 7vw, 2.5rem);
+    font-size: clamp(3.75vw, 7vw, 5.208vw);
     text-align: center;
   }
 
@@ -207,18 +207,18 @@
   }
 
   .offer-card-title {
-    font-size: 1.2rem;
+    font-size: 2.5vw;
     min-height: unset;
     margin-bottom: 2vw;
   }
 
   .offer-card-subtitle {
-    font-size: 1rem;
+    font-size: 2.083vw;
     margin-bottom: 2vw;
   }
 
   .offer-card-desc {
-    font-size: 0.95rem;
+    font-size: 1.979vw;
     margin-bottom: 4vw;
   }
 
@@ -230,8 +230,8 @@
   .btn-view-course,
   .btn-enroll-now {
     width: 48%;
-    height: 40px;
-    font-size: 0.9rem;
+    height: 5.208vw;
+    font-size: 1.875vw;
     padding: 0;
   }
 }

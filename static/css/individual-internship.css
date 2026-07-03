@@ -1,6 +1,6 @@
 .internship-detail-main {
   padding: 8vh 5vw;
-  max-width: 1440px;
+  max-width: 100vw;
   margin: 0 auto;
 }
 
@@ -28,27 +28,27 @@
 .internship-type {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: clamp(1rem, 1.2vw, 1.2rem);
+  gap: 0.694vw;
+  font-size: clamp(1.111vw, 1.2vw, 1.333vw);
   font-weight: 500;
   color: #333;
   margin-bottom: 2vh;
 }
 
 .internship-type svg {
-  width: 24px;
-  height: 24px;
+  width: 1.667vw;
+  height: 1.667vw;
 }
 
 .internship-title {
-  font-size: clamp(2rem, 3.5vw, 3.5rem);
+  font-size: clamp(2.222vw, 3.5vw, 3.889vw);
   color: #135f9a;
   margin-bottom: 2vh;
   font-weight: 700;
 }
 
 .internship-desc {
-  font-size: clamp(1rem, 1.1vw, 1.2rem);
+  font-size: clamp(1.111vw, 1.1vw, 1.333vw);
   line-height: 1.6;
   color: #333;
   margin-bottom: 4vh;
@@ -61,7 +61,7 @@
   border-radius: 6px;
   text-decoration: none;
   font-weight: 700;
-  font-size: clamp(0.9rem, 1vw, 1rem);
+  font-size: clamp(1vw, 1vw, 1.111vw);
   display: inline-block;
   transition: background 0.3s ease;
 }
@@ -75,7 +75,7 @@
 }
 
 .section-heading {
-  font-size: clamp(2rem, 2.5vw, 2.8rem);
+  font-size: clamp(2.222vw, 2.5vw, 3.111vw);
   color: #092c4c;
   border-left: 6px solid #092c4c;
   padding-left: 1.5vw;
@@ -95,16 +95,16 @@
 .eligibility-list li {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: clamp(1rem, 1.1vw, 1.2rem);
+  gap: 0.694vw;
+  font-size: clamp(1.111vw, 1.1vw, 1.333vw);
   color: #333;
 }
 
 .eligibility-list li::before {
   content: "";
   display: inline-block;
-  width: 6px;
-  height: 6px;
+  width: 0.417vw;
+  height: 0.417vw;
   background-color: #333;
   border-radius: 50%;
 }
@@ -115,7 +115,7 @@
 }
 
 .details-subheading {
-  font-size: clamp(1.2rem, 1.5vw, 1.5rem);
+  font-size: clamp(1.333vw, 1.5vw, 1.667vw);
   color: #000;
   margin-bottom: 2vh;
   font-weight: 600;
@@ -123,10 +123,10 @@
 
 .details-list {
   list-style-type: disc;
-  padding-left: 20px;
+  padding-left: 1.389vw;
   color: #333;
   line-height: 1.6;
-  font-size: clamp(0.9rem, 1vw, 1.1rem);
+  font-size: clamp(1vw, 1vw, 1.222vw);
 }
 
 .details-list li {

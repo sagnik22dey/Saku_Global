@@ -15,7 +15,7 @@
 }
 
 .sub-course-container {
-  max-width: 1200px;
+  max-width: 85vw;
   margin: 0 auto;
   padding: 3vw 4vw;
   display: flex;
@@ -74,7 +74,7 @@
   color: #fff;
   padding: 1vw 2.5vw;
   text-decoration: none;
-  border-radius: 6px;
+  border-radius: 0.417vw;
   font-family: "Inter", sans-serif;
   font-weight: 600;
   font-size: 1.1vw;
@@ -142,14 +142,14 @@
 
 .feature-card {
   background-color: #cd9efa;
-  border-radius: 12px;
+  border-radius: 0.833vw;
   padding: 1.5vw 1vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   gap: 0.5vw;
-  min-width: 140px;
+  min-width: 10vw;
   flex: 1;
 }
 .card-a {
@@ -180,7 +180,7 @@
 
 .content-headings-list {
   border: 1px solid #4d4d4d;
-  border-radius: 12px;
+  border-radius: 0.833vw;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -243,7 +243,7 @@
   align-items: center;
   gap: 1vw;
   border: 1px solid #ddd;
-  border-radius: 49px;
+  border-radius: 3.403vw;
   padding: 0.8vw 1.5vw;
   width: fit-content;
   flex-wrap: wrap;
@@ -263,7 +263,7 @@
 
 @media (max-width: 768px) {
   .sub-course-main {
-    margin-top: 70px;
+    margin-top: 9.115vw;
   }
 
   .sub-course-hero {
@@ -276,19 +276,19 @@
   }
 
   .sub-course-title {
-    font-size: clamp(1.4rem, 6vw, 2rem);
+    font-size: clamp(2.917vw, 6vw, 4.167vw);
   }
   .sub-course-meta {
-    font-size: clamp(0.85rem, 3vw, 1rem);
+    font-size: clamp(1.771vw, 3vw, 2.083vw);
   }
   .sub-course-price {
-    font-size: clamp(1.4rem, 6vw, 2rem);
+    font-size: clamp(2.917vw, 6vw, 4.167vw);
   }
   .sub-course-price-note {
-    font-size: clamp(0.75rem, 2.5vw, 0.9rem);
+    font-size: clamp(1.562vw, 2.5vw, 1.875vw);
   }
   .apply-now-btn {
-    font-size: clamp(0.9rem, 3.5vw, 1rem);
+    font-size: clamp(1.875vw, 3.5vw, 2.083vw);
     padding: 2.5vw 5vw;
     border-radius: 6px;
   }
@@ -298,11 +298,11 @@
     gap: 3vw;
   }
   .sub-course-description {
-    font-size: clamp(0.9rem, 3.5vw, 1rem);
+    font-size: clamp(1.875vw, 3.5vw, 2.083vw);
     padding: 4vw 0;
   }
   .section-title {
-    font-size: clamp(1.1rem, 5vw, 1.5rem);
+    font-size: clamp(2.292vw, 5vw, 3.125vw);
     margin-bottom: 3vw;
   }
   .learning-outcomes-list {
@@ -310,12 +310,12 @@
     padding-bottom: 4vw;
   }
   .learning-outcomes-list li {
-    font-size: clamp(0.85rem, 3.5vw, 1rem);
+    font-size: clamp(1.771vw, 3.5vw, 2.083vw);
     gap: 2.5vw;
   }
   .outcome-icon {
-    width: 20px;
-    height: 20px;
+    width: 2.604vw;
+    height: 2.604vw;
   }
 
   .programme-features-grid {
@@ -328,10 +328,10 @@
     flex: 1 1 calc(50% - 3vw);
   }
   .feature-title {
-    font-size: clamp(0.85rem, 4vw, 1rem);
+    font-size: clamp(1.771vw, 4vw, 2.083vw);
   }
   .feature-desc {
-    font-size: clamp(0.8rem, 3.5vw, 0.95rem);
+    font-size: clamp(1.667vw, 3.5vw, 1.979vw);
   }
 
   .content-heading-item {
@@ -339,7 +339,7 @@
     align-items: flex-start;
   }
   .heading-number {
-    font-size: clamp(1.5rem, 8vw, 2.5rem);
+    font-size: clamp(3.125vw, 8vw, 5.208vw);
     width: 100%;
     border-right: none;
     border-bottom: 1px solid #ccc;
@@ -350,10 +350,10 @@
     padding: 3.5vw;
   }
   .heading-title {
-    font-size: clamp(0.9rem, 4vw, 1.1rem);
+    font-size: clamp(1.875vw, 4vw, 2.292vw);
   }
   .heading-desc {
-    font-size: clamp(0.85rem, 3.5vw, 1rem);
+    font-size: clamp(1.771vw, 3.5vw, 2.083vw);
   }
 
   .section-entry-requirements {
@@ -366,17 +366,17 @@
     border-radius: 30px;
   }
   .entry-requirements-pill span {
-    font-size: clamp(0.85rem, 3.5vw, 1rem);
+    font-size: clamp(1.771vw, 3.5vw, 2.083vw);
   }
   .req-icon {
-    width: 22px;
-    height: 22px;
+    width: 2.865vw;
+    height: 2.865vw;
   }
 }
 
 .internship-guarantee-block {
   background-color: #ffeba1;
-  border-radius: 50px;
+  border-radius: 3.472vw;
   padding: 2vw 3vw;
   margin-top: 2vw;
   display: flex;

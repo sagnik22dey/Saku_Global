@@ -29,7 +29,7 @@
 }
 
 .about-intro-title {
-  font-size: clamp(2rem, 3.8vw, 3.75rem);
+  font-size: clamp(2.222vw, 3.8vw, 4.167vw);
   font-weight: 700;
   line-height: 1.17;
   background: var(--gradient-title);
@@ -39,7 +39,7 @@
 }
 
 .about-intro-desc {
-  font-size: clamp(1rem, 1.1vw, 1.15rem);
+  font-size: clamp(1.111vw, 1.1vw, 1.278vw);
   line-height: 1.88;
   color: var(--text-dark);
 }
@@ -51,7 +51,7 @@
 }
 
 .advisory-eyebrow {
-  font-size: 20px;
+  font-size: 1.389vw;
   font-weight: 500;
   text-decoration: underline;
   color: var(--text-dark);
@@ -61,7 +61,7 @@
 }
 
 .advisory-title {
-  font-size: clamp(1.8rem, 3.5vw, 3.75rem);
+  font-size: clamp(2vw, 3.5vw, 4.167vw);
   font-weight: 700;
   line-height: 1.17;
   margin-bottom: 8vh;
@@ -108,7 +108,7 @@
 }
 
 .advisory-card-name {
-  font-size: clamp(1.5rem, 2vw, 2rem);
+  font-size: clamp(1.667vw, 2vw, 2.222vw);
   font-weight: 600;
   line-height: 1;
   color: var(--text-dark);
@@ -116,14 +116,14 @@
 }
 
 .advisory-card-role {
-  font-size: clamp(1rem, 1.2vw, 1.25rem);
+  font-size: clamp(1.111vw, 1.2vw, 1.389vw);
   font-weight: 400;
   color: var(--text-muted);
   margin-bottom: 2.5vh;
 }
 
 .advisory-card-desc {
-  font-size: clamp(0.9rem, 1vw, 1rem);
+  font-size: clamp(1vw, 1vw, 1.111vw);
   font-weight: 300;
   line-height: 1.88;
   color: var(--text-dark);
@@ -156,6 +156,6 @@
   .advisory-grid {
     grid-template-columns: 1fr;
     gap: 5vh;
-    max-width: 500px;
+    max-width: 65.104vw;
   }
 }

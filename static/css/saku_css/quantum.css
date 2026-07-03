@@ -21,14 +21,14 @@
 
 .quantum-left-col {
   flex: 1;
-  min-width: 300px;
+  min-width: 20.833vw;
   max-width: 45vw;
 }
 
 .quantum-title {
   font-family: "Inter", sans-serif;
   font-weight: 700;
-  font-size: clamp(1.5rem, 2.5vw, 3rem);
+  font-size: clamp(1.667vw, 2.5vw, 3.333vw);
   line-height: 1.2;
   background: linear-gradient(90.91deg, #090909 -5.17%, #135f9a 99.22%);
   -webkit-background-clip: text;
@@ -39,7 +39,7 @@
 
 .quantum-subtitle {
   font-weight: 600;
-  font-size: clamp(0.9rem, 1.3vw, 1.3rem);
+  font-size: clamp(1vw, 1.3vw, 1.444vw);
   color: #374957;
   margin-bottom: 4vh;
   border-bottom: 2px solid #135f9a;
@@ -58,7 +58,7 @@
   align-items: flex-start;
   gap: 1vw;
   padding: 1vh 1.5vw;
-  border-radius: 8px;
+  border-radius: 0.556vw;
   transition:
     background 0.3s ease,
     transform 0.3s ease;
@@ -70,8 +70,8 @@
 }
 
 .feature-icon-wrapper {
-  width: 36px;
-  height: 36px;
+  width: 2.5vw;
+  height: 2.5vw;
   flex-shrink: 0;
   display: flex;
   align-items: center;
@@ -90,21 +90,21 @@
 }
 
 .feature-text h3 {
-  font-size: clamp(0.85rem, 1.1vw, 1.1rem);
+  font-size: clamp(0.944vw, 1.1vw, 1.222vw);
   font-weight: 700;
   margin: 0 0 0.5vh 0;
   color: #333;
 }
 
 .feature-text p {
-  font-size: clamp(0.8rem, 1vw, 1rem);
+  font-size: clamp(0.889vw, 1vw, 1.111vw);
   color: #555;
   margin: 0;
 }
 
 .quantum-right-col {
   flex: 1;
-  min-width: 300px;
+  min-width: 20.833vw;
   display: flex;
   flex-direction: column;
   gap: 2vh;
@@ -118,7 +118,7 @@
 
 .diagram-item {
   background: #f9f9f9;
-  border-radius: 8px;
+  border-radius: 0.556vw;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
@@ -136,7 +136,7 @@
 
 .diagram-main-img {
   width: 100%;
-  border-radius: 8px;
+  border-radius: 0.556vw;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   margin-top: 2vh;
   transition:
@@ -165,7 +165,7 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  max-width: 1400px;
+  max-width: 97.222vw;
   gap: 0;
 }
 
@@ -180,7 +180,7 @@
 
 .banner-divider {
   width: 1px;
-  height: 60px;
+  height: 4.167vw;
   background: rgba(255, 255, 255, 0.5);
   flex-shrink: 0;
 }
@@ -188,8 +188,8 @@
 .banner-icon {
   width: 3vw;
   height: 3vw;
-  min-width: 40px;
-  min-height: 40px;
+  min-width: 2.778vw;
+  min-height: 2.778vw;
   flex-shrink: 0;
 }
 
@@ -204,13 +204,13 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 4px;
+  gap: 0.278vw;
 }
 
 .banner-text h4 {
   font-family: "Inter", sans-serif;
   font-weight: 700;
-  font-size: clamp(13px, 1.2vw, 20px);
+  font-size: clamp(0.903vw, 1.2vw, 1.389vw);
   line-height: 1.3;
   color: #ffffff;
   margin: 0;
@@ -220,7 +220,7 @@
 .banner-text p {
   font-family: "Inter", sans-serif;
   font-weight: 400;
-  font-size: clamp(11px, 1vw, 17px);
+  font-size: clamp(0.764vw, 1vw, 1.181vw);
   line-height: 1.4;
   color: rgba(255, 255, 255, 0.85);
   margin: 0;
@@ -237,14 +237,14 @@
 }
 
 .cta-title {
-  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+  font-size: clamp(1.667vw, 2.5vw, 2.778vw);
   font-weight: 700;
   color: #333;
   margin: 0;
 }
 
 .cta-text {
-  font-size: clamp(0.9rem, 1.2vw, 1.2rem);
+  font-size: clamp(1vw, 1.2vw, 1.333vw);
   color: #555;
   max-width: 60vw;
   margin: 0;
@@ -256,7 +256,7 @@
   padding: 2vh 3vw;
   font-size: 1.2vw;
   font-weight: 600;
-  border-radius: 8px;
+  border-radius: 0.556vw;
   text-decoration: none;
   transition:
     background 0.3s ease,
@@ -287,11 +287,11 @@
   }
 
   .quantum-title {
-    font-size: clamp(1.6rem, 7vw, 2.2rem);
+    font-size: clamp(3.333vw, 7vw, 4.583vw);
   }
 
   .quantum-subtitle {
-    font-size: clamp(0.9rem, 4vw, 1.1rem);
+    font-size: clamp(1.875vw, 4vw, 2.292vw);
   }
 
   .feature-item {
@@ -300,16 +300,16 @@
   }
 
   .feature-icon-wrapper {
-    width: 28px;
-    height: 28px;
+    width: 3.646vw;
+    height: 3.646vw;
   }
 
   .feature-text h3 {
-    font-size: clamp(0.85rem, 4vw, 1rem);
+    font-size: clamp(1.771vw, 4vw, 2.083vw);
   }
 
   .feature-text p {
-    font-size: clamp(0.8rem, 3.5vw, 0.95rem);
+    font-size: clamp(1.667vw, 3.5vw, 1.979vw);
   }
 
   .quantum-diagram-grid {
@@ -322,7 +322,7 @@
 
   .banner-row {
     flex-direction: column;
-    gap: 20px;
+    gap: 2.604vw;
   }
   .banner-item {
     flex-direction: row;
@@ -334,28 +334,28 @@
     display: none;
   }
   .banner-text h4 {
-    font-size: clamp(0.9rem, 4vw, 1rem);
+    font-size: clamp(1.875vw, 4vw, 2.083vw);
     white-space: normal;
   }
   .banner-text p {
-    font-size: clamp(0.8rem, 3.5vw, 0.95rem);
+    font-size: clamp(1.667vw, 3.5vw, 1.979vw);
   }
   .banner-icon {
-    width: 40px;
-    height: 40px;
-    min-width: 40px;
-    min-height: 40px;
+    width: 5.208vw;
+    height: 5.208vw;
+    min-width: 5.208vw;
+    min-height: 5.208vw;
   }
 
   .cta-title {
-    font-size: clamp(1.4rem, 6vw, 2rem);
+    font-size: clamp(2.917vw, 6vw, 4.167vw);
   }
   .cta-text {
-    font-size: clamp(0.9rem, 4vw, 1rem);
+    font-size: clamp(1.875vw, 4vw, 2.083vw);
     max-width: 90vw;
   }
   .cta-btn {
-    font-size: clamp(0.95rem, 4vw, 1.1rem);
+    font-size: clamp(1.979vw, 4vw, 2.292vw);
     padding: 1.2vh 5vw;
   }
 }

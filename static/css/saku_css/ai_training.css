@@ -18,13 +18,13 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 1.6rem;
+    gap: 1.778vw;
     max-width: 42%;
 }
 
 .ai-title {
     font-family: 'Inter', sans-serif;
-    font-size: clamp(1.8rem, 2.4vw, 2.8rem);
+    font-size: clamp(2vw, 2.4vw, 3.111vw);
     font-weight: 800;
     color: #0c2d4e;
     line-height: 1.2;
@@ -38,10 +38,10 @@
 
 .ai-subtitle {
     font-family: 'Inter', sans-serif;
-    font-size: clamp(1rem, 1.4vw, 1.4rem);
+    font-size: clamp(1.111vw, 1.4vw, 1.556vw);
     font-weight: 600;
     color: #0c2d4e;
-    margin: -0.5rem 0 0.4rem;
+    margin: -0.556vw 0 0.444vw;
 }
 
 .ai-subtitle .subtitle-highlight {
@@ -59,15 +59,15 @@
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 1.4rem;
+    gap: 1.556vw;
 }
 
 .ai-feature-list li {
     display: flex;
     align-items: flex-start;
-    gap: 1rem;
+    gap: 1.111vw;
     font-family: 'Inter', sans-serif;
-    font-size: clamp(0.85rem, 1vw, 1.05rem);
+    font-size: clamp(0.944vw, 1vw, 1.167vw);
     font-weight: 500;
     color: #3a3a3a;
     line-height: 1.45;
@@ -80,11 +80,11 @@
 }
 
 .feature-icon {
-    width: 28px;
-    height: 28px;
+    width: 1.944vw;
+    height: 1.944vw;
     flex-shrink: 0;
     object-fit: contain;
-    margin-top: 2px;
+    margin-top: 0.139vw;
     transition: transform 0.3s ease;
 }
 
@@ -105,7 +105,7 @@
     height: auto;
     object-fit: cover;
     display: block;
-    border-radius: 15px;
+    border-radius: 1.042vw;
     box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.08);
     transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
@@ -120,19 +120,19 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 14px 17px 15px 30px;
-    gap: 10px;
-    width: 312px;
+    padding: 0.972vw 1.181vw 1.042vw 2.083vw;
+    gap: 0.694vw;
+    width: 21.667vw;
     max-width: 100%;
-    height: 60px;
+    height: 4.167vw;
     background: #00206B;
-    border-radius: 4px;
+    border-radius: 0.278vw;
     color: #ffffff;
     text-decoration: none;
     font-family: 'Inter', sans-serif;
     font-weight: 600;
-    font-size: 1rem;
-    margin-top: 1rem;
+    font-size: 1.111vw;
+    margin-top: 1.111vw;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
@@ -165,7 +165,7 @@
 
   .ai-content {
     max-width: 100%;
-    gap: 1.2rem;
+    gap: 2.5vw;
   }
 
   .ai-image-wrapper {
@@ -179,14 +179,14 @@
   }
 
   .ai-title {
-    font-size: clamp(1.6rem, 7vw, 2.2rem);
+    font-size: clamp(3.333vw, 7vw, 4.583vw);
   }
 
   .ai-subtitle {
-    font-size: clamp(0.95rem, 4vw, 1.2rem);
+    font-size: clamp(1.979vw, 4vw, 2.5vw);
   }
 
   .ai-feature-list li {
-    font-size: clamp(0.9rem, 3.5vw, 1rem);
+    font-size: clamp(1.875vw, 3.5vw, 2.083vw);
   }
 }

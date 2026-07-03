@@ -23,14 +23,14 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 1.333vw;
   max-width: 48%;
 }
 
 .career-title {
   font-family: "Inter", sans-serif;
   font-weight: 800;
-  font-size: clamp(2rem, 2.8vw, 3.2rem);
+  font-size: clamp(2.222vw, 2.8vw, 3.556vw);
   line-height: 1.2;
   color: #0c2d4e;
   margin: 0;
@@ -38,8 +38,8 @@
 }
 
 .career-title--offerings {
-  font-size: clamp(2.2rem, 3vw, 3.4rem);
-  margin-bottom: 1.2rem;
+  font-size: clamp(2.444vw, 3vw, 3.778vw);
+  margin-bottom: 1.333vw;
 }
 
 .cr-highlight {
@@ -49,7 +49,7 @@
 .career-subtitle {
   font-family: "Inter", sans-serif;
   font-weight: 600;
-  font-size: clamp(1rem, 1.2vw, 1.3rem);
+  font-size: clamp(1.111vw, 1.2vw, 1.444vw);
   line-height: 1.5;
   color: #3a3a3a;
   margin: 0;
@@ -61,20 +61,20 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 1.1rem;
+  gap: 1.222vw;
 }
 
 .career-list.detailed-list {
-  gap: 1.5rem;
+  gap: 1.667vw;
 }
 
 .career-list-item {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  gap: 0.9rem;
+  gap: 1vw;
   font-family: "Inter", sans-serif;
-  font-size: clamp(0.95rem, 1.1vw, 1.15rem);
+  font-size: clamp(1.056vw, 1.1vw, 1.278vw);
   line-height: 1.5;
   color: #333333;
   transition: transform 0.3s ease, color 0.3s ease;
@@ -88,15 +88,15 @@
 .career-list-item span {
   font-weight: 500;
   color: #444444;
-  padding-top: 3px;
+  padding-top: 0.208vw;
 }
 
 .list-icon {
-  width: 32px;
-  height: 32px;
+  width: 2.222vw;
+  height: 2.222vw;
   object-fit: contain;
   flex-shrink: 0;
-  margin-top: 2px;
+  margin-top: 0.139vw;
   transition: transform 0.3s ease;
 }
 
@@ -107,18 +107,18 @@
 .list-text-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  gap: 0.278vw;
 }
 
 .list-text-wrapper strong {
-  font-size: clamp(1rem, 1.15vw, 1.2rem);
+  font-size: clamp(1.111vw, 1.15vw, 1.333vw);
   font-weight: 700;
   color: #1a1a1a;
 }
 
 .list-text-wrapper p {
   margin: 0;
-  font-size: clamp(0.95rem, 1vw, 1.1rem);
+  font-size: clamp(1.056vw, 1vw, 1.222vw);
   color: #555555;
   font-weight: 400;
   line-height: 1.5;
@@ -143,7 +143,7 @@
   object-fit: cover;
   display: block;
   scale: 1.1;
-  border-radius: 12px;
+  border-radius: 0.833vw;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
@@ -158,7 +158,7 @@
   width: 100%;
   margin: 5vh auto 2vh;
   padding: 0.5vh 2vw;
-  border-radius: 6px;
+  border-radius: 0.417vw;
 }
 
 .banner-content {
@@ -170,8 +170,8 @@
 }
 
 .banner-divider {
-  width: 2px;
-  height: 2.5rem;
+  width: 0.139vw;
+  height: 2.778vw;
   background-color: rgba(255, 255, 255, 0.5);
   flex-shrink: 0;
 }
@@ -179,7 +179,7 @@
 .empowering-text {
   font-family: "Inter", sans-serif;
   font-weight: 500;
-  font-size: clamp(0.8rem, 1vw, 1rem);
+  font-size: clamp(0.889vw, 1vw, 1.111vw);
   line-height: 1.5;
   color: #ffffff;
   margin: 0;
@@ -212,7 +212,7 @@
 
   .career-content {
     max-width: 100%;
-    gap: 1rem;
+    gap: 2.083vw;
   }
 
   .career-image-wrapper {
@@ -229,33 +229,33 @@
   }
 
   .career-title {
-    font-size: clamp(1.6rem, 7vw, 2.2rem);
+    font-size: clamp(3.333vw, 7vw, 4.583vw);
   }
 
   .career-title--offerings {
-    font-size: clamp(1.6rem, 7vw, 2.2rem);
+    font-size: clamp(3.333vw, 7vw, 4.583vw);
   }
 
   .career-subtitle {
-    font-size: clamp(0.9rem, 3.5vw, 1rem);
+    font-size: clamp(1.875vw, 3.5vw, 2.083vw);
   }
 
   .career-list-item {
-    font-size: clamp(0.9rem, 3.5vw, 1rem);
-    gap: 0.8rem;
+    font-size: clamp(1.875vw, 3.5vw, 2.083vw);
+    gap: 1.667vw;
   }
 
   .list-icon {
-    width: 24px;
-    height: 24px;
+    width: 3.125vw;
+    height: 3.125vw;
   }
 
   .list-text-wrapper strong {
-    font-size: clamp(0.9rem, 3.5vw, 1rem);
+    font-size: clamp(1.875vw, 3.5vw, 2.083vw);
   }
 
   .list-text-wrapper p {
-    font-size: clamp(0.85rem, 3vw, 0.95rem);
+    font-size: clamp(1.771vw, 3vw, 1.979vw);
   }
 
   .empowering-banner.container {
@@ -266,15 +266,15 @@
   .banner-content {
     flex-direction: column;
     text-align: center;
-    gap: 1rem;
+    gap: 2.083vw;
   }
 
   .banner-divider {
     width: 50%;
-    height: 2px;
+    height: 0.26vw;
   }
 
   .empowering-text {
-    font-size: clamp(0.85rem, 3.5vw, 1rem);
+    font-size: clamp(1.771vw, 3.5vw, 2.083vw);
   }
 }

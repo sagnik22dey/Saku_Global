@@ -9,7 +9,7 @@
 /* Container */
 .container {
   width: 90vw;
-  max-width: 1200px;
+  max-width: 83.333vw;
   margin: 0 auto;
 }
 
@@ -73,7 +73,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: 2.222vw;
 }
 
 .hero-text-content {
@@ -82,7 +82,7 @@
   align-items: flex-start;
   justify-content: space-between;
   width: 100%;
-  gap: 2rem;
+  gap: 2.222vw;
 }
 
 @media (min-width: 768px) {
@@ -96,23 +96,23 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 1.5rem;
+  gap: 1.667vw;
 }
 
 .hero-title {
   font-weight: 600;
-  font-size: clamp(1.5rem, 4vw, 2vw);
+  font-size: clamp(1.667vw, 4vw, 2vw);
   line-height: 1.2;
   color: #ffffff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 0.139vw 0.139vw 0.278vw rgba(0, 0, 0, 0.5);
   text-align: left;
   max-width: 60vw;
 }
 
 .hero-title-underline {
-  height: 2px;
+  height: 0.139vw;
   width: 90%;
-  max-width: 400px;
+  max-width: 27.778vw;
   background-color: #ffffff;
   border-radius: 2px;
 }
@@ -121,12 +121,12 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem 2.5rem;
+  padding: 1.111vw 2.778vw;
   background-color: #ffffff;
   color: #135f9a;
   font-weight: 600;
-  font-size: 1.25rem;
-  border-radius: 4px;
+  font-size: 1.389vw;
+  border-radius: 0.278vw;
   text-decoration: none;
   transition: all 0.3s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -149,16 +149,16 @@
 
 .section-title {
   font-weight: 700;
-  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-size: clamp(1.944vw, 3vw, 2.5vw);
   color: #4d4d4d;
-  margin-bottom: 2rem;
+  margin-bottom: 2.222vw;
 }
 
 .section-subtitle {
-  font-size: 1.1rem;
+  font-size: 1.222vw;
   color: #4d4d4d;
-  margin-bottom: 3rem;
-  max-width: 600px;
+  margin-bottom: 3.333vw;
+  max-width: 41.667vw;
   margin-left: auto;
   margin-right: auto;
 }
@@ -167,15 +167,15 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 1.667vw;
 }
 
 .partner-card {
   border: 1px solid #000000;
-  border-radius: 30px;
-  padding: 0.75rem 1.5rem;
+  border-radius: 2.083vw;
+  padding: 0.833vw 1.667vw;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 1.111vw;
   color: #4d4d4d;
   background-color: #ffffff;
   transition: all 0.3s ease;
@@ -193,15 +193,15 @@
 
 .programmes-header {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 3.333vw;
 }
 
 .hero-track-cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1.5rem;
-  margin-top: 4rem;
+  gap: 1.667vw;
+  margin-top: 4.444vw;
   width: 100%;
 }
 
@@ -209,13 +209,13 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 1.5rem;
-  border-radius: 12px;
+  padding: 1.667vw;
+  border-radius: 0.833vw;
   text-decoration: none;
-  min-width: 250px;
+  min-width: 17.361vw;
   flex: 1;
-  max-width: 300px;
-  min-height: 160px;
+  max-width: 20.833vw;
+  min-height: 11.111vw;
   color: #000000;
   transition:
     transform 0.3s ease,
@@ -230,23 +230,23 @@
 
 .card-track-name {
   font-weight: 700;
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.389vw;
+  margin-bottom: 0.556vw;
 }
 
 .card-track-desc {
-  font-size: 0.95rem;
+  font-size: 1.056vw;
   line-height: 1.4;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.667vw;
   flex-grow: 1;
 }
 
 .card-track-badge {
-  font-size: 0.85rem;
+  font-size: 0.944vw;
   font-weight: 500;
   border: 1px solid #000000;
-  border-radius: 20px;
-  padding: 0.4rem 0.8rem;
+  border-radius: 1.389vw;
+  padding: 0.444vw 0.889vw;
   align-self: flex-start;
 }
 
@@ -267,10 +267,10 @@
 .track-section {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  padding: 4rem;
-  border-radius: 16px;
-  margin-bottom: 4rem;
+  gap: 2.222vw;
+  padding: 4.444vw;
+  border-radius: 1.111vw;
+  margin-bottom: 4.444vw;
   color: #000000;
 }
 
@@ -283,14 +283,14 @@
   .track-info {
     flex: 1;
     position: sticky;
-    top: 100px;
-    padding-right: 3rem;
+    top: 6.944vw;
+    padding-right: 3.333vw;
     border-right: 1px solid rgba(0, 0, 0, 0.15);
   }
 
   .course-list {
     flex: 2;
-    padding-left: 3rem;
+    padding-left: 3.333vw;
   }
 }
 
@@ -301,7 +301,7 @@
   background: linear-gradient(135deg, #a5f3fc, #3bd0f1);
 }
 .track-section-c {
-  background: linear-gradient(135deg, #c7d2fe, #a5b4fc);
+  background: linear-gradient(135deg, #dcb4ff, #cb98fe);
 }
 .track-section-d {
   background: linear-gradient(135deg, #fbcfe8, #f472b6);
@@ -311,17 +311,17 @@
 .track-badge {
   display: inline-block;
   border: 1px solid #000000;
-  border-radius: 30px;
-  padding: 0.5rem 1rem;
-  font-size: 0.9rem;
+  border-radius: 2.083vw;
+  padding: 0.556vw 1.111vw;
+  font-size: 1vw;
   font-weight: 500;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.667vw;
 }
 
 .track-title {
-  font-size: clamp(2rem, 3vw, 2.5rem);
+  font-size: clamp(2.222vw, 3vw, 2.778vw);
   font-weight: 600;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.667vw;
   line-height: 1.1;
   background: linear-gradient(90.91deg, #090909 -5.17%, #135f9a 99.22%);
   -webkit-background-clip: text;
@@ -332,20 +332,20 @@
 .track-divider {
   border: none;
   border-top: 1px solid rgba(0, 0, 0, 0.15);
-  margin: 1.5rem 0;
+  margin: 1.667vw 0;
 }
 
 .track-description {
-  font-size: 1.1rem;
+  font-size: 1.222vw;
   line-height: 1.6;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.667vw;
 }
 
 .track-stats {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
-  margin-bottom: 1.5rem;
+  gap: 1.667vw;
+  margin-bottom: 1.667vw;
 }
 
 .stat-item {
@@ -354,14 +354,14 @@
 }
 
 .stat-number {
-  font-size: 2.5rem;
+  font-size: 2.778vw;
   font-weight: 700;
   line-height: 1;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.556vw;
 }
 
 .stat-label {
-  font-size: 1rem;
+  font-size: 1.111vw;
   font-weight: 500;
 }
 
@@ -371,15 +371,15 @@
 }
 
 .price-label {
-  font-size: 1rem;
+  font-size: 1.111vw;
   font-weight: 500;
 }
 
 .price-value {
-  font-size: 2.5rem;
+  font-size: 2.778vw;
   font-weight: 700;
   line-height: 1;
-  margin: 0.25rem 0;
+  margin: 0.278vw 0;
   background: linear-gradient(90.91deg, #090909 -5.17%, #135f9a 99.22%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -387,7 +387,7 @@
 }
 
 .price-suffix {
-  font-size: 0.8rem;
+  font-size: 0.889vw;
   font-weight: 500;
 }
 
@@ -395,13 +395,13 @@
 .course-list {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.667vw;
 }
 
 .course-card {
   background-color: #ffffff;
-  border-radius: 12px;
-  padding: 2rem;
+  border-radius: 0.833vw;
+  padding: 2.222vw;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   transition:
     transform 0.3s ease,
@@ -409,7 +409,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1.667vw;
 }
 
 .course-card:hover {
@@ -422,25 +422,25 @@
 }
 
 .course-title {
-  font-size: 1.5rem;
+  font-size: 1.667vw;
   font-weight: 700;
   color: #4d4d4d;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.556vw;
 }
 
 .course-meta {
-  font-size: 1rem;
+  font-size: 1.111vw;
   color: #666666;
   line-height: 1.5;
 }
 
 .course-price-wrap {
   text-align: right;
-  min-width: 100px;
+  min-width: 6.944vw;
 }
 
 .course-price {
-  font-size: 1.5rem;
+  font-size: 1.667vw;
   font-weight: 700;
   background: linear-gradient(90.91deg, #090909 -5.17%, #135f9a 99.22%);
   -webkit-background-clip: text;
@@ -449,25 +449,44 @@
 }
 
 .course-price-suffix {
-  font-size: 0.85rem;
+  font-size: 0.944vw;
   font-weight: 500;
   color: #666666;
-  margin-top: 0.25rem;
+  margin-top: 0.278vw;
+}
+
+.btn-course-details {
+  display: inline-block;
+  background-color: #135f9a;
+  color: #ffffff;
+  padding: 0.556vw 1.111vw;
+  border-radius: 0.278vw;
+  text-decoration: none;
+  font-size: 1vw;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-top: 1.111vw;
+  white-space: nowrap;
+}
+
+.btn-course-details:hover {
+  background-color: #0d426a;
+  transform: translateY(-2px);
 }
 
 .track-action {
   display: flex;
   justify-content: flex-end;
-  margin-top: 1rem;
+  margin-top: 1.111vw;
 }
 
 .btn-track-apply {
   background-color: #135f9a;
   color: #ffffff;
-  padding: 1rem 2.5rem;
-  border-radius: 8px;
+  padding: 1.111vw 2.778vw;
+  border-radius: 0.556vw;
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 1.222vw;
   font-weight: 600;
   transition: all 0.3s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -481,23 +500,80 @@
 
 /* Back to Top */
 .back-to-top-container {
-  text-align: center;
-  padding: 2rem 0 4rem;
+  position: sticky;
+  bottom: 2.083vw;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 2.083vw 2.083vw 0;
+  z-index: 90;
+  pointer-events: none;
 }
 
 .back-to-top {
-  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.889vw;
+  background-color: #135f9a;
+  color: #ffffff;
+  border-radius: 1.75rem;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(19, 95, 154, 0.4);
+  transition: all 0.3s ease;
+  pointer-events: auto;
+  animation: pulse-bounce 2.5s infinite;
+  overflow: hidden;
+}
+
+.back-to-top-text {
+  max-width: 0;
+  opacity: 0;
+  white-space: nowrap;
   font-weight: 500;
-  color: #666666;
-  text-decoration: underline;
-  text-decoration-color: #666666;
-  text-underline-offset: 4px;
-  transition: color 0.3s ease, text-decoration-color 0.3s ease;
+  font-size: 1.056vw;
+  transition: all 0.4s ease;
+}
+
+.back-to-top:hover .back-to-top-text {
+  max-width: 13.889vw;
+  opacity: 1;
+  margin-left: 1.333vw;
+  margin-right: 0.556vw;
+}
+
+.back-to-top svg {
+  width: 1.667vw;
+  height: 1.667vw;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+  margin: 1.111vw;
 }
 
 .back-to-top:hover {
-  color: #135f9a;
-  text-decoration-color: #135f9a;
+  background-color: #0d426a;
+  transform: scale(1.1);
+  animation: none;
+}
+
+.back-to-top:hover svg {
+  animation: hover-spin 0.5s ease;
+  margin-left: 0;
+}
+
+@keyframes pulse-bounce {
+  0%, 100% {
+    transform: translateY(0);
+    box-shadow: 0 4px 15px rgba(19, 95, 154, 0.4);
+  }
+  50% {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(19, 95, 154, 0.6);
+  }
+}
+
+@keyframes hover-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 /* Responsive adjustments */
@@ -510,11 +586,11 @@
   .hero-text-content {
     flex-direction: column;
     align-items: flex-start;
-    gap: 1.5rem;
+    gap: 3.125vw;
   }
 
   .hero-title {
-    font-size: clamp(1.3rem, 6vw, 2rem);
+    font-size: clamp(2.708vw, 6vw, 4.167vw);
     max-width: 90vw;
     text-align: left;
   }
@@ -524,28 +600,28 @@
   }
 
   .btn-apply-now {
-    font-size: 1rem;
-    padding: 0.8rem 1.8rem;
+    font-size: 2.083vw;
+    padding: 1.667vw 3.75vw;
   }
 
   .section-title {
-    font-size: clamp(1.3rem, 5.5vw, 1.8rem);
+    font-size: clamp(2.708vw, 5.5vw, 3.75vw);
   }
 
   .partners-grid {
-    gap: 0.8rem;
+    gap: 1.667vw;
   }
 
   .partner-card {
-    font-size: 0.9rem;
-    padding: 0.6rem 1.2rem;
+    font-size: 1.875vw;
+    padding: 1.25vw 2.5vw;
   }
 
   .hero-track-cards {
     flex-direction: column;
     align-items: stretch;
-    gap: 1rem;
-    margin-top: 2rem;
+    gap: 2.083vw;
+    margin-top: 4.167vw;
   }
 
   .hero-track-card {
@@ -556,15 +632,15 @@
   }
 
   .track-section {
-    padding: 2rem 1.5rem;
+    padding: 4.167vw 3.125vw;
   }
 
   .track-title {
-    font-size: clamp(1.5rem, 6vw, 2rem);
+    font-size: clamp(3.125vw, 6vw, 4.167vw);
   }
 
   .stat-number {
-    font-size: 2rem;
+    font-size: 4.167vw;
   }
 
   .course-card {
@@ -577,6 +653,6 @@
   }
 
   .course-title {
-    font-size: 1.2rem;
+    font-size: 2.5vw;
   }
 }

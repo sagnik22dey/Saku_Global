@@ -16,7 +16,7 @@
 .gradient-text {
   font-family: var(--font-sans);
   font-weight: 700;
-  font-size: clamp(2.5rem, 4.5vw, 4.5rem);
+  font-size: clamp(2.778vw, 4.5vw, 5vw);
   line-height: 1.15;
   background: var(--gradient-title);
   -webkit-background-clip: text;
@@ -26,7 +26,7 @@
 }
 
 .hero-subtitle {
-  font-size: clamp(1rem, 1.2vw, 1.25rem);
+  font-size: clamp(1.111vw, 1.2vw, 1.389vw);
   line-height: 1.8;
   color: var(--text-dark);
   max-width: 42vw;
@@ -89,31 +89,31 @@
 
 .hero-slide-title {
   color: var(--text-light);
-  font-size: clamp(1.25rem, 2vw, 2rem);
+  font-size: clamp(1.389vw, 2vw, 2.222vw);
   font-weight: 600;
   margin-bottom: 0.5vh;
 }
 
 .hero-slide-count {
   color: rgba(255, 255, 255, 0.8);
-  font-size: clamp(0.875rem, 1.1vw, 1.1rem);
+  font-size: clamp(0.972vw, 1.1vw, 1.222vw);
   font-weight: 400;
   margin-bottom: 1.5vh;
 }
 
 .hero-slide-link {
   color: var(--text-light);
-  font-size: clamp(0.8rem, 1vw, 1rem);
+  font-size: clamp(0.889vw, 1vw, 1.111vw);
   font-weight: 300;
   text-decoration: underline;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 0.556vw;
 }
 
 .hero-slide-link svg {
-  width: 14px;
-  height: 14px;
+  width: 0.972vw;
+  height: 0.972vw;
   fill: var(--text-light);
   transition: transform 0.3s ease;
 }
@@ -126,8 +126,8 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 40px;
-  height: 56px;
+  width: 2.778vw;
+  height: 3.889vw;
   background: rgba(0, 0, 0, 0.3);
   display: flex;
   align-items: center;
@@ -153,8 +153,8 @@
 }
 
 .slider-nav svg {
-  width: 24px;
-  height: 24px;
+  width: 1.667vw;
+  height: 1.667vw;
   fill: var(--text-light);
 }
 
@@ -176,7 +176,7 @@
 }
 
 .mission-desc {
-  font-size: clamp(0.95rem, 1.1vw, 1.15rem);
+  font-size: clamp(1.056vw, 1.1vw, 1.278vw);
   line-height: 1.8;
   color: var(--text-dark);
   max-width: 70vw;
@@ -199,7 +199,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  gap: 20px;
+  gap: 1.389vw;
   min-height: 18vh;
   position: relative;
   overflow: hidden;
@@ -219,7 +219,7 @@
 }
 
 .mission-card-title {
-  font-size: clamp(1.2rem, 2vw, 1.8rem);
+  font-size: clamp(1.333vw, 2vw, 2vw);
   font-weight: 600;
   line-height: 1.2;
   color: var(--text-dark);
@@ -263,7 +263,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: clamp(8px, 1.1vw, 13.21px);
+  gap: clamp(0.556vw, 1.1vw, 0.917vw);
   width: 100%;
   max-width: 73.5vw;
   margin-bottom: 10vh;
@@ -273,7 +273,7 @@
 .course-tab {
   font-family: var(--font-sans);
   font-weight: 700;
-  font-size: clamp(0.85rem, 1.15vw, 1.1rem);
+  font-size: clamp(0.944vw, 1.15vw, 1.222vw);
   color: #000000;
   background: transparent;
   border: none;
@@ -282,7 +282,7 @@
   cursor: pointer;
   transition: all 0.3s ease;
   white-space: nowrap;
-  line-height: 30px;
+  line-height: 2.083vw;
   display: flex;
   align-items: center;
   text-align: center;
@@ -309,7 +309,7 @@
 
 .course-tab-divider {
   width: 1px;
-  height: 33.42px;
+  height: 2.321vw;
   background-color: #000000;
   flex-shrink: 0;
 }
@@ -349,25 +349,25 @@
 }
 
 .course-card-title {
-  font-size: clamp(1.8rem, 2.5vw, 2.5rem);
+  font-size: clamp(2vw, 2.5vw, 2.778vw);
   font-weight: 600;
   color: var(--text-dark);
 }
 
 .course-card-count {
-  font-size: clamp(1.1rem, 1.5vw, 1.5rem);
+  font-size: clamp(1.222vw, 1.5vw, 1.667vw);
   font-weight: 300;
   color: var(--text-muted);
 }
 
 .course-card-desc {
-  font-size: clamp(0.95rem, 1.1vw, 1.1rem);
+  font-size: clamp(1.056vw, 1.1vw, 1.222vw);
   line-height: 1.6;
   color: var(--text-muted);
 }
 
 .course-card-duration {
-  font-size: clamp(1.1rem, 1.5vw, 1.5rem);
+  font-size: clamp(1.222vw, 1.5vw, 1.667vw);
   font-weight: 500;
   color: var(--text-dark);
 }
@@ -375,14 +375,14 @@
 .course-card-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 0.833vw;
 }
 
 .course-tag {
   border: 1px solid var(--text-dark);
   border-radius: var(--border-radius-pill);
   padding: 0.8vh 1.5vw;
-  font-size: clamp(0.8rem, 0.95vw, 0.95rem);
+  font-size: clamp(0.889vw, 0.95vw, 1.056vw);
   font-weight: 300;
   color: var(--text-dark);
   transition: all 0.3s ease;
@@ -399,7 +399,7 @@
   border: none;
   border-radius: 6px;
   padding: 1.5vh 3vw;
-  font-size: clamp(0.95rem, 1.2vw, 1.25rem);
+  font-size: clamp(1.056vw, 1.2vw, 1.389vw);
   font-weight: 700;
   cursor: pointer;
   transition:
@@ -419,15 +419,15 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: clamp(20px, 2.9vw, 42px);
+  gap: clamp(1.389vw, 2.9vw, 2.917vw);
   overflow: hidden;
-  min-height: clamp(380px, 40vw, 565px);
-  padding-right: clamp(20px, 5.8vw, 85px);
+  min-height: clamp(26.389vw, 40vw, 39.236vw);
+  padding-right: clamp(1.389vw, 5.8vw, 5.903vw);
 }
 
 .intl-image-container {
   flex: 0 0 43%;
-  height: clamp(380px, 40vw, 565px);
+  height: clamp(26.389vw, 40vw, 39.236vw);
   overflow: hidden;
 }
 
@@ -444,13 +444,13 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 20px;
+  gap: 1.389vw;
   padding: 0;
 }
 
 .intl-eyebrow {
   font-family: var(--font-sans);
-  font-size: clamp(0.85rem, 1.1vw, 1.15rem);
+  font-size: clamp(0.944vw, 1.1vw, 1.278vw);
   font-weight: 500;
   color: #000000;
   line-height: 2;
@@ -459,7 +459,7 @@
 
 .intl-title {
   font-family: var(--font-sans);
-  font-size: clamp(2.2rem, 4.5vw, 4rem);
+  font-size: clamp(2.444vw, 4.5vw, 4.444vw);
   line-height: 1.19;
   font-weight: 700;
   background: linear-gradient(90.91deg, #090909 -5.17%, #135F9A 99.22%);
@@ -471,7 +471,7 @@
 
 .intl-desc {
   font-family: var(--font-sans);
-  font-size: clamp(0.95rem, 1.15vw, 1.25rem);
+  font-size: clamp(1.056vw, 1.15vw, 1.389vw);
   font-weight: 400;
   line-height: 1.7;
   color: #000000;
@@ -500,7 +500,7 @@
 }
 
 .build-future-title {
-  font-size: clamp(2.2rem, 4vw, 4vw);
+  font-size: clamp(2.444vw, 4vw, 4vw);
   font-weight: 700;
   line-height: 1.15;
   background: var(--gradient-title);
@@ -523,7 +523,7 @@
 }
 
 .contact-form-title {
-  font-size: clamp(1.5rem, 2vw, 2rem);
+  font-size: clamp(1.667vw, 2vw, 2.222vw);
   font-weight: 500;
   color: var(--text-dark);
 }
@@ -537,7 +537,7 @@
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: 1.389vw;
 }
 
 .form-group {
@@ -547,11 +547,11 @@
 
 .form-input {
   width: 100%;
-  height: 50px;
+  height: 3.472vw;
   background-color: var(--bg-gray);
   border: none;
-  padding: 10px 20px;
-  font-size: clamp(0.9rem, 1.1vw, 1.1rem);
+  padding: 0.694vw 1.389vw;
+  font-size: clamp(1vw, 1.1vw, 1.222vw);
   color: var(--text-dark);
   border-radius: 4px;
   outline: none;
@@ -564,13 +564,13 @@
 
 .btn-send-message {
   align-self: flex-start;
-  width: 250px;
-  height: 60px;
+  width: 17.361vw;
+  height: 4.167vw;
   background: var(--gradient-title);
   border: none;
   border-radius: 10px;
   color: var(--text-light);
-  font-size: clamp(1.1rem, 1.3vw, 1.3rem);
+  font-size: clamp(1.222vw, 1.3vw, 1.444vw);
   font-weight: 700;
   cursor: pointer;
   transition:
@@ -596,11 +596,11 @@
 }
 
 .get-in-touch-title {
-  font-size: clamp(1.8rem, 2.5vw, 2.5rem);
+  font-size: clamp(2vw, 2.5vw, 2.778vw);
   font-weight: 400;
   color: var(--text-dark);
   text-decoration: underline;
-  text-underline-offset: 8px;
+  text-underline-offset: 0.556vw;
 }
 
 .touch-grid {
@@ -614,13 +614,13 @@
 .touch-item {
   display: flex;
   align-items: center;
-  gap: 15px;
-  padding: 0 10px;
+  gap: 1.042vw;
+  padding: 0 0.694vw;
 }
 
 .touch-icon {
-  width: 60px;
-  height: 60px;
+  width: 4.167vw;
+  height: 4.167vw;
   flex-shrink: 0;
 }
 
@@ -631,21 +631,21 @@
 
 .touch-info {
   font-family: var(--font-sans);
-  font-size: clamp(0.85rem, 0.95vw, 0.95rem);
+  font-size: clamp(0.944vw, 0.95vw, 1.056vw);
   line-height: 1.5;
   color: var(--text-dark);
 }
 
 .touch-divider {
   width: 1px;
-  height: 80px;
+  height: 5.556vw;
   background-color: rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 1200px) {
   .touch-grid {
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    gap: 2.083vw;
   }
   .touch-divider {
     display: none;
@@ -727,19 +727,19 @@
   }
 
   .gradient-text {
-    font-size: clamp(1.8rem, 7.5vw, 2.8rem);
+    font-size: clamp(3.75vw, 7.5vw, 5.833vw);
     margin-bottom: 2vh;
   }
 
   .hero-subtitle {
-    font-size: 0.95rem;
+    font-size: 1.979vw;
     line-height: 1.7;
   }
 
   .hero-slider-container {
     width: 90vw;
     height: 38vw;
-    min-height: 200px;
+    min-height: 26.042vw;
     border-radius: 16px;
   }
 
@@ -748,7 +748,7 @@
   }
 
   .mission-desc {
-    font-size: 0.9rem;
+    font-size: 1.875vw;
     max-width: 90vw;
   }
 
@@ -774,13 +774,13 @@
   }
 
   .mission-card-title {
-    font-size: clamp(1rem, 4vw, 1.25rem);
+    font-size: clamp(2.083vw, 4vw, 2.604vw);
   }
 
   .mission-card-image {
     width: auto;
     height: 13vh;
-    min-height: 80px;
+    min-height: 10.417vw;
     max-width: 35%;
     margin-bottom: -3vh;
     margin-right: -5vw;
@@ -806,8 +806,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     border-radius: 20px;
-    padding: 10px;
-    gap: 8px;
+    padding: 1.302vw;
+    gap: 1.042vw;
     max-width: 90vw;
     margin-bottom: 4vh;
     overflow: visible;
@@ -821,12 +821,12 @@
     width: 100%;
     justify-content: center;
     padding: 1.2vh 2vw;
-    font-size: 0.78rem;
+    font-size: 1.625vw;
     white-space: normal;
     text-align: center;
     line-height: 1.3;
     border-radius: 12px;
-    min-height: 44px;
+    min-height: 5.729vw;
   }
 
   .course-tab.active {
@@ -844,7 +844,7 @@
     max-width: 100%;
     width: 100%;
     height: 40vw;
-    min-height: 180px;
+    min-height: 23.438vw;
     border-radius: 16px;
   }
 
@@ -855,30 +855,30 @@
   }
 
   .course-card-title {
-    font-size: clamp(1.4rem, 5.5vw, 1.8rem);
+    font-size: clamp(2.917vw, 5.5vw, 3.75vw);
   }
 
   .course-card-count {
-    font-size: 1rem;
+    font-size: 2.083vw;
   }
 
   .course-card-desc {
-    font-size: 0.9rem;
+    font-size: 1.875vw;
   }
 
   .course-card-duration {
-    font-size: 0.95rem;
+    font-size: 1.979vw;
   }
 
   .course-tag {
     padding: 0.5vh 3vw;
-    font-size: 0.78rem;
+    font-size: 1.625vw;
   }
 
   .btn-know-more {
     width: 100%;
     padding: 1.6vh 0;
-    font-size: 1rem;
+    font-size: 2.083vw;
     border-radius: 10px;
     text-align: center;
   }
@@ -890,15 +890,15 @@
 
   .intl-image-container {
     height: 45vw;
-    min-height: 200px;
+    min-height: 26.042vw;
   }
 
   .intl-title {
-    font-size: clamp(1.6rem, 6.5vw, 2.2rem);
+    font-size: clamp(3.333vw, 6.5vw, 4.583vw);
   }
 
   .intl-desc {
-    font-size: 0.9rem;
+    font-size: 1.875vw;
   }
 
   .build-future-section {
@@ -906,7 +906,7 @@
   }
 
   .build-future-title {
-    font-size: clamp(1.6rem, 6.5vw, 2.2rem);
+    font-size: clamp(3.333vw, 6.5vw, 4.583vw);
     text-align: center;
   }
 
@@ -915,7 +915,7 @@
   }
 
   .contact-form-title {
-    font-size: 1.2rem;
+    font-size: 2.5vw;
   }
 
   .form-row {
@@ -925,8 +925,8 @@
 
   .btn-send-message {
     width: 100%;
-    height: 52px;
-    font-size: 1rem;
+    height: 6.771vw;
+    font-size: 2.083vw;
   }
 
   .get-in-touch-section {
@@ -935,7 +935,7 @@
   }
 
   .get-in-touch-title {
-    font-size: clamp(1.4rem, 5.5vw, 1.8rem);
+    font-size: clamp(2.917vw, 5.5vw, 3.75vw);
   }
 
   .touch-grid {
@@ -948,17 +948,17 @@
   .touch-item {
     flex-direction: row;
     align-items: center;
-    gap: 16px;
+    gap: 2.083vw;
     padding: 2.2vh 4vw;
     background: var(--bg-gray);
     border-radius: 14px;
-    min-height: 80px;
+    min-height: 10.417vw;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   }
 
   .touch-icon {
-    width: 44px;
-    height: 44px;
+    width: 5.729vw;
+    height: 5.729vw;
     flex-shrink: 0;
     display: flex;
     align-items: center;
@@ -967,13 +967,13 @@
 
   .touch-icon img,
   .touch-icon svg {
-    width: 36px;
-    height: 36px;
+    width: 4.688vw;
+    height: 4.688vw;
     object-fit: contain;
   }
 
   .touch-info {
-    font-size: 0.82rem;
+    font-size: 1.708vw;
     line-height: 1.55;
     word-break: break-word;
     overflow-wrap: anywhere;
@@ -982,7 +982,7 @@
   }
 
   .touch-info strong {
-    font-size: 0.72rem;
+    font-size: 1.5vw;
     letter-spacing: 0.5px;
     color: var(--primary-color);
   }

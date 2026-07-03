@@ -22,15 +22,15 @@
   display: flex;
   flex-direction: column;
   padding: 5vw 0 5vw 15vw;
-  gap: 2.5rem;
+  gap: 2.778vw;
 }
 
 .leadership-title {
   font-family: "Inter", sans-serif;
   font-weight: 700;
-  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-size: clamp(2vw, 3vw, 3.111vw);
   line-height: 1.15;
-  margin-bottom: 1rem;
+  margin-bottom: 1.111vw;
 }
 
 .gradient-text {
@@ -50,10 +50,10 @@
 .timeline-list::before {
   content: "";
   position: absolute;
-  top: 37px;
-  bottom: 37px;
-  left: 37px;
-  width: 2px;
+  top: 2.569vw;
+  bottom: 2.569vw;
+  left: 2.569vw;
+  width: 0.139vw;
   border-left: 2px dashed #012c73;
   z-index: 0;
 }
@@ -62,10 +62,10 @@
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  gap: 1.5rem;
+  gap: 1.667vw;
   position: relative;
   z-index: 1;
-  padding-bottom: 2rem;
+  padding-bottom: 2.222vw;
 }
 
 .timeline-item:last-child {
@@ -74,8 +74,8 @@
 
 .timeline-icon {
   flex-shrink: 0;
-  width: 74px;
-  height: 74px;
+  width: 5.139vw;
+  height: 5.139vw;
   background-color: #012c73;
   border-radius: 50%;
   display: flex;
@@ -84,20 +84,20 @@
 }
 
 .timeline-icon img {
-  width: 40px;
-  height: 40px;
+  width: 2.778vw;
+  height: 2.778vw;
   object-fit: contain;
 }
 
 .timeline-content {
-  padding-top: 14px;
+  padding-top: 0.972vw;
   flex: 1;
 }
 
 .timeline-content p {
   font-family: "Inter", sans-serif;
   font-weight: 700;
-  font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+  font-size: clamp(1vw, 1.2vw, 1.222vw);
   line-height: 1.6;
   color: #4d4d4d;
   margin: 0;
@@ -114,9 +114,9 @@
 .image-curve-container {
   width: 100%;
   height: 100%;
-  min-height: 600px;
+  min-height: 41.667vw;
   overflow: hidden;
-  border-radius: 60px 0 0 0;
+  border-radius: 4.167vw 0 0 0;
   position: relative;
 }
 
@@ -139,7 +139,7 @@
   left: 0;
   right: 0;
   background-color: #012c73;
-  padding: 1.5rem 2.5rem;
+  padding: 1.667vw 2.778vw;
   color: #ffffff;
   border-radius: 0;
 }
@@ -147,24 +147,24 @@
 .name-card h2 {
   font-family: "Inter", sans-serif;
   font-weight: 700;
-  font-size: clamp(1.3rem, 2vw, 1.9rem);
-  margin: 0 0 0.4rem 0;
+  font-size: clamp(1.444vw, 2vw, 2.111vw);
+  margin: 0 0 0.444vw 0;
   border-bottom: 2px solid rgba(255, 255, 255, 0.35);
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.556vw;
 }
 
 .name-card p {
   font-family: "Inter", sans-serif;
   font-weight: 400;
-  font-size: clamp(0.9rem, 1.2vw, 1.1rem);
-  margin: 0.4rem 0 0 0;
+  font-size: clamp(1vw, 1.2vw, 1.222vw);
+  margin: 0.444vw 0 0 0;
   color: rgba(255, 255, 255, 0.9);
 }
 
 .bottom-banner {
   background-color: #012c73;
   width: 100%;
-  padding: 2.5rem 0;
+  padding: 2.778vw 0;
   margin-top: 0;
 }
 
@@ -182,10 +182,10 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 1.25rem;
+  gap: 1.389vw;
   color: #ffffff;
   flex: 1;
-  padding: 0 2rem;
+  padding: 0 2.222vw;
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
@@ -199,8 +199,8 @@
 }
 
 .banner-item img {
-  width: 56px;
-  height: 56px;
+  width: 3.889vw;
+  height: 3.889vw;
   object-fit: contain;
   flex-shrink: 0;
   transition: transform 0.5s ease;
@@ -213,7 +213,7 @@
 .banner-item h3 {
   font-family: "Inter", sans-serif;
   font-weight: 700;
-  font-size: clamp(0.95rem, 1.3vw, 1.15rem);
+  font-size: clamp(1.056vw, 1.3vw, 1.278vw);
   line-height: 1.35;
   margin: 0;
 }
@@ -248,31 +248,31 @@
 @media (max-width: 768px) {
   .leadership-timeline {
     padding: 6vw 5vw;
-    gap: 1.5rem;
+    gap: 3.125vw;
   }
 
   .leadership-title {
-    font-size: clamp(1.5rem, 6vw, 2.2rem);
+    font-size: clamp(3.125vw, 6vw, 4.583vw);
   }
 
   .timeline-icon {
-    width: 52px;
-    height: 52px;
+    width: 6.771vw;
+    height: 6.771vw;
   }
 
   .timeline-icon img {
-    width: 28px;
-    height: 28px;
+    width: 3.646vw;
+    height: 3.646vw;
   }
 
   .timeline-list::before {
-    left: 26px;
-    top: 26px;
-    bottom: 26px;
+    left: 3.385vw;
+    top: 3.385vw;
+    bottom: 3.385vw;
   }
 
   .timeline-content p {
-    font-size: clamp(0.85rem, 3.5vw, 1rem);
+    font-size: clamp(1.771vw, 3.5vw, 2.083vw);
   }
 
   .leadership-image-wrapper {
@@ -280,25 +280,25 @@
   }
 
   .name-card {
-    padding: 1rem 1.5rem;
+    padding: 2.083vw 3.125vw;
   }
 
   .name-card h2 {
-    font-size: clamp(1rem, 4.5vw, 1.4rem);
+    font-size: clamp(2.083vw, 4.5vw, 2.917vw);
   }
 
   .name-card p {
-    font-size: clamp(0.8rem, 3.5vw, 1rem);
+    font-size: clamp(1.667vw, 3.5vw, 2.083vw);
   }
 
   .bottom-banner {
-    padding: 2rem 0;
+    padding: 4.167vw 0;
     margin-top: 0;
   }
 
   .banner-container {
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 3.125vw;
     max-width: 90vw;
   }
 
@@ -309,6 +309,6 @@
   }
 
   .banner-item h3 {
-    font-size: clamp(0.9rem, 3.5vw, 1rem);
+    font-size: clamp(1.875vw, 3.5vw, 2.083vw);
   }
 }
