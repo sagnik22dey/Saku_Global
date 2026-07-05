@@ -292,6 +292,20 @@
     flex: 2;
     padding-left: 3.333vw;
   }
+
+  /* Specific alignment for Track C since it has only 1 card */
+  .track-section-c .course-list {
+    align-self: stretch;
+    justify-content: center;
+    position: relative;
+  }
+
+  .track-section-c .track-action {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-top: 0;
+  }
 }
 
 .track-section-a {
@@ -342,8 +356,8 @@
 }
 
 .track-stats {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.667vw;
   margin-bottom: 1.667vw;
 }
@@ -457,21 +471,16 @@
 
 .btn-course-details {
   display: inline-block;
-  background-color: #135f9a;
-  color: #ffffff;
-  padding: 0.556vw 1.111vw;
-  border-radius: 0.278vw;
+  color: #4d4d4d;
+  font-size: 0.833vw;
+  font-weight: 700;
   text-decoration: none;
-  font-size: 1vw;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  margin-top: 1.111vw;
+  margin-top: 0.833vw;
   white-space: nowrap;
 }
 
 .btn-course-details:hover {
-  background-color: #0d426a;
-  transform: translateY(-2px);
+  text-decoration: underline;
 }
 
 .track-action {
