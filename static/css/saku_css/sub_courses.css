@@ -187,7 +187,7 @@
 
 .content-heading-item {
   display: flex;
-  align-items: flex-start;
+  align-items: stretch;
   border-bottom: 1px solid #4d4d4d;
 }
 
@@ -206,13 +206,17 @@
   text-align: center;
   padding: 2vw 0;
   flex-shrink: 0;
+  border-right: 1px solid #4d4d4d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .heading-text {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5vw;
+  display: block;
   padding: 2vw;
+  flex: 1;
+  align-self: center;
 }
 
 .heading-title {
@@ -220,14 +224,16 @@
   font-weight: 700;
   font-size: 1.4vw;
   color: #4d4d4d;
+  display: inline;
 }
 
 .heading-desc {
   font-family: "Inter", sans-serif;
   font-weight: 400;
-  font-size: 1.2vw;
+  font-size: 1.4vw;
   color: #4d4d4d;
   line-height: 1.5;
+  display: inline;
 }
 
 .section-entry-requirements {
@@ -344,6 +350,7 @@
     border-bottom: 1px solid #ccc;
     padding: 2vw;
     text-align: left;
+    justify-content: flex-start;
   }
   .heading-text {
     padding: 3.5vw;

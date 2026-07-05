@@ -1,213 +1,116 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Applied AI Engineering Industry Ready Programme | Saku Global</title>
-    <link href="/static/css/common.css" rel="stylesheet" />
-    <link href="/static/css/saku_css/sub_courses.css" rel="stylesheet" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <header class="saku-header">
-      <div class="header-container">
-        <a href="/" class="logo-link">
-          <img
-            alt="Saku Global"
-            class="logo-svg"
-            src="/static/images/logo.svg"
-          />
-        </a>
-        <button aria-label="Toggle Navigation" class="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <nav class="nav-menu">
-          <a class="nav-item" href="/#about">About Us</a>
-          <div class="nav-item dropdown">
-            <a href="/what-we-offer">What We Offer</a>
-            <svg class="nav-arrow" viewbox="0 0 10 6">
-              <path
-                d="M1 1L5 5L9 1"
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-              ></path>
-            </svg>
-            <div class="dropdown-content">
-              <div class="sub-dropdown">
-                <div class="sub-dropdown-link-container">
-                  <a href="/saku/ai-training"
-                    >AI Training &amp; Workforce Development</a
-                  ><svg class="nav-arrow sub-nav-arrow" viewbox="0 0 10 6">
-                    <path
-                      d="M1 1L5 5L9 1"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.5"
-                    ></path>
-                  </svg>
-                </div>
-                <div class="sub-dropdown-content">
-                  <div class="sub-sub-dropdown">
-                    <div class="sub-sub-dropdown-link-container">
-                      <a href="/saku/master-ai/track-a"
-                        >Essential &amp; Fundamental Applied AI Programmes</a
-                      ><svg class="nav-arrow sub-nav-arrow" viewbox="0 0 10 6">
-                        <path
-                          d="M1 1L5 5L9 1"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="1.5"
-                        ></path>
-                      </svg>
-                    </div>
-                    <div class="sub-sub-dropdown-content">
-                      <a href="/saku/master-ai/track-a/master-in-ai-creation"
-                        >Master in AI Creation</a
-                      ><a
-                        href="/saku/master-ai/track-a/data-science-foundations"
-                        >Data Science Foundations with Python</a
-                      ><a
-                        href="/saku/master-ai/track-a/practical-machine-learning"
-                        >Practical Machine Learning</a
-                      >
-                    </div>
-                  </div>
-                  <div class="sub-sub-dropdown">
-                    <div class="sub-sub-dropdown-link-container">
-                      <a href="/saku/master-ai/track-b"
-                        >Advanced Applied AI Programmes</a
-                      ><svg class="nav-arrow sub-nav-arrow" viewbox="0 0 10 6">
-                        <path
-                          d="M1 1L5 5L9 1"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="1.5"
-                        ></path>
-                      </svg>
-                    </div>
-                    <div class="sub-sub-dropdown-content">
-                      <a href="/saku/master-ai/track-b/full-stack-dev-ai"
-                        >Full Stack Development with AI</a
-                      ><a href="/saku/master-ai/track-b/deep-learning-cv"
-                        >Deep Learning and Computer Vision</a
-                      ><a href="/saku/master-ai/track-b/advanced-ai-nlp-llms-rl"
-                        >Advanced AI with NLP, LLMs, RL &amp; Ethics</a
-                      ><a href="/saku/master-ai/track-b/rl-and-responsible-ai"
-                        >Reinforcement Learning and Responsible AI</a
-                      ><a
-                        href="/saku/master-ai/track-b/master-ai-app-engineering"
-                        >Master of AI Application Engineering</a
-                      >
-                    </div>
-                  </div>
-                  <div class="sub-sub-dropdown">
-                    <div class="sub-sub-dropdown-link-container">
-                      <a href="/saku/master-ai/track-c"
-                        >AI Engineering Flagship Programme</a
-                      ><svg class="nav-arrow sub-nav-arrow" viewbox="0 0 10 6">
-                        <path
-                          d="M1 1L5 5L9 1"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="1.5"
-                        ></path>
-                      </svg>
-                    </div>
-                    <div class="sub-sub-dropdown-content">
-                      <a href="/saku/master-ai/track-c/applied-ai-engineering"
-                        >Applied AI Engineering Industry Ready Programme</a
-                      >
-                    </div>
-                  </div>
-                  <div class="sub-sub-dropdown">
-                    <div class="sub-sub-dropdown-link-container">
-                      <a href="/saku/master-ai/track-d"
-                        >Medical &amp; Healthcare AI Programmes</a
-                      ><svg class="nav-arrow sub-nav-arrow" viewbox="0 0 10 6">
-                        <path
-                          d="M1 1L5 5L9 1"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="1.5"
-                        ></path>
-                      </svg>
-                    </div>
-                    <div class="sub-sub-dropdown-content">
-                      <a href="/saku/master-ai/track-d/ai-essentials-doctors"
-                        >AI Essentials for Doctors</a
-                      ><a href="/saku/master-ai/track-d/ai-fundamentals-doctors"
-                        >AI Fundamentals for Doctors</a
-                      ><a href="/saku/master-ai/track-d/ai-excellence-doctors"
-                        >AI Excellence for Doctors</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <a href="/saku/semiconductor"
-                >Semiconductor Manufacturing Education &amp; Training</a
-              >
-              <a href="/saku/quantum"
-                >Quantum Communication Technology Programme</a
-              >
-              <a href="/saku/career-readiness"
-                >Career Readiness &amp; Employability Solutions</a
-              >
-              <a href="/saku/industry-academia">Industry-Academia Engagement</a>
-              <a href="/saku/higher-ed">Higher Education Consultancy</a>
-            </div>
-          </div>
-          <a class="nav-item" href="/why-choose">Why Choose Us?</a>
-          <a class="nav-item" href="/leadership">Leadership</a>
-          <a class="nav-item" href="/contact_us">Contacts Us</a>
-          <a class="nav-btn-apply" href="/application-form" style="display: none;">Apply Now</a>
-        </nav>
-      </div>
-    </header>
+<!DOCTYPE html>
 
-    <main class="sub-course-main">
-      <div
-        id="hero"
-        class="sub-course-hero"
-        style="
-          background-image: url(&quot;/static/images/saku_images/sub-courses/AI-Engineering-Flagship-Programme/applied-engineering-programme.png&quot;);
-        "
-      ></div>
-      <div class="sub-course-container">
-        <div class="sub-course-header-section">
-          <h1 class="sub-course-title">Applied AI Engineering Industry Ready Programme</h1>
-          <div class="sub-course-meta">
-            6-12 Months, Self-paced/Live mix | Students / Professionals<br />
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Applied AI Engineering Industry Ready Programme | Saku Global</title>
+<link href="/static/css/common.css" rel="stylesheet"/>
+<link href="/static/css/saku_css/sub_courses.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+</head>
+<body>
+<header class="saku-header">
+<div class="header-container">
+<a class="logo-link" href="/">
+<img alt="Saku Global" class="logo-svg" src="/static/images/logo.svg"/>
+</a>
+<button aria-label="Toggle Navigation" class="hamburger">
+<span></span>
+<span></span>
+<span></span>
+</button>
+<nav class="nav-menu">
+<a class="nav-item" href="/#about">About Us</a>
+<div class="nav-item dropdown">
+<a href="/what-we-offer">What We Offer</a>
+<svg class="nav-arrow" viewbox="0 0 10 6">
+<path d="M1 1L5 5L9 1" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+</svg>
+<div class="dropdown-content">
+<div class="sub-dropdown">
+<div class="sub-dropdown-link-container">
+<a href="/saku/ai-training">AI Training &amp; Workforce Development</a><svg class="nav-arrow sub-nav-arrow" viewbox="0 0 10 6">
+<path d="M1 1L5 5L9 1" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+</svg>
+</div>
+<div class="sub-dropdown-content">
+<div class="sub-sub-dropdown">
+<div class="sub-sub-dropdown-link-container">
+<a href="/saku/master-ai/track-a">Essential &amp; Fundamental Applied AI Programmes</a><svg class="nav-arrow sub-nav-arrow" viewbox="0 0 10 6">
+<path d="M1 1L5 5L9 1" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+</svg>
+</div>
+<div class="sub-sub-dropdown-content">
+<a href="/saku/master-ai/track-a/master-in-ai-creation">Master in AI Creation</a><a href="/saku/master-ai/track-a/data-science-foundations">Data Science Foundations with Python</a><a href="/saku/master-ai/track-a/practical-machine-learning">Practical Machine Learning</a>
+</div>
+</div>
+<div class="sub-sub-dropdown">
+<div class="sub-sub-dropdown-link-container">
+<a href="/saku/master-ai/track-b">Advanced Applied AI Programmes</a><svg class="nav-arrow sub-nav-arrow" viewbox="0 0 10 6">
+<path d="M1 1L5 5L9 1" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+</svg>
+</div>
+<div class="sub-sub-dropdown-content">
+<a href="/saku/master-ai/track-b/full-stack-dev-ai">Full Stack Development with AI</a><a href="/saku/master-ai/track-b/deep-learning-cv">Deep Learning and Computer Vision</a><a href="/saku/master-ai/track-b/advanced-ai-nlp-llms-rl">Advanced AI with NLP, LLMs, RL &amp; Ethics</a><a href="/saku/master-ai/track-b/rl-and-responsible-ai">Reinforcement Learning and Responsible AI</a><a href="/saku/master-ai/track-b/master-ai-app-engineering">Master of AI Application Engineering</a>
+</div>
+</div>
+<div class="sub-sub-dropdown">
+<div class="sub-sub-dropdown-link-container">
+<a href="/saku/master-ai/track-c">AI Engineering Flagship Programme</a><svg class="nav-arrow sub-nav-arrow" viewbox="0 0 10 6">
+<path d="M1 1L5 5L9 1" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+</svg>
+</div>
+<div class="sub-sub-dropdown-content">
+<a href="/saku/master-ai/track-c/applied-ai-engineering">Applied AI Engineering Industry Ready Programme</a>
+</div>
+</div>
+<div class="sub-sub-dropdown">
+<div class="sub-sub-dropdown-link-container">
+<a href="/saku/master-ai/track-d">Medical &amp; Healthcare AI Programmes</a><svg class="nav-arrow sub-nav-arrow" viewbox="0 0 10 6">
+<path d="M1 1L5 5L9 1" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+</svg>
+</div>
+<div class="sub-sub-dropdown-content">
+<a href="/saku/master-ai/track-d/ai-essentials-doctors">AI Essentials for Doctors</a><a href="/saku/master-ai/track-d/ai-fundamentals-doctors">AI Fundamentals for Doctors</a><a href="/saku/master-ai/track-d/ai-excellence-doctors">AI Excellence for Doctors</a>
+</div>
+</div>
+</div>
+</div>
+<a href="/saku/semiconductor">Semiconductor Manufacturing Education &amp; Training</a>
+<a href="/saku/quantum">Quantum Communication Technology Programme</a>
+<a href="/saku/career-readiness">Career Readiness &amp; Employability Solutions</a>
+<a href="/saku/industry-academia">Industry-Academia Engagement</a>
+<a href="/saku/higher-ed">Higher Education Consultancy</a>
+</div>
+</div>
+<a class="nav-item" href="/why-choose">Why Choose Us?</a>
+<a class="nav-item" href="/leadership">Leadership</a>
+<a class="nav-item" href="/contact_us">Contacts Us</a>
+<a class="nav-btn-apply" href="/application-form" style="display: none;">Apply Now</a>
+</nav>
+</div>
+</header>
+<main class="sub-course-main">
+<div class="sub-course-hero" id="hero" style='
+          background-image: url("/static/images/saku_images/sub-courses/AI-Engineering-Flagship-Programme/applied-engineering-programme.png");
+        '></div>
+<div class="sub-course-container">
+<div class="sub-course-header-section">
+<h1 class="sub-course-title">Applied AI Engineering Industry Ready Programme</h1>
+<div class="sub-course-meta">
+            6-12 Months, Self-paced/Live mix | Students / Professionals<br/>
             480 Hands-on Labs - 200+ Coding Assignments - 300+ Theory Assignments - 85 Industry-Relevant Projects - 250+ Videos - 48 hrs CPU
           </div>
-          <div class="sub-course-action-row">
-            <div class="sub-course-price-block">
-              <span class="sub-course-price">₹1,51,760</span>
-              <span class="sub-course-price-note"><del>₹1,89,700</del></span>
-            </div>
-            <a href="/application-form" class="apply-now-btn">Apply Now</a>
-          </div>
-        </div>
-
-        <div class="sub-course-description">
+<div class="sub-course-action-row">
+<div class="sub-course-price-block">
+<span class="sub-course-price">₹1,51,760</span>
+<span class="sub-course-price-note"><del>₹1,89,700</del></span>
+</div>
+<a class="apply-now-btn" href="/application-form">Apply Now</a>
+</div>
+</div>
+<div class="sub-course-description">
           An all-in-one, industry-backed AI training designed to equip learners
           with the real-world skills to build and deploy AI solutions. Combines
           theory with hands-on projects to develop job-ready skills across AI,
@@ -215,424 +118,343 @@
           cloud-based labs and a guaranteed internship opportunity upon
           completion.
         </div>
-
-        <div class="section-learning-outcomes">
-          <h2 class="section-title">Learning Outcomes</h2>
-          <ul class="learning-outcomes-list">
-            <li>
-              <img
-                src="/static/images/outcome-check.svg"
-                class="outcome-icon"
-                alt="check"
-              />
+<div class="section-learning-outcomes">
+<h2 class="section-title">Learning Outcomes</h2>
+<ul class="learning-outcomes-list">
+<li>
+<img alt="check" class="outcome-icon" src="/static/images/outcome-check.svg"/>
               Master Python programming, ML algorithms, and AI fundamentals
             </li>
-            <li>
-              <img
-                src="/static/images/outcome-check.svg"
-                class="outcome-icon"
-                alt="check"
-              />
+<li>
+<img alt="check" class="outcome-icon" src="/static/images/outcome-check.svg"/>
               Build and deploy deep learning models and neural networks
             </li>
-            <li>
-              <img
-                src="/static/images/outcome-check.svg"
-                class="outcome-icon"
-                alt="check"
-              />
+<li>
+<img alt="check" class="outcome-icon" src="/static/images/outcome-check.svg"/>
               Develop NLP applications such as AI chatbots, sentiment analysis,
               and sequence models
             </li>
-            <li>
-              <img
-                src="/static/images/outcome-check.svg"
-                class="outcome-icon"
-                alt="check"
-              />
+<li>
+<img alt="check" class="outcome-icon" src="/static/images/outcome-check.svg"/>
               Gain expertise in transformers and LLMs including BERT, GPT, and
               T5
             </li>
-            <li>
-              <img
-                src="/static/images/outcome-check.svg"
-                class="outcome-icon"
-                alt="check"
-              />
+<li>
+<img alt="check" class="outcome-icon" src="/static/images/outcome-check.svg"/>
               Learn MLOps best practices using Docker, Kubernetes, and FastAPI
             </li>
-            <li>
-              <img
-                src="/static/images/outcome-check.svg"
-                class="outcome-icon"
-                alt="check"
-              />
+<li>
+<img alt="check" class="outcome-icon" src="/static/images/outcome-check.svg"/>
               Work on real-world AI projects including image classifiers and AI
               assistants
             </li>
-            <li>
-              <img
-                src="/static/images/outcome-check.svg"
-                class="outcome-icon"
-                alt="check"
-              />
+<li>
+<img alt="check" class="outcome-icon" src="/static/images/outcome-check.svg"/>
               Apply knowledge through a guaranteed internship placement
               post-completion
             </li>
-          </ul>
-        </div>
-
-        <div class="section-programme-features">
-          <h2 class="section-title">Programme Features</h2>
-          <div class="programme-features-grid">
-            <div class="feature-card card-c">
-              <span class="feature-title">Hands-on Labs</span>
-              <span class="feature-desc">480</span>
-            </div>
-            <div class="feature-card card-c">
-              <span class="feature-title">Coding Assignments</span>
-              <span class="feature-desc">200+</span>
-            </div>
-            <div class="feature-card card-c">
-              <span class="feature-title">Theory Assignments</span>
-              <span class="feature-desc">300+</span>
-            </div>
-            <div class="feature-card card-c">
-              <span class="feature-title">Industry-Relevant Projects</span>
-              <span class="feature-desc">85</span>
-            </div>
-            <div class="feature-card card-c">
-              <span class="feature-title">Video Lessons</span>
-              <span class="feature-desc">250+ Videos</span>
-            </div>
-            <div class="feature-card card-c">
-              <span class="feature-title">CPU Access</span>
-              <span class="feature-desc">48 Hours Cloud CPU</span>
-            </div>
-            <div class="feature-card card-c">
-              <span class="feature-title">Capstone</span>
-              <span class="feature-desc">End to End AI Project</span>
-            </div>
-            <div class="feature-card card-c">
-              <span class="feature-title">Internship</span>
-              <span class="feature-desc">Guaranteed Placement</span>
-            </div>
-          </div>
-          <div class="internship-guarantee-block">
-            <span class="internship-guarantee-title"
-              >Internship Guarantee Included</span
-            >
-            <span class="internship-guarantee-desc"
-              >A 100% guaranteed, exclusive, project-based internship placement to apply AI engineering skills in real industry settings.</span
-            >
-          </div>
-        </div>
-
-        <div class="section-content-headings">
-          <h2 class="section-title">Programme Content Headings</h2>
-          <div class="content-headings-list">
-            <div class="content-heading-item">
-              <div class="heading-number">01</div>
-              <div class="heading-text">
-                <div class="heading-title">
+</ul>
+</div>
+<div class="section-programme-features">
+<h2 class="section-title">Programme Features</h2>
+<div class="programme-features-grid">
+<div class="feature-card card-c">
+<span class="feature-title">Hands-on Labs</span>
+<span class="feature-desc">480</span>
+</div>
+<div class="feature-card card-c">
+<span class="feature-title">Coding Assignments</span>
+<span class="feature-desc">200+</span>
+</div>
+<div class="feature-card card-c">
+<span class="feature-title">Theory Assignments</span>
+<span class="feature-desc">300+</span>
+</div>
+<div class="feature-card card-c">
+<span class="feature-title">Industry-Relevant Projects</span>
+<span class="feature-desc">85</span>
+</div>
+<div class="feature-card card-c">
+<span class="feature-title">Video Lessons</span>
+<span class="feature-desc">250+ Videos</span>
+</div>
+<div class="feature-card card-c">
+<span class="feature-title">CPU Access</span>
+<span class="feature-desc">48 Hours Cloud CPU</span>
+</div>
+<div class="feature-card card-c">
+<span class="feature-title">Capstone</span>
+<span class="feature-desc">End to End AI Project</span>
+</div>
+<div class="feature-card card-c">
+<span class="feature-title">Internship</span>
+<span class="feature-desc">Guaranteed Placement</span>
+</div>
+</div>
+<div class="internship-guarantee-block">
+<span class="internship-guarantee-title">Internship Guarantee Included</span>
+<span class="internship-guarantee-desc">A 100% guaranteed, exclusive, project-based internship placement to apply AI engineering skills in real industry settings.</span>
+</div>
+</div>
+<div class="section-content-headings">
+<h2 class="section-title">Programme Content Headings</h2>
+<div class="content-headings-list">
+<div class="content-heading-item">
+<div class="heading-number">01</div>
+<div class="heading-text">
+<div class="heading-text"><span class="heading-title">
                   Python Programming &amp; Data Manipulation
-                </div>
-                <div class="heading-desc">
+                </span> <span class="heading-desc">— 
                   NumPy, Pandas, data visualisation with Matplotlib
-                </div>
-              </div>
-            </div>
-            <div class="content-heading-item">
-              <div class="heading-number">02</div>
-              <div class="heading-text">
-                <div class="heading-title">Mathematical Foundations for AI</div>
-                <div class="heading-desc">
+                </span></div>
+
+</div>
+</div>
+<div class="content-heading-item">
+<div class="heading-number">02</div>
+<div class="heading-text">
+<div class="heading-text"><span class="heading-title">Mathematical Foundations for AI</span> <span class="heading-desc">— 
                   Linear algebra; calculus for ML; probability &amp; statistics
-                </div>
-              </div>
-            </div>
-            <div class="content-heading-item">
-              <div class="heading-number">03</div>
-              <div class="heading-text">
-                <div class="heading-title">Machine Learning Fundamentals</div>
-                <div class="heading-desc">
+                </span></div>
+
+</div>
+</div>
+<div class="content-heading-item">
+<div class="heading-number">03</div>
+<div class="heading-text">
+<div class="heading-text"><span class="heading-title">Machine Learning Fundamentals</span> <span class="heading-desc">— 
                   ML basics; supervised learning; feature engineering;
                   unsupervised learning — Miniproject: End-to-End ML Application
-                </div>
-              </div>
-            </div>
-            <div class="content-heading-item">
-              <div class="heading-number">04</div>
-              <div class="heading-text">
-                <div class="heading-title">
+                </span></div>
+
+</div>
+</div>
+<div class="content-heading-item">
+<div class="heading-number">04</div>
+<div class="heading-text">
+<div class="heading-text"><span class="heading-title">
                   Neural Networks and Deep Learning Basics
-                </div>
-                <div class="heading-desc">
+                </span> <span class="heading-desc">— 
                   Neural network fundamentals; training neural networks,
                   implementing frameworks
-                </div>
-              </div>
-            </div>
-            <div class="content-heading-item">
-              <div class="heading-number">05</div>
-              <div class="heading-text">
-                <div class="heading-title">CNNs for Vision</div>
-                <div class="heading-desc">
+                </span></div>
+
+</div>
+</div>
+<div class="content-heading-item">
+<div class="heading-number">05</div>
+<div class="heading-text">
+<div class="heading-text"><span class="heading-title">CNNs for Vision</span> <span class="heading-desc">— 
                   CNN basics; CNN architectures; regularization; transfer
                   learning and fine-tuning — Miniproject: Image Classification
-                </div>
-              </div>
-            </div>
-            <div class="content-heading-item">
-              <div class="heading-number">06</div>
-              <div class="heading-text">
-                <div class="heading-title">
+                </span></div>
+
+</div>
+</div>
+<div class="content-heading-item">
+<div class="heading-number">06</div>
+<div class="heading-text">
+<div class="heading-text"><span class="heading-title">
                   Advanced Model Optimisation &amp; Tuning
-                </div>
-                <div class="heading-desc">
+                </span> <span class="heading-desc">— 
                   Optimisation algorithms; hyperparameter tuning strategies
-                </div>
-              </div>
-            </div>
-            <div class="content-heading-item">
-              <div class="heading-number">07</div>
-              <div class="heading-text">
-                <div class="heading-title">
+                </span></div>
+
+</div>
+</div>
+<div class="content-heading-item">
+<div class="heading-number">07</div>
+<div class="heading-text">
+<div class="heading-text"><span class="heading-title">
                   Model Deployment &amp; MLOps Best Practices
-                </div>
-                <div class="heading-desc">
+                </span> <span class="heading-desc">— 
                   Model serving and deployment; MLOps &amp; model lifecycle
                   management
-                </div>
-              </div>
-            </div>
-            <div class="content-heading-item">
-              <div class="heading-number">08</div>
-              <div class="heading-text">
-                <div class="heading-title">NLP Fundamentals</div>
-                <div class="heading-desc">
+                </span></div>
+
+</div>
+</div>
+<div class="content-heading-item">
+<div class="heading-number">08</div>
+<div class="heading-text">
+<div class="heading-text"><span class="heading-title">NLP Fundamentals</span> <span class="heading-desc">— 
                   Text preprocessing; traditional feature-based NLP; word
                   embeddings
-                </div>
-              </div>
-            </div>
-            <div class="content-heading-item">
-              <div class="heading-number">09</div>
-              <div class="heading-text">
-                <div class="heading-title">
+                </span></div>
+
+</div>
+</div>
+<div class="content-heading-item">
+<div class="heading-number">09</div>
+<div class="heading-text">
+<div class="heading-text"><span class="heading-title">
                   Sequence Models (RNNs) and NLP Applications
-                </div>
-                <div class="heading-desc">
+                </span> <span class="heading-desc">— 
                   Recurrent neural networks &amp; LSTMs — Miniproject: NLP
                   Sequence Task
-                </div>
-              </div>
-            </div>
-            <div class="content-heading-item">
-              <div class="heading-number">10</div>
-              <div class="heading-text">
-                <div class="heading-title">
+                </span></div>
+
+</div>
+</div>
+<div class="content-heading-item">
+<div class="heading-number">10</div>
+<div class="heading-text">
+<div class="heading-text"><span class="heading-title">
                   Transformers and Large Language Models
-                </div>
-                <div class="heading-desc">
+                </span> <span class="heading-desc">— 
                   Attention mechanisms; HuggingFace pretrained models — Project:
                   Transformer Application
-                </div>
-              </div>
-            </div>
-            <div class="content-heading-item">
-              <div class="heading-number">11</div>
-              <div class="heading-text">
-                <div class="heading-title">
+                </span></div>
+
+</div>
+</div>
+<div class="content-heading-item">
+<div class="heading-number">11</div>
+<div class="heading-text">
+<div class="heading-text"><span class="heading-title">
                   Prompt Engineering and Advanced LLM Applications
-                </div>
-                <div class="heading-desc">
+                </span> <span class="heading-desc">— 
                   Prompt engineering; LLM-powered apps — Miniproject: LLM
                   Chatbot or QA System
-                </div>
-              </div>
-            </div>
-            <div class="content-heading-item">
-              <div class="heading-number">12</div>
-              <div class="heading-text">
-                <div class="heading-title">
+                </span></div>
+
+</div>
+</div>
+<div class="content-heading-item">
+<div class="heading-number">12</div>
+<div class="heading-text">
+<div class="heading-text"><span class="heading-title">
                   Reinforcement Learning &amp; Advanced Topics
-                </div>
-                <div class="heading-desc">
+                </span> <span class="heading-desc">— 
                   RL fundamentals; algorithms and deep RL; emerging specialsed
                   topics
-                </div>
-              </div>
-            </div>
-            <div class="content-heading-item">
-              <div class="heading-number">13</div>
-              <div class="heading-text">
-                <div class="heading-title">Responsible AI and Ethics</div>
-                <div class="heading-desc">
+                </span></div>
+
+</div>
+</div>
+<div class="content-heading-item">
+<div class="heading-number">13</div>
+<div class="heading-text">
+<div class="heading-text"><span class="heading-title">Responsible AI and Ethics</span> <span class="heading-desc">— 
                   Fairness and bias; model interpretability; privacy, security,
                   and safety in AI
-                </div>
-              </div>
-            </div>
-            <div class="content-heading-item">
-              <div class="heading-number">14</div>
-              <div class="heading-text">
-                <div class="heading-title">Capstone Project</div>
-                <div class="heading-desc">
+                </span></div>
+
+</div>
+</div>
+<div class="content-heading-item">
+<div class="heading-number">14</div>
+<div class="heading-text">
+<div class="heading-text"><span class="heading-title">Capstone Project</span> <span class="heading-desc">— 
                   Final capstone: full pipeline from data to deployment
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+                </span></div>
 
-        <div class="section-entry-requirements">
-          <h2 class="section-title">Entry Requirements</h2>
-          <div class="entry-requirements-pill">
-            <img
-              src="/static/images/req-icon.svg"
-              class="req-icon"
-              alt="requirement"
-            />
-            <span
-              >Basic Python knowledge required; the programme comprehensively covers building through advanced levels.</span
-            >
-          </div>
-        </div>
-      </div>
-    <div class="back-to-top-container">
-      <a href="#hero" class="back-to-top" aria-label="Back to Top">
-        <span class="back-to-top-text">Back to Top</span>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M12 19V5M5 12l7-7 7 7"/>
-        </svg>
-      </a>
-    </div>
-    </main>
-
-    <footer class="saku-footer">
-      <div class="container">
-        <div class="footer-top">
-          <div class="footer-brand">
-            <img
-              alt="Saku Global"
-              class="logo-svg footer-logo"
-              src="/static/images/saku_images/saku-logo-footer.png"
-            />
-            <p class="footer-desc">
+</div>
+</div>
+</div>
+</div>
+<div class="section-entry-requirements">
+<h2 class="section-title">Entry Requirements</h2>
+<div class="entry-requirements-pill">
+<img alt="requirement" class="req-icon" src="/static/images/req-icon.svg"/>
+<span>Basic Python knowledge required; the programme comprehensively covers building through advanced levels.</span>
+</div>
+</div>
+</div>
+<div class="back-to-top-container">
+<a aria-label="Back to Top" class="back-to-top" href="#hero">
+<span class="back-to-top-text">Back to Top</span>
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24">
+<path d="M12 19V5M5 12l7-7 7 7"></path>
+</svg>
+</a>
+</div>
+</main>
+<footer class="saku-footer">
+<div class="container">
+<div class="footer-top">
+<div class="footer-brand">
+<img alt="Saku Global" class="logo-svg footer-logo" src="/static/images/saku_images/saku-logo-footer.png"/>
+<p class="footer-desc">
               Saku Global Tech Tabs Pvt Ltd - where deep tech education meets
               industry demand. Shaping the engineers of tomorrow, today.
             </p>
-            <div class="footer-contact-info">
-              <div class="contact-item">
-                <img
-                  alt="Email"
-                  class="contact-icon"
-                  src="/static/images/envelope.svg"
-                />
-                <span>info@sakuglobaltech.com</span>
-              </div>
-              <div class="contact-item">
-                <img
-                  alt="Website"
-                  class="contact-icon"
-                  src="/static/images/route.svg"
-                />
-                <span>www.sakuglobaltech.com</span>
-              </div>
-            </div>
-            <div class="footer-connect-section">
-              <h4 class="footer-col-title">Connect</h4>
-              <div class="social-links">
-                <a aria-label="WhatsApp" class="social-icon-wrapper" href="#">
-                  <img
-                    alt="WhatsApp"
-                    class="social-icon"
-                    src="/static/images/whatsapp.svg"
-                  />
-                </a>
-                <a aria-label="X" class="social-icon-wrapper" href="#">
-                  <img alt="X" class="social-icon" src="/static/images/x.svg" />
-                </a>
-                <a aria-label="LinkedIn" class="social-icon-wrapper" href="#">
-                  <img
-                    alt="LinkedIn"
-                    class="social-icon"
-                    src="/static/images/linkedin.svg"
-                  />
-                </a>
-                <a aria-label="Instagram" class="social-icon-wrapper" href="#">
-                  <img
-                    alt="Instagram"
-                    class="social-icon"
-                    src="/static/images/instagram.svg"
-                  />
-                </a>
-                <a aria-label="YouTube" class="social-icon-wrapper" href="#">
-                  <img
-                    alt="YouTube"
-                    class="social-icon"
-                    src="/static/images/youtube.svg"
-                  />
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="footer-right-columns">
-            <div class="footer-col programme">
-              <h4 class="footer-col-title">Programme</h4>
-              <div class="footer-links">
-                <a href="/saku/ai-training"
-                  >AI Training &amp; Workforce Development</a
-                >
-                <a href="/saku/semiconductor"
-                  >Semiconductor Manufacturing Education &amp; Training</a
-                >
-                <a href="/saku/quantum"
-                  >Quantum Communication Technology Programme</a
-                >
-              </div>
-            </div>
-            <div class="footer-col services">
-              <h4 class="footer-col-title">Services</h4>
-              <div class="footer-links">
-                <a href="/saku/higher-ed">Higher Education Consultancy</a>
-                <a href="/saku/industry-academia"
-                  >Industry - Academia Engagement</a
-                >
-                <a href="/saku/career-readiness"
-                  >Career Readiness &amp; Employability Solutions</a
-                >
-              </div>
-            </div>
-            <div class="footer-col company">
-              <h4 class="footer-col-title">Company</h4>
-              <div class="footer-links">
-                <a href="/#about">About Us</a>
-                <a href="#">Advisory Board</a>
-                <a href="#">Internships</a>
-                <a href="#">International</a>
-                <a href="#">Careers</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <div class="footer-copyright">
-            <span class="copyright-text">2026 | All Rights Reserved</span>
-          </div>
-          <div class="footer-bottom-links">
-            <a href="/privacy">Privacy</a>
-            <div class="footer-bottom-divider"></div>
-            <a href="/terms">Terms</a>
-            <div class="footer-bottom-divider"></div>
-            <a href="/sitemap">Sitemap</a>
-            <div class="footer-bottom-divider"></div>
-            <a href="/help">Help</a>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <script src="/static/js/main.js"></script>
-  </body>
+<div class="footer-contact-info">
+<div class="contact-item">
+<img alt="Email" class="contact-icon" src="/static/images/envelope.svg"/>
+<span>info@sakuglobaltech.com</span>
+</div>
+<div class="contact-item">
+<img alt="Website" class="contact-icon" src="/static/images/route.svg"/>
+<span>www.sakuglobaltech.com</span>
+</div>
+</div>
+<div class="footer-connect-section">
+<h4 class="footer-col-title">Connect</h4>
+<div class="social-links">
+<a aria-label="WhatsApp" class="social-icon-wrapper" href="#">
+<img alt="WhatsApp" class="social-icon" src="/static/images/whatsapp.svg"/>
+</a>
+<a aria-label="X" class="social-icon-wrapper" href="#">
+<img alt="X" class="social-icon" src="/static/images/x.svg"/>
+</a>
+<a aria-label="LinkedIn" class="social-icon-wrapper" href="#">
+<img alt="LinkedIn" class="social-icon" src="/static/images/linkedin.svg"/>
+</a>
+<a aria-label="Instagram" class="social-icon-wrapper" href="#">
+<img alt="Instagram" class="social-icon" src="/static/images/instagram.svg"/>
+</a>
+<a aria-label="YouTube" class="social-icon-wrapper" href="#">
+<img alt="YouTube" class="social-icon" src="/static/images/youtube.svg"/>
+</a>
+</div>
+</div>
+</div>
+<div class="footer-right-columns">
+<div class="footer-col programme">
+<h4 class="footer-col-title">Programme</h4>
+<div class="footer-links">
+<a href="/saku/ai-training">AI Training &amp; Workforce Development</a>
+<a href="/saku/semiconductor">Semiconductor Manufacturing Education &amp; Training</a>
+<a href="/saku/quantum">Quantum Communication Technology Programme</a>
+</div>
+</div>
+<div class="footer-col services">
+<h4 class="footer-col-title">Services</h4>
+<div class="footer-links">
+<a href="/saku/higher-ed">Higher Education Consultancy</a>
+<a href="/saku/industry-academia">Industry - Academia Engagement</a>
+<a href="/saku/career-readiness">Career Readiness &amp; Employability Solutions</a>
+</div>
+</div>
+<div class="footer-col company">
+<h4 class="footer-col-title">Company</h4>
+<div class="footer-links">
+<a href="/#about">About Us</a>
+<a href="#">Advisory Board</a>
+<a href="#">Internships</a>
+<a href="#">International</a>
+<a href="#">Careers</a>
+</div>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<div class="footer-copyright">
+<span class="copyright-text">2026 | All Rights Reserved</span>
+</div>
+<div class="footer-bottom-links">
+<a href="/privacy">Privacy</a>
+<div class="footer-bottom-divider"></div>
+<a href="/terms">Terms</a>
+<div class="footer-bottom-divider"></div>
+<a href="/sitemap">Sitemap</a>
+<div class="footer-bottom-divider"></div>
+<a href="/help">Help</a>
+</div>
+</div>
+</div>
+</footer>
+<script src="/static/js/main.js"></script>
+</body>
 </html>
