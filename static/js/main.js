@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const courseData = {
     'ai': {
-      image: '/static/images/courses/course-1.png',
+      image: '/static/images/courses/course-1.webp',
       title: 'Artificial Intelligence',
       count: '12 Courses',
       desc: 'End-to-end AI engineering — from ML fundamentals to deploying large language models in production environments.',
@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
       link: '/courses-ai'
     },
     'semiconductor': {
-      image: '/static/images/courses/course-2.png',
+      image: '/static/images/courses/course-2.webp',
       title: 'Semiconductor Engineering',
       count: '8 Courses',
       desc: 'Comprehensive training in semiconductor physics, chip architecture, fabrication processes, and cleanroom protocols.',
@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
       link: '/courses-semiconductor'
     },
     'cloud': {
-      image: '/static/images/courses/course-3.png',
+      image: '/static/images/courses/course-3.webp',
       title: 'Cloud Computing',
       count: '10 Courses',
       desc: 'Master modern cloud architecture, containerization, serverless computing, and DevOps automation across major cloud platforms.',
@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
       link: '/courses-cloud'
     },
     'placement': {
-      image: '/static/images/courses/course-4.png',
+      image: '/static/images/courses/course-4.webp',
       title: 'Pre-Placement Training',
       count: '6 Courses',
       desc: 'Accelerate your career readiness with dedicated mock interviews, algorithmic problem solving, and soft skills training.',
@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
       link: '/courses-placement'
     },
     'vlsi': {
-      image: '/static/images/courses/course-5.png',
+      image: '/static/images/courses/course-5.webp',
       title: 'VLSI & Chip Design',
       count: '9 Courses',
       desc: 'Dive deep into hardware description languages, physical design flow, RTL coding, and electronic design automation tools.',
