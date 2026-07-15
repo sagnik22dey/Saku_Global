@@ -1,6 +1,13 @@
+import os
+import smtplib
+from email.message import EmailMessage
 from pathlib import Path
+from dotenv import load_dotenv
 from pydantic import BaseModel
-from fastapi import FastAPI, Request
+from fastapi import FastAPI, Request, UploadFile, Form, File, BackgroundTasks
+
+load_dotenv(override=True)
+
 from fastapi.responses import FileResponse, HTMLResponse
 from fastapi.staticfiles import StaticFiles
 
@@ -19,6 +26,69 @@ app = FastAPI(title="SAKU Global Tech Labs")
 async def handle_contact_submission(data: ContactRequest):
     """Handle the contact form submission API."""
     return {"status": "success"}
+
+
+def _build_email(subject: str, from_addr: str, to_addr: str, body: str, pdf_content: bytes, filename: str) -> EmailMessage:
+    """Build an EmailMessage with a PDF attachment."""
+    msg = EmailMessage()
+    msg['Subject'] = subject
+    msg['From'] = from_addr
+    msg['To'] = to_addr
+    msg.set_content(body)
+    msg.add_attachment(pdf_content, maintype='application', subtype='pdf', filename=filename)
+    return msg
+
+
+def send_email_background(pdf_content: bytes, filename: str, applicant_name: str, app_number: str, applicant_email: str = "", programme: str = ""):
+    """Send confirmation PDF to the SAKU team inbox via Brevo SMTP."""
+    smtp_user = os.getenv("SMTP_USER")
+    smtp_password = os.getenv("SMTP_PASSWORD")
+    smtp_from = os.getenv("SMTP_FROM", smtp_user)
+    to_email = os.getenv("TO_EMAIL", "")
+
+    if not smtp_user or not smtp_password:
+        print(f"[EMAIL MOCK] No SMTP credentials. Would email {to_email} for {applicant_name} ({app_number}).")
+        return
+
+    subject = f"New Application: {app_number} — {applicant_name}"
+    body = (
+        f"Hello SAKU Team,\n\n"
+        f"A new application has been submitted.\n"
+        f"Applicant: {applicant_name}\n"
+        f"Email: {applicant_email}\n"
+        f"Programme: {programme}\n"
+        f"Application Number: {app_number}\n\n"
+        f"Please find the attached PDF confirmation.\n\nBest,\nSAKU System"
+    )
+
+    try:
+        msg = _build_email(subject, smtp_from, to_email, body, pdf_content, filename)
+        smtp_host = os.getenv("SMTP_HOST", "smtp-relay.brevo.com")
+        smtp_port = int(os.getenv("SMTP_PORT", "587"))
+        with smtplib.SMTP(smtp_host, smtp_port) as server:
+            server.starttls()
+            server.login(smtp_user, smtp_password)
+            server.send_message(msg)
+        print(f"[EMAIL OK] Sent to {to_email} ({app_number})")
+    except Exception as e:
+        print(f"[EMAIL ERROR] Failed to send to {to_email}: {e}")
+
+@app.post("/api/send-confirmation")
+async def send_confirmation(
+    background_tasks: BackgroundTasks,
+    pdf: UploadFile = File(...),
+    full_name: str = Form("Unknown"),
+    appNumber: str = Form("Unknown"),
+    applicant_email: str = Form(""),
+    programme: str = Form(""),
+):
+    """Accept the generated PDF and dispatch confirmation emails to admin and applicant."""
+    pdf_content = await pdf.read()
+    background_tasks.add_task(
+        send_email_background,
+        pdf_content, pdf.filename, full_name, appNumber, applicant_email, programme
+    )
+    return {"status": "success", "message": "Email sending initiated"}
 
 app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
 
@@ -103,6 +173,7 @@ ROUTES = {
     "/saku/master-ai/track-d/ai-fundamentals-doctors": "saku_pages/medical_healthcare_ai/ai_fundamentals_doctors.html",
     "/saku/master-ai/track-d/ai-excellence-doctors": "saku_pages/medical_healthcare_ai/ai_excellence_doctors.html",
     "/application-form": "saku_pages/application_form.html",
+    "/application-received": "saku_pages/application_received.html",
 }
 
 

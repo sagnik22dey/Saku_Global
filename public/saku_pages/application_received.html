@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Application Received | Saku Global</title>
+    <link href="/static/css/common.css" rel="stylesheet" />
+    <link href="/static/css/saku_css/application_received.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  </head>
+  <body>
+    <header class="saku-header">
+      <div class="header-container">
+        <a href="/" class="logo-link">
+          <img alt="Saku Global" class="logo-svg" src="/static/images/logo.svg" />
+        </a>
+        <button aria-label="Toggle Navigation" class="hamburger">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="nav-menu">
+          <a class="nav-item" href="/#about">About Us</a>
+          <div class="nav-item dropdown">
+            <a href="/what-we-offer">What We Offer</a>
+            <svg class="nav-arrow" viewbox="0 0 10 6">
+              <path d="M1 1L5 5L9 1" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+            </svg>
+            <div class="dropdown-content">
+              <a href="/saku/ai-training">AI Training & Workforce Development</a>
+              <a href="/saku/semiconductor">Semiconductor Manufacturing Education & Training</a>
+              <a href="/saku/quantum">Quantum Communication Technology Programme</a>
+              <a href="/saku/career-readiness">Career Readiness & Employability Solutions</a>
+              <a href="/saku/industry-academia">Industry-Academia Engagement</a>
+              <a href="/saku/higher-ed">Higher Education Consultancy</a>
+            </div>
+          </div>
+          <a class="nav-item" href="/why-choose">Why Choose Us?</a>
+          <a class="nav-item" href="/leadership">Leadership</a>
+          <a class="nav-item" href="/contact_us">Contacts Us</a>
+          <a class="nav-btn-apply" href="/application-form" style="display: none;">Apply Now</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="application-main">
+      <div id="pdf-content">
+        <div class="application-header">
+          <div class="breadcrumbs">
+            <a href="/">Home</a> / <span>Programme Application</span>
+          </div>
+          <div class="badge-container">
+            <div class="badge">APPLICATION FORM</div>
+          </div>
+          <h1 class="form-main-title">Start Your <span style="color: var(--primary-color);">Applied AI</span><br/>Learning Journey</h1>
+          <p class="subtitle">Complete the form below and our admissions team will get in touch with the next steps.</p>
+        </div>
+
+        <div class="container form-container">
+          <div class="received-card">
+            <div class="success-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 6L9 17L4 12" stroke="#102e75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h2>Application Received</h2>
+            <p class="received-message">Thank you, <span id="display-name"></span>. Your application for "<span id="display-programme"></span>" has been received and recorded.</p>
+            
+            <div class="app-number-box">
+              <div class="app-number-label">YOUR APPLICATION NUMBER</div>
+              <div class="app-number-value" id="display-app-number"></div>
+            </div>
+
+            <div class="info-box">
+              <div class="info-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" fill="#102e75"/>
+                  <path d="M22 6l-10 7L2 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="info-text">
+                A confirmation email with your full application details and application number has been sent to your registered email address. <strong>The SAKU Global Tech Labs Team will verify your form and reply with your Payment Link and Programme Platform Link within 24 hours.</strong>
+              </div>
+            </div>
+
+            <div class="details-table-container">
+              <div class="table-header">Submitted Details</div>
+              <table class="details-table">
+                <tbody>
+                  <tr>
+                    <td>Full Name</td>
+                    <td id="table-name"></td>
+                  </tr>
+                  <tr>
+                    <td>Email Address</td>
+                    <td id="table-email"></td>
+                  </tr>
+                  <tr>
+                    <td>Phone / WhatsApp Number</td>
+                    <td id="table-phone"></td>
+                  </tr>
+                  <tr>
+                    <td>Programme</td>
+                    <td id="table-programme"></td>
+                  </tr>
+                  <tr>
+                    <td>Applying As</td>
+                    <td id="table-apply"></td>
+                  </tr>
+                  <tr>
+                    <td>Highest Qualification</td>
+                    <td id="table-qual"></td>
+                  </tr>
+                  <tr>
+                    <td>Country</td>
+                    <td id="table-country"></td>
+                  </tr>
+                  <tr>
+                    <td>Preferred Start</td>
+                    <td id="table-start"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p class="footer-message">Your application has been saved with number <span id="footer-app-number"></span>. Automatic email delivery has been initiated — download your confirmation below for your records.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Buttons are placed outside of pdf-content so they don't get printed in the PDF -->
+      <div class="container action-buttons">
+        <button id="downloadPdfBtn" class="secondary-btn">Download Confirmation</button>
+        <a href="/application-form" class="secondary-btn outline-btn">Submit Another Application</a>
+      </div>
+    </main>
+
+    <footer class="saku-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <img alt="Saku Global" class="logo-svg footer-logo" src="/static/images/saku_images/saku-logo-footer.webp" />
+            <p class="footer-desc">Saku Global Tech Tabs Pvt Ltd - where deep tech education meets industry demand. Shaping the engineers of tomorrow, today.</p>
+            <div class="footer-contact-info">
+              <div class="contact-item">
+                <img alt="Email" class="contact-icon" src="/static/images/envelope.svg" />
+                <a href="mailto:info@sakuglobaltech.com" style="color: inherit; text-decoration: none;">info@sakuglobaltech.com</a>
+              </div>
+              <div class="contact-item">
+                <img alt="Website" class="contact-icon" src="/static/images/route.svg" />
+                <span>www.sakuglobaltech.com</span>
+              </div>
+            </div>
+            <div class="footer-connect-section">
+              <h4 class="footer-col-title">Connect</h4>
+              <div class="social-links">
+                <a aria-label="WhatsApp" class="social-icon-wrapper" href="https://wa.me/qr/VW3HYNYO5P77E1" target="_blank"><img alt="WhatsApp" class="social-icon" src="/static/images/whatsapp.svg" /></a>
+                <a aria-label="X" class="social-icon-wrapper" href="https://x.com/Sakuglobaltech" target="_blank"><img alt="X" class="social-icon" src="/static/images/x.svg" /></a>
+                <a aria-label="LinkedIn" class="social-icon-wrapper" href="https://www.linkedin.com/company/saku-global-tech-labs/?viewAsMember=true" target="_blank"><img alt="LinkedIn" class="social-icon" src="/static/images/linkedin.svg" /></a>
+                <a aria-label="Instagram" class="social-icon-wrapper" href="https://www.instagram.com/sakuglobaltechlabs?utm_source=qr&igsh=MTR5ZW84NWpjNXg2MQ==" target="_blank"><img alt="Instagram" class="social-icon" src="/static/images/instagram.svg" /></a>
+                <a aria-label="Facebook" class="social-icon-wrapper" href="https://www.facebook.com/share/1EJZSEJM86/" target="_blank"><img alt="Facebook" class="social-icon" src="/static/images/facebook.svg" /></a>
+                <a aria-label="YouTube" class="social-icon-wrapper" href="#"><img alt="YouTube" class="social-icon" src="/static/images/youtube.svg" /></a>
+              </div>
+            </div>
+          </div>
+          <div class="footer-right-columns">
+            <div class="footer-col programme">
+              <h4 class="footer-col-title">Program</h4>
+              <div class="footer-links">
+                <a href="/saku/ai-training">AI Training & Workforce Development</a>
+                <a href="/saku/semiconductor">Semiconductor Manufacturing Education & Training</a>
+                <a href="/saku/career-readiness">Career Readiness & Employability Solutions</a>
+              </div>
+            </div>
+            <div class="footer-col services">
+              <h4 class="footer-col-title">Services</h4>
+              <div class="footer-links">
+                <a href="/saku/higher-ed">Higher Education Consultancy</a>
+                <a href="/saku/industry-academia">Industry - Academia Engagement</a>
+              </div>
+            </div>
+            <div class="footer-col company">
+              <h4 class="footer-col-title">Company</h4>
+              <div class="footer-links">
+                <a href="/#about">About Us</a>
+                <a href="#">Advisory Board</a>
+                <a href="#">Internships</a>
+                <a href="#">International</a>
+                <a href="#">Careers</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-copyright">
+            <span class="copyright-text">© 2026 SAKU Global Tech Labs Pvt. Ltd. | All Rights Reserved</span>
+          </div>
+          <div class="footer-bottom-links">
+            <a href="/privacy">Privacy</a>
+            <div class="footer-bottom-divider"></div>
+            <a href="/terms">Terms</a>
+            <div class="footer-bottom-divider"></div>
+            <a href="/sitemap">Sitemap</a>
+            <div class="footer-bottom-divider"></div>
+            <a href="/help">Help</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    <script src="/static/js/main.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const rawData = sessionStorage.getItem('applicationData');
+        if (!rawData) {
+          window.location.href = '/application-form';
+          return;
+        }
+
+        const data = JSON.parse(rawData);
+
+        document.getElementById('display-name').textContent = data.full_name || '';
+        document.getElementById('display-programme').textContent = data.programmeDisplay || '';
+        document.getElementById('display-app-number').textContent = data.appNumber || '';
+
+        document.getElementById('table-name').textContent = data.full_name || '';
+        document.getElementById('table-email').textContent = data.email || '';
+        document.getElementById('table-phone').textContent = data.phone || '';
+        document.getElementById('table-programme').textContent = data.programmeDisplay || '';
+        document.getElementById('table-apply').textContent = data.applyDisplay || '';
+        document.getElementById('table-qual').textContent = data.highestQualDisplay || '';
+        document.getElementById('table-country').textContent = data.countryDisplay || '';
+        document.getElementById('table-start').textContent = data.startDisplay || '';
+
+        document.getElementById('footer-app-number').textContent = data.appNumber || '';
+
+        const submittedDate = new Date().toLocaleDateString('en-IN', {
+          year: 'numeric', month: 'long', day: 'numeric'
+        });
+
+        function generatePdf(d) {
+          const { jsPDF } = window.jspdf;
+          const doc = new jsPDF({ unit: 'mm', format: 'a4', orientation: 'portrait' });
+          const W = 210;
+          const H = 297;
+          const ml = 14;
+          const fixRupee = (s) => (s || '').replace(/\u20b9/g, 'Rs. ').replace(/\u2014/g, '-').replace(/\u00b7/g, '.');
+          d = { ...d, programmeDisplay: fixRupee(d.programmeDisplay) };
+          let y = 0;
+
+          const navH = 20;
+          doc.setFillColor(255, 255, 255);
+          doc.rect(0, 0, W, navH, 'F');
+
+          if (window.__sakuLogo) {
+            doc.addImage(window.__sakuLogo, 'PNG', ml, 4, 14.5, 12);
+          }
+          doc.setTextColor(16, 46, 117);
+          doc.setFont('helvetica', 'bold');
+          doc.setFontSize(9);
+          doc.text('SAKU GLOBAL', ml + 17, 9.5);
+          doc.setFontSize(6.5);
+          doc.setTextColor(107, 114, 128);
+          doc.text('TECH LABS', ml + 17, 13.6);
+
+          doc.setFont('helvetica', 'normal');
+          doc.setFontSize(7.5);
+          doc.setTextColor(75, 85, 99);
+          const navContact = 'info@sakuglobaltech.com  |  www.sakuglobaltech.com';
+          const applyLbl = 'Apply Now';
+          doc.setFont('helvetica', 'bold');
+          doc.setFontSize(8.5);
+          const apW = doc.getTextWidth(applyLbl) + 10;
+          const apX = W - ml - apW;
+          const apY = 4.5;
+          doc.setFillColor(16, 46, 117);
+          doc.roundedRect(apX, apY, apW, 10, 2, 2, 'F');
+          doc.setTextColor(255, 255, 255);
+          doc.text(applyLbl, apX + apW / 2, apY + 6.4, { align: 'center' });
+
+          doc.setFont('helvetica', 'normal');
+          doc.setFontSize(7);
+          doc.setTextColor(120, 120, 120);
+          doc.text(navContact, apX - 4 - doc.getTextWidth(navContact), 12);
+
+          doc.setDrawColor(37, 99, 235);
+          doc.setLineWidth(0.5);
+          doc.line(0, navH, W, navH);
+
+          doc.setFillColor(247, 249, 252);
+          doc.rect(0, navH, W, 44, 'F');
+
+          y = navH + 9;
+          doc.setFontSize(8.5);
+          doc.setFont('helvetica', 'normal');
+          doc.setTextColor(59, 130, 246);
+          doc.text('Home', ml, y);
+          const hw = doc.getTextWidth('Home');
+          doc.setTextColor(107, 114, 128);
+          doc.text(' / Programme Application', ml + hw, y);
+          y += 6.5;
+
+          doc.setFontSize(7);
+          doc.setFont('helvetica', 'bold');
+          const badgeLbl = 'APPLICATION FORM';
+          const badgeTextW = doc.getTextWidth(badgeLbl);
+          const badgeW = badgeTextW + 8;
+          const badgeH = 6.6;
+          doc.setFillColor(226, 236, 253);
+          doc.roundedRect(ml, y - 4.6, badgeW, badgeH, 3.3, 3.3, 'F');
+          doc.setTextColor(37, 99, 235);
+          doc.text(badgeLbl, ml + 4, y);
+          y += 9;
+
+          doc.setFontSize(21);
+          doc.setFont('helvetica', 'bold');
+          doc.setTextColor(17, 24, 39);
+          doc.text('Start Your', ml, y);
+          const syW = doc.getTextWidth('Start Your ') + 1;
+          doc.setTextColor(59, 130, 246);
+          doc.text('Applied AI', ml + syW, y);
+          y += 8.5;
+          doc.setTextColor(17, 24, 39);
+          doc.text('Learning Journey', ml, y);
+          y += 7;
+
+          doc.setTextColor(107, 114, 128);
+          doc.setFontSize(9);
+          doc.setFont('helvetica', 'normal');
+          doc.text('Complete the form below and our admissions team will get in touch with the next steps.', ml, y);
+          y = navH + 44 + 6;
+
+          const cX = ml;
+          const cW = W - ml * 2;
+          const cStartY = y;
+          const inX = cX + 6;
+          const inW = cW - 12;
+          y += 7;
+
+          const circR = 4.6;
+          doc.setFillColor(238, 242, 255);
+          doc.circle(W / 2, y + circR, circR, 'F');
+          doc.setDrawColor(16, 46, 117);
+          doc.setLineWidth(0.9);
+          doc.line(W / 2 - 2.1, y + circR, W / 2 - 0.5, y + circR + 2.1);
+          doc.line(W / 2 - 0.5, y + circR + 2.1, W / 2 + 2.7, y + circR - 2.1);
+          y += circR * 2 + 4.5;
+
+          doc.setTextColor(17, 24, 39);
+          doc.setFontSize(13);
+          doc.setFont('helvetica', 'bold');
+          const recvTitle = 'Application Received';
+          doc.text(recvTitle, W / 2, y, { align: 'center' });
+          y += 6.5;
+
+          doc.setTextColor(75, 85, 99);
+          doc.setFontSize(8.5);
+          doc.setFont('helvetica', 'normal');
+          const msgStr = 'Thank you, ' + (d.full_name || '') + '. Your application for "' + (d.programmeDisplay || '') + '" has been received and recorded.';
+          const msgLines = doc.splitTextToSize(msgStr, inW - 20);
+          msgLines.forEach(line => { doc.text(line, W / 2, y, { align: 'center' }); y += 4.8; });
+          y += 3.5;
+
+          doc.setFillColor(16, 46, 117);
+          doc.roundedRect(inX, y, inW, 17, 2.5, 2.5, 'F');
+          doc.setTextColor(191, 210, 245);
+          doc.setFontSize(6.8);
+          doc.setFont('helvetica', 'bold');
+          doc.text('YOUR APPLICATION NUMBER', W / 2, y + 6, { align: 'center' });
+          doc.setFontSize(14);
+          doc.setTextColor(255, 255, 255);
+          doc.text(d.appNumber || '', W / 2, y + 13.5, { align: 'center' });
+          y += 21;
+
+          doc.setFontSize(7.6);
+          doc.setFont('helvetica', 'normal');
+          const infoStr = 'A confirmation email with your full application details and application number has been sent to your registered email address. The SAKU Global Tech Labs Team will verify your form and reply with your Payment Link and Programme Platform Link within 24 hours.';
+          const infoLines = doc.splitTextToSize(infoStr, inW - 20);
+          const ibH = infoLines.length * 4.4 + 6;
+          doc.setFillColor(239, 246, 255);
+          doc.setDrawColor(191, 219, 254);
+          doc.setLineWidth(0.3);
+          doc.roundedRect(inX, y, inW, ibH, 2, 2, 'FD');
+          const iCX = inX + 7;
+          const iCY = y + ibH / 2;
+          doc.setFillColor(16, 46, 117);
+          doc.circle(iCX, iCY, 4, 'F');
+          doc.setDrawColor(255, 255, 255);
+          doc.setLineWidth(0.5);
+          doc.roundedRect(iCX - 2.5, iCY - 1.9, 5, 3.6, 0.5, 0.5, 'D');
+          doc.line(iCX - 2.5, iCY - 1.9, iCX, iCY);
+          doc.line(iCX, iCY, iCX + 2.5, iCY - 1.9);
+          doc.setTextColor(30, 58, 138);
+          doc.setFontSize(7.6);
+          const infoTextY = y + (ibH - infoLines.length * 4.4) / 2 + 3.4;
+          infoLines.forEach((line, i) => doc.text(line, inX + 15, infoTextY + i * 4.4));
+          y += ibH + 5;
+
+          const tX = inX;
+          const tW = inW;
+          doc.setFillColor(249, 250, 251);
+          doc.setDrawColor(209, 213, 219);
+          doc.setLineWidth(0.3);
+          const tHdrH = 8;
+          doc.rect(tX, y, tW, tHdrH, 'FD');
+          doc.setTextColor(17, 24, 39);
+          doc.setFontSize(8.5);
+          doc.setFont('helvetica', 'bold');
+          doc.text('Submitted Details', tX + 4.5, y + 5.4);
+          y += tHdrH;
+
+          const tableRows = [
+            ['Full Name', d.full_name || ''],
+            ['Email Address', d.email || ''],
+            ['Phone / WhatsApp Number', d.phone || ''],
+            ['Programme', d.programmeDisplay || ''],
+            ['Applying As', d.applyDisplay || ''],
+            ['Highest Qualification', d.highestQualDisplay || ''],
+            ['Country', d.countryDisplay || ''],
+            ['Preferred Start', d.startDisplay || ''],
+          ];
+          const valW = tW * 0.55;
+          const tBodyStartY = y;
+          tableRows.forEach(([label, value]) => {
+            doc.setFontSize(8);
+            doc.setFont('helvetica', 'bold');
+            const vLines = doc.splitTextToSize(String(value), valW - 4);
+            const rH = Math.max(7.6, vLines.length * 4.3 + 4.5);
+            doc.setFillColor(255, 255, 255);
+            doc.rect(tX, y, tW, rH, 'F');
+            doc.setDrawColor(233, 236, 240);
+            doc.setLineWidth(0.25);
+            doc.line(tX + 3, y + rH, tX + tW - 3, y + rH);
+            doc.setTextColor(107, 114, 128);
+            doc.setFont('helvetica', 'normal');
+            doc.setFontSize(8);
+            doc.text(label, tX + 4.5, y + rH / 2 + 1.4);
+            doc.setTextColor(17, 24, 39);
+            doc.setFont('helvetica', 'bold');
+            const vBlockY = y + rH / 2 - (vLines.length - 1) * 2.15 + 1.4;
+            vLines.forEach((vl, vi) => {
+              doc.text(vl, tX + tW - 4.5 - doc.getTextWidth(vl), vBlockY + vi * 4.3);
+            });
+            y += rH;
+          });
+          doc.setDrawColor(209, 213, 219);
+          doc.setLineWidth(0.3);
+          doc.rect(tX, tBodyStartY, tW, y - tBodyStartY, 'D');
+          y += 5.5;
+
+          doc.setTextColor(107, 114, 128);
+          doc.setFontSize(7.6);
+          doc.setFont('helvetica', 'normal');
+          const noteStr = 'Your application has been saved with number ' + (d.appNumber || '') + '. Automatic email delivery has been initiated - download your confirmation below for your records.';
+          const noteLines = doc.splitTextToSize(noteStr, inW - 10);
+          noteLines.forEach(line => { doc.text(line, W / 2, y, { align: 'center' }); y += 4.3; });
+          y += 4;
+
+          doc.setDrawColor(209, 213, 219);
+          doc.setLineWidth(0.4);
+          doc.roundedRect(cX, cStartY, cW, y - cStartY, 3, 3, 'D');
+
+          drawSiteFooter(doc, d, y);
+          return doc;
+        }
+
+        function drawSiteFooter(doc, d, contentBottom) {
+          const W = 210;
+          const H = 297;
+          const ml = 14;
+          const barH = 14;
+          const barY = H - barH;
+
+          doc.setFillColor(18, 16, 16);
+          doc.rect(0, barY, W, barH, 'F');
+
+          if (window.__sakuLogo) {
+            doc.setFillColor(255, 255, 255);
+            doc.roundedRect(ml, barY + 2.4, 11.5, 9.2, 1.4, 1.4, 'F');
+            doc.addImage(window.__sakuLogo, 'PNG', ml + 0.9, barY + 3.1, 9.7, 7.8);
+          }
+
+          doc.setTextColor(226, 232, 240);
+          doc.setFont('helvetica', 'bold');
+          doc.setFontSize(8);
+          doc.text('SAKU Global Tech Labs Pvt. Ltd.', ml + 15, barY + 6.2);
+          doc.setFont('helvetica', 'normal');
+          doc.setFontSize(7);
+          doc.setTextColor(148, 163, 184);
+          doc.text('info@sakuglobaltech.com', ml + 15, barY + 10.4);
+
+          const genLabel = 'Generated: ' + (d.submittedDate || '');
+          doc.setFontSize(7.5);
+          doc.setTextColor(148, 163, 184);
+          doc.text(genLabel, W - ml - doc.getTextWidth(genLabel), barY + 8.4);
+        }
+
+
+        const pdfFilename = `${data.appNumber}.pdf`;
+
+        function loadLogo() {
+          return new Promise((resolve) => {
+            const img = new Image();
+            img.crossOrigin = 'anonymous';
+            img.onload = () => {
+              try {
+                const scale = 4;
+                const canvas = document.createElement('canvas');
+                canvas.width = 244 * scale / 2;
+                canvas.height = 200 * scale / 2;
+                const ctx = canvas.getContext('2d');
+                ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+                window.__sakuLogo = canvas.toDataURL('image/png');
+              } catch (e) {
+                window.__sakuLogo = null;
+              }
+              resolve();
+            };
+            img.onerror = () => resolve();
+            img.src = '/static/images/logo.svg';
+          });
+        }
+
+        loadLogo().then(() => {
+          const doc = generatePdf({ ...data, submittedDate });
+          const pdfBlob = doc.output('blob');
+          const formData = new FormData();
+          formData.append('pdf', pdfBlob, pdfFilename);
+          formData.append('full_name', data.full_name || '');
+          formData.append('appNumber', data.appNumber || '');
+          formData.append('applicant_email', data.email || '');
+          formData.append('programme', data.programmeDisplay || '');
+          fetch('/api/send-confirmation', { method: 'POST', body: formData })
+            .then(res => res.json())
+            .then(result => console.log('Email result:', result))
+            .catch(err => console.error('Email error:', err));
+        });
+
+        document.getElementById('downloadPdfBtn').addEventListener('click', () => {
+          const doc = generatePdf({ ...data, submittedDate });
+          doc.save(pdfFilename);
+        });
+      });
+    </script>
+  </body>
+</html>

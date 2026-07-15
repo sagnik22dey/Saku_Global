@@ -193,7 +193,7 @@
       </div>
 
       <div class="container form-container">
-        <form class="application-form" action="#" method="POST">
+        <form id="applicationForm" class="application-form">
           
           <div class="form-card">
             <div class="card-header">
@@ -544,5 +544,41 @@
       </div>
     </footer>
     <script src="/static/js/main.js"></script>
+    <script>
+      document.getElementById('applicationForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const date = new Date();
+        const yyyy = date.getFullYear();
+        const mm = String(date.getMonth() + 1).padStart(2, '0');
+        const dd = String(date.getDate()).padStart(2, '0');
+        const randomSuffix = Math.random().toString(36).substring(2, 7).toUpperCase();
+        const appNumber = `SAKU-${yyyy}${mm}${dd}-${randomSuffix}`;
+        
+        const formData = new FormData(this);
+        const data = Object.fromEntries(formData.entries());
+        
+        // Extract display text for dropdowns
+        const programmeSelect = this.elements['programme'];
+        if (programmeSelect && programmeSelect.selectedIndex >= 0) data.programmeDisplay = programmeSelect.options[programmeSelect.selectedIndex].text;
+        
+        const applySelect = this.elements['applying_as'];
+        if (applySelect && applySelect.selectedIndex >= 0) data.applyDisplay = applySelect.options[applySelect.selectedIndex].text;
+        
+        const highestQualSelect = this.elements['highest_qualification'];
+        if (highestQualSelect && highestQualSelect.selectedIndex >= 0) data.highestQualDisplay = highestQualSelect.options[highestQualSelect.selectedIndex].text;
+        
+        const countrySelect = this.elements['country'];
+        if (countrySelect && countrySelect.selectedIndex >= 0) data.countryDisplay = countrySelect.options[countrySelect.selectedIndex].text;
+        
+        const startSelect = this.elements['preferred_start'];
+        if (startSelect && startSelect.selectedIndex >= 0) data.startDisplay = startSelect.options[startSelect.selectedIndex].text;
+        
+        data.appNumber = appNumber;
+        
+        sessionStorage.setItem('applicationData', JSON.stringify(data));
+        window.location.href = '/application-received';
+      });
+    </script>
   </body>
 </html>
