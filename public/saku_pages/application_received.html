@@ -528,6 +528,7 @@
           formData.append('appNumber', data.appNumber || '');
           formData.append('applicant_email', data.email || '');
           formData.append('programme', data.programmeDisplay || '');
+          formData.append('allData', JSON.stringify(data));
           fetch('/api/send-confirmation', { method: 'POST', body: formData })
             .then(res => res.json())
             .then(result => console.log('Email result:', result))

@@ -4,11 +4,13 @@ from email.message import EmailMessage
 from pathlib import Path
 from dotenv import load_dotenv
 from pydantic import BaseModel
-from fastapi import FastAPI, Request, UploadFile, Form, File, BackgroundTasks
+from fastapi import FastAPI, Request, UploadFile, Form, File, BackgroundTasks, Depends, HTTPException, status, Response
+import secrets
+import json
 
 load_dotenv(override=True)
 
-from fastapi.responses import FileResponse, HTMLResponse
+from fastapi.responses import FileResponse, HTMLResponse, RedirectResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -21,6 +23,37 @@ class ContactRequest(BaseModel):
     email: str
 
 app = FastAPI(title="SAKU Global Tech Labs")
+
+SESSION_TOKEN = secrets.token_hex(32)
+
+def verify_admin_api(request: Request):
+    token = request.cookies.get("admin_session")
+    if not token or not secrets.compare_digest(token, SESSION_TOKEN):
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Unauthorized")
+    return True
+
+def verify_admin_html(request: Request):
+    token = request.cookies.get("admin_session")
+    if not token or not secrets.compare_digest(token, SESSION_TOKEN):
+        raise HTTPException(status_code=status.HTTP_307_TEMPORARY_REDIRECT, headers={"Location": "/admin-login"})
+    return True
+
+class LoginRequest(BaseModel):
+    username: str
+    password: str
+
+@app.post("/api/admin-login")
+def admin_login(creds: LoginRequest, response: Response):
+    correct_username = secrets.compare_digest(creds.username, os.getenv("ADMIN_USERNAME", "admin"))
+    correct_password = secrets.compare_digest(creds.password, os.getenv("ADMIN_PASSWORD", "password"))
+    if correct_username and correct_password:
+        response.set_cookie(key="admin_session", value=SESSION_TOKEN, httponly=True, max_age=86400)
+        return {"status": "success"}
+    raise HTTPException(status_code=401, detail="Invalid credentials")
+
+@app.get("/admin-login", response_class=HTMLResponse)
+def login_page():
+    return FileResponse(PUBLIC_DIR / "saku_pages" / "login.html")
 
 @app.post("/api/contact")
 async def handle_contact_submission(data: ContactRequest):
@@ -81,14 +114,47 @@ async def send_confirmation(
     appNumber: str = Form("Unknown"),
     applicant_email: str = Form(""),
     programme: str = Form(""),
+    allData: str = Form(None),
 ):
     """Accept the generated PDF and dispatch confirmation emails to admin and applicant."""
+    if allData:
+        try:
+            parsed_data = json.loads(allData)
+            apps_file = BASE_DIR / "applications.json"
+            existing_apps = []
+            if apps_file.exists():
+                with open(apps_file, "r") as f:
+                    try:
+                        existing_apps = json.load(f)
+                    except json.JSONDecodeError:
+                        pass
+            existing_apps.append(parsed_data)
+            with open(apps_file, "w") as f:
+                json.dump(existing_apps, f, indent=2)
+        except Exception as e:
+            print(f"[SAVE ERROR] Failed to save application data: {e}")
+
     pdf_content = await pdf.read()
     background_tasks.add_task(
         send_email_background,
         pdf_content, pdf.filename, full_name, appNumber, applicant_email, programme
     )
     return {"status": "success", "message": "Email sending initiated"}
+
+@app.get("/api/applications")
+def get_applications(authorized: bool = Depends(verify_admin_api)):
+    apps_file = BASE_DIR / "applications.json"
+    if apps_file.exists():
+        with open(apps_file, "r") as f:
+            try:
+                return json.load(f)
+            except json.JSONDecodeError:
+                return []
+    return []
+
+@app.get("/application-submissions", response_class=HTMLResponse)
+def application_submissions_page(authorized: bool = Depends(verify_admin_html)):
+    return FileResponse(PUBLIC_DIR / "saku_pages" / "application_submissions.html")
 
 app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
 
