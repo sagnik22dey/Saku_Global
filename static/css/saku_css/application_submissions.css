@@ -263,6 +263,56 @@
   stroke-linejoin: round;
 }
 
+.refresh-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6vw;
+  background: white;
+  color: #374151;
+  padding: 0.9vw 1.5vw;
+  border-radius: 0.5vw;
+  font-size: 0.95vw;
+  font-weight: 600;
+  border: 1px solid #d1d5db;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.refresh-btn:hover {
+  border-color: #2563eb;
+  color: #2563eb;
+  background-color: #f8fafc;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
+}
+
+.refresh-btn svg {
+  width: 1.2vw;
+  height: 1.2vw;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 0.4s ease;
+}
+
+.refresh-btn.refreshing svg {
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
 .action-btn-view {
   background-color: #eff6ff;
   color: #2563eb;
@@ -279,6 +329,120 @@
   background-color: #2563eb;
   color: white;
 }
+
+.delete-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6vw;
+  background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
+  color: white;
+  padding: 0.9vw 1.5vw;
+  border-radius: 0.5vw;
+  font-size: 0.95vw;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(239, 68, 68, 0.3);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.delete-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(239, 68, 68, 0.4);
+  background: linear-gradient(135deg, #b91c1c 0%, #dc2626 100%);
+}
+
+.delete-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+.delete-btn svg {
+  width: 1.2vw;
+  height: 1.2vw;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.action-btn-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5vw;
+}
+
+.action-btn-delete {
+  background-color: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+  padding: 0.4vw 0.6vw;
+  border-radius: 0.4vw;
+  font-size: 0.85vw;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.action-btn-delete:hover {
+  background-color: #dc2626;
+  color: white;
+}
+
+.action-btn-delete svg {
+  width: 1vw;
+  height: 1vw;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.checkbox-cell {
+  width: 40px;
+  text-align: center;
+}
+
+.checkbox-cell input[type="checkbox"] {
+  width: 1.1vw;
+  height: 1.1vw;
+  cursor: pointer;
+  accent-color: #2563eb;
+}
+
+@media (max-width: 768px) {
+  .delete-btn {
+    font-size: 3.5vw;
+    padding: 3vw 5vw;
+    border-radius: 1.5vw;
+    width: 100%;
+    justify-content: center;
+  }
+  .delete-btn svg {
+    width: 4vw;
+    height: 4vw;
+  }
+  .checkbox-cell input[type="checkbox"] {
+    width: 4vw;
+    height: 4vw;
+  }
+  .action-btn-delete {
+    padding: 1.5vw;
+  }
+  .action-btn-delete svg {
+    width: 4vw;
+    height: 4vw;
+  }
+}
+
 
 .modal-overlay {
   position: fixed;
@@ -374,6 +538,17 @@
 }
 
 @media (max-width: 768px) {
+  .refresh-btn {
+    font-size: 3.5vw;
+    padding: 3vw 5vw;
+    border-radius: 1.5vw;
+    width: 100%;
+    justify-content: center;
+  }
+  .refresh-btn svg {
+    width: 4vw;
+    height: 4vw;
+  }
   .download-btn {
     font-size: 3.5vw;
     padding: 3vw 5vw;
@@ -408,3 +583,4 @@
     font-size: 3.5vw;
   }
 }
+

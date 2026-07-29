@@ -209,6 +209,39 @@ def get_applications(authorized: bool = Depends(verify_admin_api)):
                 return []
     return []
 
+class DeleteApplicationsRequest(BaseModel):
+    appNumbers: list[str] = []
+    deleteAll: bool = False
+
+@app.delete("/api/applications")
+def delete_applications(payload: DeleteApplicationsRequest, authorized: bool = Depends(verify_admin_api)):
+    """Delete single, multiple, or all application records."""
+    apps_file = BASE_DIR / "applications.json"
+    if not apps_file.exists():
+        return {"status": "success", "deleted_count": 0}
+    try:
+        with open(apps_file, "r") as f:
+            existing_apps = json.load(f)
+    except Exception:
+        existing_apps = []
+
+    initial_count = len(existing_apps)
+    if payload.deleteAll:
+        updated_apps = []
+    else:
+        to_delete = set(payload.appNumbers)
+        updated_apps = [app for app in existing_apps if app.get("appNumber") not in to_delete]
+
+    deleted_count = initial_count - len(updated_apps)
+    try:
+        with open(apps_file, "w") as f:
+            json.dump(updated_apps, f, indent=2)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to update file: {e}")
+
+    return {"status": "success", "deleted_count": deleted_count}
+
+
 @app.get("/api/applications/export-csv")
 def export_applications_csv(authorized: bool = Depends(verify_admin_api)):
     """Export all student application submissions as a CSV file."""

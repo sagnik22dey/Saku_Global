@@ -115,6 +115,14 @@
               <option value="all">All Programmes</option>
             </select>
           </div>
+          <button id="refreshBtn" class="refresh-btn" onclick="loadApplications(true)" title="Refresh Applications Data">
+            <svg viewBox="0 0 24 24" class="refresh-icon">
+              <polyline points="23 4 23 10 17 10"></polyline>
+              <polyline points="1 20 1 14 7 14"></polyline>
+              <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+            </svg>
+            Refresh
+          </button>
           <button id="downloadExcelBtn" class="download-btn">
             <svg viewBox="0 0 24 24">
               <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
@@ -125,12 +133,22 @@
             </svg>
             Download All Student Details
           </button>
+          <button id="deleteSelectedBtn" class="delete-btn" disabled onclick="deleteSelectedRecords()">
+            <svg viewBox="0 0 24 24">
+              <polyline points="3 6 5 6 21 6"></polyline>
+              <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+              <line x1="10" y1="11" x2="10" y2="17"></line>
+              <line x1="14" y1="11" x2="14" y2="17"></line>
+            </svg>
+            Delete Selected (<span id="selectedCount">0</span>)
+          </button>
         </div>
 
         <div class="table-container">
           <table class="submissions-table">
             <thead>
               <tr>
+                <th class="checkbox-cell"><input type="checkbox" id="selectAllCheckbox" onchange="toggleSelectAll(this.checked)" title="Select All"></th>
                 <th>App Number</th>
                 <th>Submitted At</th>
                 <th>Applicant Details</th>
@@ -141,7 +159,7 @@
             </thead>
             <tbody id="submissionsTableBody">
               <tr>
-                <td colspan="6" class="loading-cell">
+                <td colspan="7" class="loading-cell">
                   <div class="spinner"></div> Loading applications...
                 </td>
               </tr>
@@ -253,6 +271,21 @@
       let applications = [];
 
       document.addEventListener('DOMContentLoaded', () => {
+        loadApplications();
+
+        document.getElementById('searchInput').addEventListener('input', filterData);
+        document.getElementById('programmeFilter').addEventListener('change', filterData);
+        document.getElementById('downloadExcelBtn').addEventListener('click', downloadStudentDetails);
+        document.getElementById('closeModalBtn').addEventListener('click', closeModal);
+        document.getElementById('detailModal').addEventListener('click', (e) => {
+          if (e.target.id === 'detailModal') closeModal();
+        });
+      });
+
+      function loadApplications(isManualRefresh = false) {
+        const refreshBtn = document.getElementById('refreshBtn');
+        if (refreshBtn) refreshBtn.classList.add('refreshing');
+
         fetch('/api/applications', { credentials: 'same-origin' })
           .then(res => {
             if (!res.ok) {
@@ -267,21 +300,21 @@
           .then(data => {
             applications = [...data].reverse();
             populateFilters(applications);
-            renderTable(applications);
+            filterData();
           })
           .catch(err => {
             console.error('Error fetching applications:', err);
-            document.getElementById('submissionsTableBody').innerHTML = '<tr><td colspan="6" style="text-align: center; color: red;">Failed to load applications.</td></tr>';
+            document.getElementById('submissionsTableBody').innerHTML = '<tr><td colspan="7" style="text-align: center; color: red;">Failed to load applications.</td></tr>';
+          })
+          .finally(() => {
+            if (refreshBtn) {
+              setTimeout(() => {
+                refreshBtn.classList.remove('refreshing');
+              }, 400);
+            }
           });
+      }
 
-        document.getElementById('searchInput').addEventListener('input', filterData);
-        document.getElementById('programmeFilter').addEventListener('change', filterData);
-        document.getElementById('downloadExcelBtn').addEventListener('click', downloadStudentDetails);
-        document.getElementById('closeModalBtn').addEventListener('click', closeModal);
-        document.getElementById('detailModal').addEventListener('click', (e) => {
-          if (e.target.id === 'detailModal') closeModal();
-        });
-      });
 
       function populateFilters(data) {
         const programmes = new Set();
@@ -327,6 +360,9 @@
         const tbody = document.getElementById('submissionsTableBody');
         const noResults = document.getElementById('noResults');
 
+        document.getElementById('selectAllCheckbox').checked = false;
+        updateSelectionState();
+
         if (data.length === 0) {
           tbody.innerHTML = '';
           noResults.style.display = 'block';
@@ -343,6 +379,9 @@
           const submittedAtStr = app.submitted_at || 'N/A';
           
           tr.innerHTML = `
+            <td class="checkbox-cell">
+              <input type="checkbox" class="record-checkbox" value="${app.appNumber || ''}" onchange="updateSelectionState()">
+            </td>
             <td><strong>${app.appNumber || 'N/A'}</strong></td>
             <td><small style="color: #4b5563; font-weight: 500;">${submittedAtStr}</small></td>
             <td>
@@ -359,13 +398,91 @@
               <div class="meta-info">${app.city ? app.city + ', ' : ''}${app.state ? app.state + ', ' : ''}${app.countryDisplay || 'N/A'}</div>
             </td>
             <td>
-              <button class="action-btn-view" onclick="showDetails('${app.appNumber}')">View Details</button>
+              <div class="action-btn-group">
+                <button class="action-btn-view" onclick="showDetails('${app.appNumber}')">View</button>
+                <button class="action-btn-delete" onclick="deleteSingleRecord('${app.appNumber}')" title="Delete Record">
+                  <svg viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+                </button>
+              </div>
             </td>
           `;
           
           tbody.appendChild(tr);
         });
       }
+
+      function toggleSelectAll(checked) {
+        const checkboxes = document.querySelectorAll('.record-checkbox');
+        checkboxes.forEach(cb => {
+          cb.checked = checked;
+        });
+        updateSelectionState();
+      }
+
+      function updateSelectionState() {
+        const checkboxes = document.querySelectorAll('.record-checkbox');
+        const checkedBoxes = document.querySelectorAll('.record-checkbox:checked');
+        const selectedCountSpan = document.getElementById('selectedCount');
+        const deleteSelectedBtn = document.getElementById('deleteSelectedBtn');
+        const selectAllCheckbox = document.getElementById('selectAllCheckbox');
+
+        const count = checkedBoxes.length;
+        selectedCountSpan.textContent = count;
+
+        if (count > 0) {
+          deleteSelectedBtn.removeAttribute('disabled');
+        } else {
+          deleteSelectedBtn.setAttribute('disabled', 'true');
+        }
+
+        if (checkboxes.length > 0 && count === checkboxes.length) {
+          selectAllCheckbox.checked = true;
+        } else {
+          selectAllCheckbox.checked = false;
+        }
+      }
+
+      function deleteSingleRecord(appNumber) {
+        if (!appNumber) return;
+        if (confirm(`Are you sure you want to delete application "${appNumber}"? This action cannot be undone.`)) {
+          performDelete([appNumber]);
+        }
+      }
+
+      function deleteSelectedRecords() {
+        const checkedBoxes = document.querySelectorAll('.record-checkbox:checked');
+        const selectedAppNumbers = Array.from(checkedBoxes).map(cb => cb.value).filter(val => val);
+        
+        if (selectedAppNumbers.length === 0) return;
+
+        if (confirm(`Are you sure you want to delete ${selectedAppNumbers.length} selected record(s)? This action cannot be undone.`)) {
+          performDelete(selectedAppNumbers);
+        }
+      }
+
+      function performDelete(appNumbers) {
+        fetch('/api/applications', {
+          method: 'DELETE',
+          headers: { 'Content-Type': 'application/json' },
+          credentials: 'same-origin',
+          body: JSON.stringify({ appNumbers: appNumbers })
+        })
+        .then(res => {
+          if (!res.ok) throw new Error('Failed to delete records');
+          return res.json();
+        })
+        .then(data => {
+          const deleteSet = new Set(appNumbers);
+          applications = applications.filter(app => !deleteSet.has(app.appNumber));
+          populateFilters(applications);
+          filterData();
+        })
+        .catch(err => {
+          console.error('Delete error:', err);
+          alert('Error deleting record(s). Please try again.');
+        });
+      }
+
 
       function showDetails(appNum) {
         const app = applications.find(a => a.appNumber === appNum);
