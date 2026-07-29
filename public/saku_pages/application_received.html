@@ -506,10 +506,12 @@
         const pdfFilename = `${data.appNumber}.pdf`;
 
         function loadLogo() {
-          return new Promise((resolve) => {
+          return new Promise(resolve => {
+            const timeout = setTimeout(() => resolve(), 2000);
             const img = new Image();
             img.crossOrigin = 'anonymous';
             img.onload = () => {
+              clearTimeout(timeout);
               try {
                 const scale = 4;
                 const canvas = document.createElement('canvas');
@@ -526,7 +528,10 @@
               }
               resolve();
             };
-            img.onerror = () => resolve();
+            img.onerror = () => {
+              clearTimeout(timeout);
+              resolve();
+            };
             img.src = '/static/images/saku_images/saku-global-new-logo.png';
           });
         }

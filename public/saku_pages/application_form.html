@@ -577,6 +577,21 @@
     </footer>
     <script src="/static/js/main.js"></script>
     <script>
+      const COURSE_CODES = {
+        'master_in_ai_creation': 'MAIC',
+        'data_science_foundations': 'DSFD',
+        'practical_machine_learning': 'PMLN',
+        'full_stack_development': 'FSDA',
+        'deep_learning_cv': 'DLCV',
+        'advanced_ai_nlp_llms': 'ANLP',
+        'rl_responsible_ai': 'RLRA',
+        'master_ai_application_engineering': 'MAAE',
+        'applied_ai_engineering': 'AAIE',
+        'ai_essentials_doctors': 'AIED',
+        'ai_fundamentals_doctors': 'AIFD',
+        'ai_excellence_doctors': 'AIXD'
+      };
+
       document.getElementById('applicationForm').addEventListener('submit', function(e) {
         e.preventDefault();
         
@@ -584,13 +599,18 @@
         const yyyy = date.getFullYear();
         const mm = String(date.getMonth() + 1).padStart(2, '0');
         const dd = String(date.getDate()).padStart(2, '0');
-        const randomSuffix = Math.random().toString(36).substring(2, 7).toUpperCase();
-        const appNumber = `SAKU-${yyyy}${mm}${dd}-${randomSuffix}`;
+        const hh = String(date.getHours()).padStart(2, '0');
+        const min = String(date.getMinutes()).padStart(2, '0');
+        const sec = String(date.getSeconds()).padStart(2, '0');
+        const randomSuffix = Math.random().toString(36).substring(2, 6).toUpperCase();
         
         const formData = new FormData(this);
         const data = Object.fromEntries(formData.entries());
         
-        // Extract display text for dropdowns
+        const selectedProg = data.programme || '';
+        const courseCode = COURSE_CODES[selectedProg] || 'GEN1';
+        const appNumber = `SAKU-${yyyy}${mm}${dd}-${courseCode}-${randomSuffix}`;
+        
         const programmeSelect = this.elements['programme'];
         if (programmeSelect && programmeSelect.selectedIndex >= 0) data.programmeDisplay = programmeSelect.options[programmeSelect.selectedIndex].text;
         
@@ -606,9 +626,19 @@
         const startSelect = this.elements['preferred_start'];
         if (startSelect && startSelect.selectedIndex >= 0) data.startDisplay = startSelect.options[startSelect.selectedIndex].text;
         
+        data.courseCode = courseCode;
         data.appNumber = appNumber;
+        data.submitted_at = `${yyyy}-${mm}-${dd} ${hh}:${min}:${sec}`;
         
         sessionStorage.setItem('applicationData', JSON.stringify(data));
+        
+        fetch('/api/submit-application', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+          keepalive: true
+        }).catch(err => console.error('Submit application error:', err));
+
         window.location.href = '/application-received';
       });
     </script>

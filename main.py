@@ -1,17 +1,19 @@
 import os
 import smtplib
 from email.message import EmailMessage
+import secrets
+import json
+import csv
+import io
+from datetime import datetime
 from pathlib import Path
 from dotenv import load_dotenv
 from pydantic import BaseModel
 from fastapi import FastAPI, Request, UploadFile, Form, File, BackgroundTasks, Depends, HTTPException, status, Response
-import secrets
-import json
+from fastapi.responses import FileResponse, HTMLResponse, RedirectResponse, JSONResponse, StreamingResponse
+from fastapi.staticfiles import StaticFiles
 
 load_dotenv(override=True)
-
-from fastapi.responses import FileResponse, HTMLResponse, RedirectResponse, JSONResponse
-from fastapi.staticfiles import StaticFiles
 
 BASE_DIR = Path(__file__).resolve().parent
 PUBLIC_DIR = BASE_DIR / "public"
@@ -106,6 +108,69 @@ def send_email_background(pdf_content: bytes, filename: str, applicant_name: str
     except Exception as e:
         print(f"[EMAIL ERROR] Failed to send to {to_email}: {e}")
 
+COURSE_CODES = {
+    "master_in_ai_creation": "MAIC",
+    "data_science_foundations": "DSFD",
+    "practical_machine_learning": "PMLN",
+    "full_stack_development": "FSDA",
+    "deep_learning_cv": "DLCV",
+    "advanced_ai_nlp_llms": "ANLP",
+    "rl_responsible_ai": "RLRA",
+    "master_ai_application_engineering": "MAAE",
+    "applied_ai_engineering": "AAIE",
+    "ai_essentials_doctors": "AIED",
+    "ai_fundamentals_doctors": "AIFD",
+    "ai_excellence_doctors": "AIXD"
+}
+
+def save_application_record(data: dict):
+    """Safely save application data into applications.json with timestamp."""
+    if not isinstance(data, dict):
+        return
+    now_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    if "submitted_at" not in data or not data["submitted_at"]:
+        data["submitted_at"] = now_str
+    prog = data.get("programme", "")
+    code = COURSE_CODES.get(prog, "GEN1")
+    data["courseCode"] = code
+    if "appNumber" not in data or not data["appNumber"]:
+        ts_code = datetime.now().strftime("%Y%m%d")
+        rand_code = secrets.token_hex(2).upper()
+        data["appNumber"] = f"SAKU-{ts_code}-{code}-{rand_code}"
+    apps_file = BASE_DIR / "applications.json"
+    existing_apps = []
+    if apps_file.exists():
+        try:
+            with open(apps_file, "r") as f:
+                existing_apps = json.load(f)
+        except Exception:
+            existing_apps = []
+    app_num = data.get("appNumber")
+    updated = False
+    if app_num:
+        for idx, item in enumerate(existing_apps):
+            if item.get("appNumber") == app_num:
+                existing_apps[idx] = data
+                updated = True
+                break
+    if not updated:
+        existing_apps.append(data)
+    try:
+        with open(apps_file, "w") as f:
+            json.dump(existing_apps, f, indent=2)
+    except Exception as e:
+        print(f"[SAVE ERROR] Failed to save application data: {e}")
+
+@app.post("/api/submit-application")
+async def submit_application(request: Request):
+    """Save application submission data directly."""
+    try:
+        data = await request.json()
+        save_application_record(data)
+        return {"status": "success"}
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
 @app.post("/api/send-confirmation")
 async def send_confirmation(
     background_tasks: BackgroundTasks,
@@ -120,17 +185,7 @@ async def send_confirmation(
     if allData:
         try:
             parsed_data = json.loads(allData)
-            apps_file = BASE_DIR / "applications.json"
-            existing_apps = []
-            if apps_file.exists():
-                with open(apps_file, "r") as f:
-                    try:
-                        existing_apps = json.load(f)
-                    except json.JSONDecodeError:
-                        pass
-            existing_apps.append(parsed_data)
-            with open(apps_file, "w") as f:
-                json.dump(existing_apps, f, indent=2)
+            save_application_record(parsed_data)
         except Exception as e:
             print(f"[SAVE ERROR] Failed to save application data: {e}")
 
@@ -143,14 +198,75 @@ async def send_confirmation(
 
 @app.get("/api/applications")
 def get_applications(authorized: bool = Depends(verify_admin_api)):
+    """Retrieve all application records."""
     apps_file = BASE_DIR / "applications.json"
     if apps_file.exists():
         with open(apps_file, "r") as f:
             try:
-                return json.load(f)
+                data = json.load(f)
+                return data
             except json.JSONDecodeError:
                 return []
     return []
+
+@app.get("/api/applications/export-csv")
+def export_applications_csv(authorized: bool = Depends(verify_admin_api)):
+    """Export all student application submissions as a CSV file."""
+    apps_file = BASE_DIR / "applications.json"
+    existing_apps = []
+    if apps_file.exists():
+        try:
+            with open(apps_file, "r") as f:
+                existing_apps = json.load(f)
+        except Exception:
+            existing_apps = []
+    
+    headers = [
+        "Application Number", "Submitted At", "Full Name", "Email", "Phone",
+        "Date of Birth", "Gender", "Country", "State", "City",
+        "Applying As", "Highest Qualification", "School / College",
+        "Field of Study", "Graduation Year", "Programme",
+        "Prior Experience", "Device Access", "Preferred Start",
+        "Confirm Details", "Agree Contact", "Receive Updates"
+    ]
+    
+    output = io.StringIO()
+    writer = csv.writer(output)
+    writer.writerow(headers)
+    
+    for app in reversed(existing_apps):
+        writer.writerow([
+            app.get("appNumber", ""),
+            app.get("submitted_at", ""),
+            app.get("full_name", ""),
+            app.get("email", ""),
+            app.get("phone", ""),
+            app.get("dob", ""),
+            app.get("gender", ""),
+            app.get("countryDisplay", app.get("country", "")),
+            app.get("state", ""),
+            app.get("city", ""),
+            app.get("applyDisplay", app.get("applying_as", "")),
+            app.get("highestQualDisplay", app.get("highest_qualification", "")),
+            app.get("school_college", ""),
+            app.get("field_of_study", ""),
+            app.get("graduation_year", ""),
+            app.get("programmeDisplay", app.get("programme", "")),
+            app.get("prior_experience", ""),
+            app.get("device_access", ""),
+            app.get("startDisplay", app.get("preferred_start", "")),
+            app.get("confirm_details", ""),
+            app.get("agree_contact", ""),
+            app.get("receive_updates", "")
+        ])
+    
+    output.seek(0)
+    return StreamingResponse(
+        io.BytesIO(output.getvalue().encode('utf-8-sig')),
+        media_type="text/csv",
+        headers={"Content-Disposition": "attachment; filename=Saku_Global_Student_Submissions.csv"}
+    )
+
 
 @app.get("/application-submissions", response_class=HTMLResponse)
 def application_submissions_page(authorized: bool = Depends(verify_admin_html)):
