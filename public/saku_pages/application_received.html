@@ -12,7 +12,7 @@
     <header class="saku-header">
       <div class="header-container">
         <a href="/" class="logo-link">
-          <img alt="Saku Global" class="logo-svg" src="/static/images/logo.svg" />
+          <img alt="Saku Global" class="logo-svg" src="/static/images/saku_images/saku-global-new-logo.png" />
         </a>
         <button aria-label="Toggle Navigation" class="hamburger">
           <span></span><span></span><span></span>
@@ -251,15 +251,13 @@
           doc.rect(0, 0, W, navH, 'F');
 
           if (window.__sakuLogo) {
-            doc.addImage(window.__sakuLogo, 'PNG', ml, 4, 14.5, 12);
+            const maxH = 15;
+            const aspect = window.__sakuLogoAspect || 2.4;
+            const logoW = Math.min(50, maxH * aspect);
+            const logoH = logoW / aspect;
+            const logoY = 2.5 + (15 - logoH) / 2;
+            doc.addImage(window.__sakuLogo, 'PNG', ml, logoY, logoW, logoH);
           }
-          doc.setTextColor(16, 46, 117);
-          doc.setFont('helvetica', 'bold');
-          doc.setFontSize(9);
-          doc.text('SAKU GLOBAL', ml + 17, 9.5);
-          doc.setFontSize(6.5);
-          doc.setTextColor(107, 114, 128);
-          doc.text('TECH LABS', ml + 17, 13.6);
 
           doc.setFont('helvetica', 'normal');
           doc.setFontSize(7.5);
@@ -473,19 +471,30 @@
           doc.rect(0, barY, W, barH, 'F');
 
           if (window.__sakuLogo) {
+            const aspect = window.__sakuLogoAspect || 2.4;
+            const logoH = 8.5;
+            const logoW = logoH * aspect;
             doc.setFillColor(255, 255, 255);
-            doc.roundedRect(ml, barY + 2.4, 11.5, 9.2, 1.4, 1.4, 'F');
-            doc.addImage(window.__sakuLogo, 'PNG', ml + 0.9, barY + 3.1, 9.7, 7.8);
+            doc.roundedRect(ml, barY + 2.2, logoW + 2, logoH + 1.4, 1.4, 1.4, 'F');
+            doc.addImage(window.__sakuLogo, 'PNG', ml + 1, barY + 2.9, logoW, logoH);
+            doc.setTextColor(226, 232, 240);
+            doc.setFont('helvetica', 'bold');
+            doc.setFontSize(8);
+            doc.text('SAKU Global Tech Labs Pvt. Ltd.', ml + logoW + 5, barY + 6.2);
+            doc.setFont('helvetica', 'normal');
+            doc.setFontSize(7);
+            doc.setTextColor(148, 163, 184);
+            doc.text('info@sakuglobaltech.com', ml + logoW + 5, barY + 10.4);
+          } else {
+            doc.setTextColor(226, 232, 240);
+            doc.setFont('helvetica', 'bold');
+            doc.setFontSize(8);
+            doc.text('SAKU Global Tech Labs Pvt. Ltd.', ml, barY + 6.2);
+            doc.setFont('helvetica', 'normal');
+            doc.setFontSize(7);
+            doc.setTextColor(148, 163, 184);
+            doc.text('info@sakuglobaltech.com', ml, barY + 10.4);
           }
-
-          doc.setTextColor(226, 232, 240);
-          doc.setFont('helvetica', 'bold');
-          doc.setFontSize(8);
-          doc.text('SAKU Global Tech Labs Pvt. Ltd.', ml + 15, barY + 6.2);
-          doc.setFont('helvetica', 'normal');
-          doc.setFontSize(7);
-          doc.setTextColor(148, 163, 184);
-          doc.text('info@sakuglobaltech.com', ml + 15, barY + 10.4);
 
           const genLabel = 'Generated: ' + (d.submittedDate || '');
           doc.setFontSize(7.5);
@@ -504,18 +513,21 @@
               try {
                 const scale = 4;
                 const canvas = document.createElement('canvas');
-                canvas.width = 244 * scale / 2;
-                canvas.height = 200 * scale / 2;
+                const w = img.naturalWidth || img.width || 244;
+                const h = img.naturalHeight || img.height || 200;
+                canvas.width = w * scale;
+                canvas.height = h * scale;
                 const ctx = canvas.getContext('2d');
                 ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
                 window.__sakuLogo = canvas.toDataURL('image/png');
+                window.__sakuLogoAspect = w / h;
               } catch (e) {
                 window.__sakuLogo = null;
               }
               resolve();
             };
             img.onerror = () => resolve();
-            img.src = '/static/images/logo.svg';
+            img.src = '/static/images/saku_images/saku-global-new-logo.png';
           });
         }
 

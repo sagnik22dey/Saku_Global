@@ -80,8 +80,8 @@ ul {
 }
 
 .logo-svg {
-  width: 7vw;
-  height: 5.2vw;
+  width: 10.5vw;
+  height: 6vw;
   object-fit: contain;
 }
 
@@ -492,8 +492,8 @@ ul {
   }
 
   .logo-svg {
-    width: 9.375vw;
-    height: 7.031vw;
+    width: 14vw;
+    height: 8.5vw;
   }
 
   .hamburger {
